@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e540fc32fea0bc468d2b4ce40375263, type: 3}
+  m_Name: DefinitionRegistry
+  m_EditorClassIdentifier: Assembly-CSharp::DefinitionRegistry
+  randomEvents:
+  - key: sample_event
+    value: {fileID: 11400000, guid: f08dfd57b1d442348b3c9c3e5f2307e0, type: 2}
+  plantType:
+  - key: sample_plant
+    value: {fileID: 11400000, guid: 502383d9ec29b6e4a9d49e5a2a34b17b, type: 2}

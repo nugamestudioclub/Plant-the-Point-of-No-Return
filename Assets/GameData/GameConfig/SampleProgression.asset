@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a7b7bbe19b99740aa236c5907fd2d7, type: 3}
+  m_Name: SampleProgression
+  m_EditorClassIdentifier: Assembly-CSharp::Progression
+  plotUpgradeCosts:
+  - milestoneTag: Upgrade 1
+    resourceRequirements:
+    - key: fertilizer
+      value: 500
+    - key: food
+      value: 500
+    - key: population
+      value: 20
+  - milestoneTag: Upgrade 2
+    resourceRequirements:
+    - key: fertilizer
+      value: 1000
+    - key: food
+      value: 5000
+    - key: population
+      value: 20
+  plotExpansionCosts:
+  - milestoneTag: Plot 1
+    resourceRequirements:
+    - key: fertilizer
+      value: 10
+    - key: food
+      value: 50
+    - key: population
+      value: 20
+  - milestoneTag: Plot 2
+    resourceRequirements:
+    - key: population
+      value: 20
+    - key: food
+      value: 100
+    - key: fertilizer
+      value: 40
+  - milestoneTag: Plot 3
+    resourceRequirements:
+    - key: fertilizer
+      value: 100
+    - key: food
+      value: 200
+    - key: population
+      value: 20
+  - milestoneTag: Plot 4
+    resourceRequirements:
+    - key: fertilizer
+      value: 300
+    - key: food
+      value: 300
+    - key: population
+      value: 20
+  specialPlotUpgradeCosts:
+  - milestoneTag: Level 1
+    resourceRequirements:
+    - key: population
+      value: 40
+  - milestoneTag: Level 2
+    resourceRequirements:
+    - key: population
+      value: 200
+  maxPlotCount: 4

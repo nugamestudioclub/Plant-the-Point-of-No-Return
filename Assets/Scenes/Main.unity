@@ -1249,6 +1249,8 @@ GameObject:
   - component: {fileID: 793207374}
   - component: {fileID: 793207375}
   - component: {fileID: 793207376}
+  - component: {fileID: 793207377}
+  - component: {fileID: 793207378}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1286,6 +1288,8 @@ MonoBehaviour:
   mainMenuManager: {fileID: 793207375}
   cameraManager: {fileID: 1876679501}
   gameUIManager: {fileID: 793207376}
+  gameState: {fileID: 793207378}
+  gameDefinitionRegistry: {fileID: 793207374}
 --- !u!114 &793207374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1298,12 +1302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d47647bd0c2e5e44b6f4216f5e86be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DefinitionRegistry
-  randomEvents:
-  - key: Sample Event
-    value: {fileID: 11400000, guid: f08dfd57b1d442348b3c9c3e5f2307e0, type: 2}
-  plantType:
-  - key: Sample Plant
-    value: {fileID: 11400000, guid: 502383d9ec29b6e4a9d49e5a2a34b17b, type: 2}
+  registry: {fileID: 11400000, guid: c78b0a05f7a28ed4ea7d66a6cd515c07, type: 2}
+  config: {fileID: 0}
 --- !u!114 &793207375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1333,6 +1333,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameUI
   screensCanvas: {fileID: 31811253}
+--- !u!114 &793207377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793207371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d47647bd0c2e5e44b6f4216f5e86be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameRunner
+  registry: {fileID: 11400000, guid: c78b0a05f7a28ed4ea7d66a6cd515c07, type: 2}
+  config: {fileID: 11400000, guid: c478fe6f21faa4a46ace186477c1478a, type: 2}
+--- !u!114 &793207378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793207371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada2f14b30cb9a548ac1b24fa4a5aaaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameState
 --- !u!1 &920108825
 GameObject:
   m_ObjectHideFlags: 0
