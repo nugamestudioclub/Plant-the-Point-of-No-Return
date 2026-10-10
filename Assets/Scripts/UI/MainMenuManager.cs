@@ -17,7 +17,7 @@ public class MainMenuManager : MonoBehaviour
     void Start()
     {
         startButton.onClick.AddListener(() => {
-            GameManager.Instance.TransitionToState(GameManager.EGameState.EARLYGAME);
+            GameManager.Instance.TransitionToState(GameManager.EGameState.GAME);
         });
         //settingsButton.onClick.AddListener();
         exitButton.onClick.AddListener(() =>

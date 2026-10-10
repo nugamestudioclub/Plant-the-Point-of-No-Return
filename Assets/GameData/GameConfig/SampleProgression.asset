@@ -72,3 +72,6 @@ MonoBehaviour:
     - key: population
       value: 200
   maxPlotCount: 4
+  startingPopulation: 25
+  startingFood: 100
+  startingFertalizer: 20
