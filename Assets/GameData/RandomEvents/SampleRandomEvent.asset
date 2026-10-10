@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccdf1a5296b2834cac3b8ab0a7b8ff7, type: 3}
+  m_Name: SampleRandomEvent
+  m_EditorClassIdentifier: Assembly-CSharp::RandomEvent
+  title: Breakout!
+  art: {fileID: 0}
+  textDisplay: Sir, the plants have broken out! They're attacking colonists, what do we do?!
+  choice1: Send out colonists to repair the fence and kill the plants!
+  choice2: Burn the fields!
