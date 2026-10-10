@@ -119,21 +119,20 @@ public class GameManager : MonoBehaviour
 
     private void Intro()
     {
-        // TODO: Add actual transitions/animations logic. For now it transitions immediately out.
         TransitionToState(EGameState.MAINMENU);
     }
     public void MainMenu()
     {
-        // Trigger logic in MainMenuManager while in this mode.
+        // Trigger logic in MainMenuManager while in this mode on Update Basis.
 
     }
     public void GameRun()
     {
-        // Trigger logic in GameRunner while in this mode.
+        // Trigger logic in GameRunner while in this mode on Update Basis.
     }
     public void PostGame()
     {
-        // Trigger logic in EndingManager while in this mode.
+        // Trigger logic in EndingManager while in this mode on Update Basis.
     }
 
     private void OnDestroy()

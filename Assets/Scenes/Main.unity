@@ -1301,6 +1301,9 @@ MonoBehaviour:
   randomEvents:
   - key: Sample Event
     value: {fileID: 11400000, guid: f08dfd57b1d442348b3c9c3e5f2307e0, type: 2}
+  plantType:
+  - key: Sample Plant
+    value: {fileID: 11400000, guid: 502383d9ec29b6e4a9d49e5a2a34b17b, type: 2}
 --- !u!114 &793207375
 MonoBehaviour:
   m_ObjectHideFlags: 0
