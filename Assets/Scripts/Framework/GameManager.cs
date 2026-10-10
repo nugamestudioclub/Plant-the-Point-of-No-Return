@@ -12,6 +12,12 @@ public class GameManager : MonoBehaviour
     private CameraManager cameraManager;
     [SerializeField]
     private GameUI gameUIManager;
+    [SerializeField]
+    private GameState gameState;
+
+    [SerializeField]
+    private GameDefinitionRegistry gameDefinitionRegistry;
+
     
     public static ETransitionState TransitionState { get; private set; } = ETransitionState.NONE;
 
@@ -62,18 +68,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private EGameState transition(EGameState state)
-    {
-        print($"[Game Manager] Transition out of {GameState} into {state}");
-        GameState = state;
-        return GameState;
-    }
-
-    private EGameState noTransition(EGameState s)
-    {
-        print($"[Game Manager] Transition from {GameState} to {s} failed!");
-        return GameState;
-    }
+   
     /// <summary>
     /// This function handles on transition logic, enforcing our state machine and triggering transition logic for the correct edges.
     /// </summary>
@@ -102,6 +97,7 @@ public class GameManager : MonoBehaviour
                     mainMenuManager.StartTransition();
                     cameraManager.TransitionIn();
                     gameUIManager.TransitionIn();
+                    gameState.NewGame();
                     return transition(destState);
                 }
                 break;
@@ -115,6 +111,18 @@ public class GameManager : MonoBehaviour
 
         // Returns game state on success otherwise maintains original state.
         return noTransition(destState);
+    }
+    private EGameState transition(EGameState state)
+    {
+        print($"[Game Manager] Transition out of {GameState} into {state}");
+        GameState = state;
+        return GameState;
+    }
+
+    private EGameState noTransition(EGameState s)
+    {
+        print($"[Game Manager] Transition from {GameState} to {s} failed!");
+        return GameState;
     }
 
     private void Intro()
