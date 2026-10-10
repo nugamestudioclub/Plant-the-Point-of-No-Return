@@ -9,8 +9,8 @@ public class DefinitionRegistry : ScriptableObject
     public Dictionary<string, RandomEvent> RandomEvents { get { return randomEvents; } }
 
     [SerializeField]
-    private Dictionary<string, PlantType> plantType;
-    public Dictionary<string, PlantType> PlantType { get { return plantType; } }
+    private Dictionary<string, PlantType> plantTypes;
+    public Dictionary<string, PlantType> PlantTypes { get { return plantTypes; } }
 
     public string PopulationResourceTagName { get; private set; } = "population";
     public string FoodResourceTagName { get; private set; } = "food";

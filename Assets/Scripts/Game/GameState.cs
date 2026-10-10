@@ -67,7 +67,7 @@ public class GameState : MonoBehaviour
         print($"[Game State] Create {plotCount} plots!");
 
         // Load relevant Plant Tags
-        plantTags = registry.PlantType.Keys.ToArray<string>();
+        plantTags = registry.PlantTypes.Keys.ToArray<string>();
         
         // Initialize reosurce tracking.
         resourceSupplyCounts = new Dictionary<string, int>();
@@ -75,7 +75,7 @@ public class GameState : MonoBehaviour
         // Apply starting resources
         resourceSupplyCounts[registry.PopulationResourceTagName] = config.startingPopulation;
         resourceSupplyCounts[registry.FoodResourceTagName] = config.startingFood;
-        resourceSupplyCounts[registry.FertilizeResouceTagName] = config.startingFertalizer;
+        resourceSupplyCounts[registry.FertilizeResouceTagName] = config.startingFertilizer;
 
 
     }
