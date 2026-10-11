@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,6 +21,9 @@ public class GameUI : MonoBehaviour
     [SerializeField, Tooltip("Sorted in the same order as plots")]
     private TMP_Text[] plotLevelTexts;
 
+    [SerializeField]
+    private PlotScreenComponent[] plotScreenComponents;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,12 +33,10 @@ public class GameUI : MonoBehaviour
        
         for (int i = 0; i < plotButtons.Length; i++)
         {
-            int index = i;
-            
+            Button btn = plotUpgradeButtons[i];
             plotUpgradeButtons[i].onClick.AddListener(() =>
             {
-                GameState.Instance.GamePlots[index].SetPlant("potato");
-                GameState.Instance.GamePlots[index].LevelUp();
+                RequestLevelUp(btn);
             });
         }
     }
@@ -108,26 +110,33 @@ public class GameUI : MonoBehaviour
             }
         }
     }
-
-    private class GameUIButton
+    private void RequestLevelUp(Button plotUpgradeButton)
     {
-        public Button btn;
-        public int index;
-
-        public void ApplyLevelUpListener()
-        {
-            btn.onClick.AddListener(() => {
-                GameState.Instance.GamePlots[index].SetPlant("potato");
-                GameState.Instance.GamePlots[index].LevelUp();
-            });
-            
-        }
+        int index = Array.IndexOf(plotUpgradeButtons, plotUpgradeButton);
+        GameState.Instance.Pause();
+        int level = GameState.Instance.GamePlots[index].level;
         
-        public GameUIButton(Button btn, int index)
+        Dictionary<string, int> requirements = GameState.Instance.GetUpgradeRequirements(level+1);
+        if(level == 0)
         {
-            this.btn = btn;
-            this.index = index;
-            ApplyLevelUpListener();
+            int count = GameState.Instance.GetNumberOfActivePlots();
+            requirements = GameState.Instance.GetExpansionRequirements(count);
         }
+        List<string> availableResources = new List<string>();
+        foreach (string resource in requirements.Keys)
+        {
+            // Check if the resource is sufficient for upgrade.
+            if(GameState.Instance.GetResourceCount(resource) >= requirements[resource])
+            {
+                availableResources.Add(resource);
+            }
+        }
+        plotScreenComponents[index].LevelUpRequested(index, requirements, availableResources.ToArray());
+    }
+
+    
+    public struct IndexI
+    {
+        public int index;
     }
 }

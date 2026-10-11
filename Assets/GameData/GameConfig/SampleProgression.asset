@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SampleProgression
   m_EditorClassIdentifier: Assembly-CSharp::Progression
   plotUpgradeCosts:
-  - costTag: 
+  - costTag: first plot
     resourceRequirements:
     - key: fertilizer
       value: 500
@@ -21,7 +21,7 @@ MonoBehaviour:
       value: 500
     - key: population
       value: 20
-  - costTag: 
+  - costTag: second plot
     resourceRequirements:
     - key: fertilizer
       value: 1000
@@ -30,7 +30,7 @@ MonoBehaviour:
     - key: population
       value: 20
   plotExpansionCosts:
-  - costTag: 
+  - costTag: level 1
     resourceRequirements:
     - key: fertilizer
       value: 10
@@ -38,7 +38,7 @@ MonoBehaviour:
       value: 50
     - key: population
       value: 20
-  - costTag: 
+  - costTag: level 2
     resourceRequirements:
     - key: population
       value: 20
@@ -46,7 +46,7 @@ MonoBehaviour:
       value: 100
     - key: fertilizer
       value: 40
-  - costTag: 
+  - costTag: level 3
     resourceRequirements:
     - key: fertilizer
       value: 100
@@ -54,7 +54,7 @@ MonoBehaviour:
       value: 200
     - key: population
       value: 20
-  - costTag: 
+  - costTag: level 4
     resourceRequirements:
     - key: fertilizer
       value: 300

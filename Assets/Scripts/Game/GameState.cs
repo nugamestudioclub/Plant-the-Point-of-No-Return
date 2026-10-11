@@ -78,6 +78,11 @@ public class GameState : MonoBehaviour
         this.isTickerRunning = !this.isTickerRunning;
         print($"[Game State] Ticker Paused: {isTickerRunning}");
     }
+    public void Pause()
+    {
+        this.isTickerRunning = false;
+        print($"[Game State] Ticker Paused: {isTickerRunning}");
+    }
 
     /// <summary>
     /// This function loads the types out of registry to create trackable resource tags for internal tracking.
@@ -145,6 +150,46 @@ public class GameState : MonoBehaviour
         return this.resourceSupplyCounts[resource];
     }
     
+    public void Spend(string resource, float count)
+    {
+        float curCount = this.resourceSupplyCounts[resource];
+        if (curCount - count > 0)
+        {
+            this.resourceSupplyCounts[resource] -= count;
+        }
+        else
+        {
+            this.resourceSupplyCounts[resource] = 0;
+        }
+        
+    }
+
+    public Dictionary<string,int> GetUpgradeRequirements(int level)
+    {
+        level = level - 2;
+        if(level >= config.plotUpgradeCosts.Length || level < 0)
+        {
+            print($"[Game State] Invalid Level: {level} for resource upgrade request.");
+            return new Dictionary<string,int>();
+        }
+        return config.plotUpgradeCosts[level].resourceRequirements;
+    }
+    public Dictionary<string, int> GetExpansionRequirements(int alreadyExisitingCount)
+    {
+        return config.plotExpansionCosts[alreadyExisitingCount].resourceRequirements;
+    }
+    public int GetNumberOfActivePlots()
+    {
+        int count = 0;
+        foreach(var plot in this.plots)
+        {
+            if(plot.level > 0)
+            {
+                count += 1;
+            }
+        }
+        return count;
+    }
     
     private void OnDestroy()
     {
@@ -231,6 +276,20 @@ public class GameState : MonoBehaviour
 
         public void LevelUp()
         {
+            Dictionary<string, int> costs;
+            if(this.level == 0)
+            {
+                costs = GameState.Instance.GetExpansionRequirements(GameState.Instance.GetNumberOfActivePlots());
+            }
+            else
+            {
+                costs = GameState.Instance.GetUpgradeRequirements(this.level-1);
+            }
+            foreach (string name in costs.Keys)
+            {
+                GameState.Instance.Spend(name,costs[name]);
+            }
+            
             this.level += 1;
             print($"[Game State] Set Plot's Level to {level}.");
         }
