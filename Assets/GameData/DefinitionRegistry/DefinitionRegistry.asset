@@ -15,6 +15,12 @@ MonoBehaviour:
   randomEvents:
   - key: sample_event
     value: {fileID: 11400000, guid: f08dfd57b1d442348b3c9c3e5f2307e0, type: 2}
-  plantType:
-  - key: sample_plant
+  plantTypes:
+  - key: corn
+    value: {fileID: 11400000, guid: 33a21140c2af47147a30c18b3c3653cd, type: 2}
+  - key: mushroom
+    value: {fileID: 11400000, guid: 1733e61a16e2f734ea77c6474e5c9cd5, type: 2}
+  - key: potato
     value: {fileID: 11400000, guid: 502383d9ec29b6e4a9d49e5a2a34b17b, type: 2}
+  - key: pumpkin
+    value: {fileID: 11400000, guid: 37972f8faaa7a604aa0cda6c7e4d06b0, type: 2}
