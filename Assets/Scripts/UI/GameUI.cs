@@ -11,13 +11,14 @@ public class GameUI : MonoBehaviour
     [SerializeField]
     private Button[] plotButtons;
 
-    [SerializeField]
+    [SerializeField, Tooltip("Sorted in the same order as plots")]
     private Button[] plotUpgradeButtons;
 
     [SerializeField]
     private TMP_Text resourceTexts;
 
-    private GameUIButton[] upgradeBtns;
+    [SerializeField, Tooltip("Sorted in the same order as plots")]
+    private TMP_Text[] plotLevelTexts;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,11 +26,11 @@ public class GameUI : MonoBehaviour
     {
         screensCanvas.gameObject.SetActive(false);
 
-        //upgradeBtns = new GameUIButton[plotButtons.Length];
+       
         for (int i = 0; i < plotButtons.Length; i++)
         {
             int index = i;
-            //upgradeBtns[i] = new GameUIButton(plotUpgradeButtons[i],i);
+            
             plotUpgradeButtons[i].onClick.AddListener(() =>
             {
                 GameState.Instance.GamePlots[index].SetPlant("potato");
@@ -45,6 +46,7 @@ public class GameUI : MonoBehaviour
         {
             DisplayResourceState();
             UpdatePlotState();
+            DisplayPlotLevels();
         }
     }
 
@@ -74,6 +76,24 @@ public class GameUI : MonoBehaviour
         resourceTexts.text = displayText;
     }
 
+    private void DisplayPlotLevels()
+    {
+        for (int i = 0; i < plotButtons.Length; i++)
+        {
+            string text = "Not In Use";
+            if (GameState.Instance.GamePlots[i].level == 0)
+            {
+                plotButtons[i].interactable = false;
+                
+            }
+            else
+            {
+                plotButtons[i].interactable = true;
+                text = GameState.Instance.GamePlots[i].level.ToString();
+            }
+            plotLevelTexts[i].text = text;
+        }
+    }
     private void UpdatePlotState()
     {
         for(int i =0;i < plotButtons.Length; i++)
