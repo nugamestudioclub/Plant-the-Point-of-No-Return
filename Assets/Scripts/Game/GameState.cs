@@ -176,20 +176,43 @@ public class GameState : MonoBehaviour
 
         }
 
+        private float ScaleOutputByResourceLeft(string resource, float pull, int level)
+        {
+            //Example: say we pull 15
+            float mod = pull * level;
+            // but say we only have 10 left.
+            float curSupply = Instance.resourceSupplyCounts[resource];
+            // neg_overflow = -5
+            float neg_overflow = Mathf.Min(0, curSupply - mod);
+            // pos_overflow = 5
+            float pos_overflow = Mathf.Abs(neg_overflow);
+            // if there is no supply don't pull/push resources.
+            if (curSupply < 0)
+            {
+                return 0;
+            }
+            // perc = 5/15 = 1/3
+            float perc = pos_overflow / mod;
+            // returns 0.6666 (2/3).
+            return 1 - perc;
+        }
+
         public void Produce()
         {
             if(inputs!=null && outputs != null && level >= 1)
             {
+                float scale = 1;
                 foreach(string input in inputs.Keys)
                 {
                     float mod = inputs[input] * level;
-                    print($"[Game State] Plot spent {mod} {input}");
-                    Instance.resourceSupplyCounts[input] -= mod;
+                    scale = ScaleOutputByResourceLeft(input, scale, level);
+                    print($"[Game State] Plot spent {mod*scale} {input}");
+                    Instance.resourceSupplyCounts[input] -= mod*scale;
                 }
                 print($"[Game State] To produce:");
                 foreach(string output in outputs.Keys)
                 {
-                    float mod = outputs[output] * level;
+                    float mod = outputs[output] * level*scale;
                     print($"[Game State] {mod} {output}");
                     Instance.resourceSupplyCounts[output] += mod;
                     
@@ -206,9 +229,9 @@ public class GameState : MonoBehaviour
             print($"[Game State] Set Plot's Plant to {plant}.");
         }
 
-        public void LevelUp(int level)
+        public void LevelUp()
         {
-            this.level = level;
+            this.level += 1;
             print($"[Game State] Set Plot's Level to {level}.");
         }
     }

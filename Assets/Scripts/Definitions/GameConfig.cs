@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "GameConfig", menuName = "PlantGame/GameConfig")]
@@ -31,9 +32,11 @@ public class GameConfig : ScriptableObject
     {
         if(resourceCostsDict == null)
         {
+            resourceCostsDict = new Dictionary<string,OngoingCost>();
             for(int i = 0; i < resourceCosts.Length; i++)
             {
                 OngoingCost orc = resourceCosts[i];
+                Debug.Log("ORC:"+orc);
                 resourceCostsDict[orc.resourceTag] = orc;
             }
         }

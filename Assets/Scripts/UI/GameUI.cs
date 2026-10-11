@@ -14,10 +14,10 @@ public class GameUI : MonoBehaviour
     [SerializeField]
     private Button[] plotUpgradeButtons;
 
-    
-
     [SerializeField]
     private TMP_Text resourceTexts;
+
+    private GameUIButton[] upgradeBtns;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,24 +25,17 @@ public class GameUI : MonoBehaviour
     {
         screensCanvas.gameObject.SetActive(false);
 
+        //upgradeBtns = new GameUIButton[plotButtons.Length];
         for (int i = 0; i < plotButtons.Length; i++)
         {
-            /*plotButtons[i].onClick.AddListener(() => {
-                
+            int index = i;
+            //upgradeBtns[i] = new GameUIButton(plotUpgradeButtons[i],i);
+            plotUpgradeButtons[i].onClick.AddListener(() =>
+            {
+                GameState.Instance.GamePlots[index].SetPlant("potato");
+                GameState.Instance.GamePlots[index].LevelUp();
             });
-            Button b = plotUpgradeButtons[i];
-            plotUpgradeButtons[i].onClick.AddListener(() => {
-                HandleLevelUp(b);
-            });*/
-            // not implemented yet.
-        }    
-    }
-
-    private void HandleLevelUp(Button b)
-    {
-        int index = Array.IndexOf(plotUpgradeButtons, b);
-        GameState.Instance.GamePlots[index].SetPlant("potato");
-        GameState.Instance.GamePlots[index].LevelUp(1);
+        }
     }
 
     // Update is called once per frame
@@ -66,7 +59,7 @@ public class GameUI : MonoBehaviour
         string[] resources = GameState.Instance.GetResources();
         foreach (string resource in resources)
         {
-            float count = GameState.Instance.GetResourceCount(resource);
+            float count = Mathf.RoundToInt(GameState.Instance.GetResourceCount(resource));
             displayText += $"<color=black><b>{resource}:";
             if (count < 21) {
                 displayText += "<color=red>" + count + "</color>\n";
@@ -93,6 +86,28 @@ public class GameUI : MonoBehaviour
             {
                 plotButtons[i].enabled = true;
             }
+        }
+    }
+
+    private class GameUIButton
+    {
+        public Button btn;
+        public int index;
+
+        public void ApplyLevelUpListener()
+        {
+            btn.onClick.AddListener(() => {
+                GameState.Instance.GamePlots[index].SetPlant("potato");
+                GameState.Instance.GamePlots[index].LevelUp();
+            });
+            
+        }
+        
+        public GameUIButton(Button btn, int index)
+        {
+            this.btn = btn;
+            this.index = index;
+            ApplyLevelUpListener();
         }
     }
 }
