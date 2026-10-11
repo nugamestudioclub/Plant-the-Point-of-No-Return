@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SampleProgression
   m_EditorClassIdentifier: Assembly-CSharp::Progression
   plotUpgradeCosts:
-  - milestoneTag: Upgrade 1
+  - costTag: 
     resourceRequirements:
     - key: fertilizer
       value: 500
@@ -21,7 +21,7 @@ MonoBehaviour:
       value: 500
     - key: population
       value: 20
-  - milestoneTag: Upgrade 2
+  - costTag: 
     resourceRequirements:
     - key: fertilizer
       value: 1000
@@ -30,7 +30,7 @@ MonoBehaviour:
     - key: population
       value: 20
   plotExpansionCosts:
-  - milestoneTag: Plot 1
+  - costTag: 
     resourceRequirements:
     - key: fertilizer
       value: 10
@@ -38,7 +38,7 @@ MonoBehaviour:
       value: 50
     - key: population
       value: 20
-  - milestoneTag: Plot 2
+  - costTag: 
     resourceRequirements:
     - key: population
       value: 20
@@ -46,7 +46,7 @@ MonoBehaviour:
       value: 100
     - key: fertilizer
       value: 40
-  - milestoneTag: Plot 3
+  - costTag: 
     resourceRequirements:
     - key: fertilizer
       value: 100
@@ -54,7 +54,7 @@ MonoBehaviour:
       value: 200
     - key: population
       value: 20
-  - milestoneTag: Plot 4
+  - costTag: 
     resourceRequirements:
     - key: fertilizer
       value: 300
@@ -63,15 +63,56 @@ MonoBehaviour:
     - key: population
       value: 20
   specialPlotUpgradeCosts:
-  - milestoneTag: Level 1
+  - costTag: 
     resourceRequirements:
     - key: population
       value: 40
-  - milestoneTag: Level 2
+  - costTag: 
     resourceRequirements:
     - key: population
       value: 200
   maxPlotCount: 4
   startingPopulation: 25
   startingFood: 100
-  startingFertalizer: 20
+  startingFertilizer: 20
+  resourceCosts:
+  - resourceTag: corn
+    costTag: corn_production
+    inputResourceCost:
+    - key: fertilizer
+      value: 1
+    outputResourceGain:
+    - key: food
+      value: 1
+    functionTags:
+    - CORN_EVENTS
+  - resourceTag: pumpkin
+    costTag: pumpkin_production
+    inputResourceCost:
+    - key: fertilizer
+      value: 1
+    outputResourceGain:
+    - key: food
+      value: 1
+    functionTags:
+    - PUMPKIN_EVENTS
+  - resourceTag: potato
+    costTag: potato_production
+    inputResourceCost:
+    - key: fertilizer
+      value: 1
+    outputResourceGain:
+    - key: food
+      value: 1
+    functionTags:
+    - POTATO_EVENTS
+  - resourceTag: fungi
+    costTag: fungi_production
+    inputResourceCost:
+    - key: fertilizer
+      value: 1
+    outputResourceGain:
+    - key: food
+      value: 1
+    functionTags:
+    - POTATO_EVENTS

@@ -23,6 +23,22 @@ public class GameConfig : ScriptableObject
     public int startingFood = 100;
     [SerializeField]
     public int startingFertilizer = 20;
+    [SerializeField]
+    public OngoingCost[] resourceCosts;
+    private Dictionary<string,OngoingCost> resourceCostsDict;
+
+    public OngoingCost GetResourceOngoingCost(string resource)
+    {
+        if(resourceCostsDict == null)
+        {
+            for(int i = 0; i < resourceCosts.Length; i++)
+            {
+                OngoingCost orc = resourceCosts[i];
+                resourceCostsDict[orc.resourceTag] = orc;
+            }
+        }
+        return resourceCostsDict[resource];
+    }
 
     /// <summary>
     /// Cost Represents the purchase cost to purchase something once. (like an upgrade).
@@ -54,9 +70,9 @@ public class GameConfig : ScriptableObject
         [SerializeField]
         public string costTag;
         [SerializeField]
-        public Dictionary<string, int> inputResourceCost;
+        public Dictionary<string, float> inputResourceCost;
         [SerializeField]
-        public Dictionary<string, int> outputResourceCost;
+        public Dictionary<string, float> outputResourceGain;
         [SerializeField]
         public string[] functionTags;
     }
