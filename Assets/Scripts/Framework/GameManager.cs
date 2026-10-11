@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     public enum EGameState
     {
-        INTRO, MAINMENU, EARLYGAME, LATEGAME, POSTGAME, EXIT
+        INTRO, MAINMENU, GAME, POSTGAME, EXIT
     }
     public enum ETransitionState { NONE, TRANSITION }
 
@@ -58,8 +58,7 @@ public class GameManager : MonoBehaviour
                 break;
             case EGameState.MAINMENU:
                 MainMenu(); break;
-            case EGameState.EARLYGAME:
-            case EGameState.LATEGAME:
+            case EGameState.GAME:
                 GameRun(); break;
             case EGameState.POSTGAME:
                 PostGame(); break;
@@ -90,7 +89,7 @@ public class GameManager : MonoBehaviour
                 break;
                 
             case EGameState.MAINMENU:
-                if (destState == EGameState.EARLYGAME)
+                if (destState == EGameState.GAME)
                 {
                     // Perform animated transition logic.
                     // change state.
@@ -101,10 +100,9 @@ public class GameManager : MonoBehaviour
                     return transition(destState);
                 }
                 break;
-            case EGameState.EARLYGAME:
+            case EGameState.GAME:
                 break;
-            case EGameState.LATEGAME:
-                break;
+
             case EGameState.POSTGAME:
                 break;
         }

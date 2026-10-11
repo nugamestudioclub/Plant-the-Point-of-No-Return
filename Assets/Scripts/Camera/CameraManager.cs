@@ -22,7 +22,7 @@ public class CameraManager : MonoBehaviour
     }
     private void Update()
     {
-        if ( GameManager.GameState == GameManager.EGameState.EARLYGAME || GameManager.GameState == GameManager.EGameState.LATEGAME)
+        if ( GameManager.GameState == GameManager.EGameState.GAME )
         {
             ShiftCamera();
         }
