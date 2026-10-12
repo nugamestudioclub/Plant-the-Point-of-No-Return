@@ -10,6 +10,9 @@ public class GameUI : MonoBehaviour
     private Canvas screensCanvas;
 
     [SerializeField]
+    private List<GameObject> screensObjects;
+
+    [SerializeField]
     private Button[] plotButtons;
 
     [SerializeField, Tooltip("Sorted in the same order as plots")]
@@ -28,6 +31,11 @@ public class GameUI : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        foreach (GameObject monitor in screensObjects)
+        {
+            monitor.SetActive(false);
+        }
+
         screensCanvas.gameObject.SetActive(false);
 
        
@@ -54,6 +62,11 @@ public class GameUI : MonoBehaviour
 
     public void TransitionIn()
     {
+        foreach (GameObject monitor in screensObjects)
+        {
+            monitor.SetActive(true);
+        }
+
         screensCanvas.gameObject.SetActive(true);
     }
 
