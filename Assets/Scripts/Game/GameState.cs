@@ -174,9 +174,23 @@ public class GameState : MonoBehaviour
         }
         return config.plotUpgradeCosts[level].resourceRequirements;
     }
+    public int GetUpgradeCapcityIncrease(int level)
+    {
+        level = level - 2;
+        if (level >= config.plotUpgradeCosts.Length || level < 0)
+        {
+            print($"[Game State] Invalid Level: {level} for capacity increase request.");
+            return 0;
+        }
+        return config.plotUpgradeCosts[level].newCapacityIncrease;
+    }
     public Dictionary<string, int> GetExpansionRequirements(int alreadyExisitingCount)
     {
         return config.plotExpansionCosts[alreadyExisitingCount].resourceRequirements;
+    }
+    public int GetExpansionCapacityIncrease(int alreaydExistingCount)
+    {
+        return config.plotExpansionCosts[alreaydExistingCount].newCapacityIncrease;
     }
     public int GetNumberOfActivePlots()
     {
@@ -211,6 +225,8 @@ public class GameState : MonoBehaviour
         public Dictionary<string, float> outputs;
 
         public string plant;
+        public int capacityLimit;
+        public int assigned;
 
         public Plot()
         {
@@ -218,7 +234,24 @@ public class GameState : MonoBehaviour
             inputs = new Dictionary<string, float>();
             outputs = new Dictionary<string, float>();
             plant = "";
+            capacityLimit = 0;
+            assigned = 0;
 
+        }
+        /// <summary>
+        /// Sets the # of people assigned to current plot. Returns # of overflow people that could not be assigned.
+        /// </summary>
+        /// <param name="count"># of people being assigned</param>
+        /// <returns>Overflow count of people that were not assigned.</returns>
+        public int AssignNewAssignmentCount(int count)
+        {
+            if(count >= capacityLimit)
+            {
+                this.assigned = capacityLimit;
+                return this.capacityLimit - count;
+            }
+            this.assigned = count;
+            return 0;
         }
 
         private float ScaleOutputByResourceLeft(string resource, float pull, int level)
@@ -279,11 +312,14 @@ public class GameState : MonoBehaviour
             Dictionary<string, int> costs;
             if(this.level == 0)
             {
-                costs = GameState.Instance.GetExpansionRequirements(GameState.Instance.GetNumberOfActivePlots());
+                int activeCount = GameState.Instance.GetNumberOfActivePlots();
+                costs = GameState.Instance.GetExpansionRequirements(activeCount);
+                this.capacityLimit += GameState.Instance.GetExpansionCapacityIncrease(activeCount);
             }
             else
             {
                 costs = GameState.Instance.GetUpgradeRequirements(this.level-1);
+                this.capacityLimit += GameState.Instance.GetUpgradeCapcityIncrease(this.level - 1);
             }
             foreach (string name in costs.Keys)
             {

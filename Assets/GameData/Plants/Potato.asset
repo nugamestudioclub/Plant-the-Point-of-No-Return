@@ -15,3 +15,4 @@ MonoBehaviour:
   plantName: potato
   description: 
   Icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  FieldIcon: {fileID: 21300000, guid: 400f63e093ba17d4ea2d8bd8c099b521, type: 3}

@@ -15,3 +15,4 @@ MonoBehaviour:
   plantName: pumpkin
   description: 
   Icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  FieldIcon: {fileID: 21300000, guid: e90a7dec324b14a48836839e03cbdfcb, type: 3}

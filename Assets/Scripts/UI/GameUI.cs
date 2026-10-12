@@ -104,7 +104,7 @@ public class GameUI : MonoBehaviour
             else
             {
                 plotButtons[i].interactable = true;
-                text = GameState.Instance.GamePlots[i].level.ToString();
+                text = $"Level {GameState.Instance.GamePlots[i].level}";
             }
             plotLevelTexts[i].text = text;
         }

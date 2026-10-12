@@ -19,6 +19,8 @@ public class PlotScreenComponent : MonoBehaviour
     private TMP_Text levelUpBtnText;
     [SerializeField]
     private TMP_Text levelUpRequirementsText;
+    [SerializeField]
+    private Image fieldImage;
 
     [SerializeField]
     private TMP_Dropdown plantSelectionDropDown;
@@ -73,7 +75,7 @@ public class PlotScreenComponent : MonoBehaviour
 
        
         plantSelectionDropDown.gameObject.SetActive(index >= 0 && GameState.Instance.GamePlots[index].level > 0);
-        
+        SetFieldImage();
     }
 
     public void LevelUpRequested(int index, Dictionary<string, int> requirementCounts, string[] availableCounts)
@@ -146,4 +148,13 @@ public class PlotScreenComponent : MonoBehaviour
         }
     }
 
+    private void SetFieldImage()
+    {
+        // has a name
+        if(selectedPlant.Length>2)
+        {
+            Sprite image = GameManager.Instance.GameDefinitionRegistry.Registry.PlantTypes[selectedPlant].FieldIcon;
+            fieldImage.sprite = image;
+        }
+    }
 }
