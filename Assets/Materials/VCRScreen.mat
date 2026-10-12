@@ -11,7 +11,8 @@ Material:
   m_Shader: {fileID: 4800000, guid: 3af281a11ac912f43b712f0512a431e2, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - UNITY_UI_ALPHACLIP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -48,7 +49,7 @@ Material:
     - _NoiseIntensity: 0.03
     - _ScanlineIntensity: 1.16
     - _TimeParam: 0
-    - _UseUIAlphaClip: 0
+    - _UseUIAlphaClip: 1
     - _WobbleFrequency: 9.3
     - _WobbleSpeed: 0.91
     - _ZWrite: 0
