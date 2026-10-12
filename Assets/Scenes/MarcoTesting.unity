@@ -876,7 +876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameState
   isTickerRunning: 0
-  tickDuration: 5
+  tickDuration: 1
   onTick:
     m_PersistentCalls:
       m_Calls: []

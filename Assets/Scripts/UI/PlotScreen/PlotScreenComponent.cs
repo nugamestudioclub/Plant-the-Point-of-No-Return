@@ -20,19 +20,29 @@ public class PlotScreenComponent : MonoBehaviour
     [SerializeField]
     private TMP_Text levelUpRequirementsText;
 
-    private bool isOpen = false;
+    [SerializeField]
+    private TMP_Dropdown plantSelectionDropDown;
+
+    private string selectedPlant;
+
+    private bool isUpgradeOpen = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         levelUpScreen.gameObject.SetActive(false);
-        
+        selectedPlant = "";
+        LoadPlantOptions();
+
+        plantSelectionDropDown.onValueChanged.AddListener((value) => {
+            UpdatePlantSelection(value);
+        });
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isOpen && Input.GetMouseButtonDown(0))
+        if(isUpgradeOpen && Input.GetMouseButtonDown(0))
         {
             if(EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
             {
@@ -60,6 +70,10 @@ public class PlotScreenComponent : MonoBehaviour
 
             }
         }
+
+       
+        plantSelectionDropDown.gameObject.SetActive(index >= 0 && GameState.Instance.GamePlots[index].level > 0);
+        
     }
 
     public void LevelUpRequested(int index, Dictionary<string, int> requirementCounts, string[] availableCounts)
@@ -97,14 +111,39 @@ public class PlotScreenComponent : MonoBehaviour
             GameState.Instance.GamePlots[this.index].LevelUp();
             this.ExitView();
         });
-        isOpen = true;
+        isUpgradeOpen = true;
 
     }
 
     public void ExitView()
     {
         levelUpScreen.gameObject.SetActive(false);
-        isOpen= false;
+        isUpgradeOpen= false;
     }
   
+    private void LoadPlantOptions()
+    {
+        Dictionary<string, PlantType> plantTypes = GameManager.Instance.GameDefinitionRegistry.Registry.PlantTypes;
+        string[] names = plantTypes.Keys.ToArray();
+
+        
+        List<TMP_Dropdown.OptionData> newOptions = new List<TMP_Dropdown.OptionData>();
+        foreach(string name in names)
+        {
+            newOptions.Add(new TMP_Dropdown.OptionData(name));
+        }
+
+        plantSelectionDropDown.AddOptions(newOptions);
+    }
+
+    private void UpdatePlantSelection(int sel)
+    {
+        string option = plantSelectionDropDown.options[sel].text;
+        if (option != null && GameManager.Instance.GameDefinitionRegistry.Registry.PlantTypes.ContainsKey(option))
+        {
+            selectedPlant = option;
+            GameState.Instance.GamePlots[index].SetPlant(option);
+        }
+    }
+
 }

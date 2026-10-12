@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameDefinitionRegistry gameDefinitionRegistry;
+    public GameDefinitionRegistry GameDefinitionRegistry { get { return gameDefinitionRegistry; } }
 
     
     public static ETransitionState TransitionState { get; private set; } = ETransitionState.NONE;
