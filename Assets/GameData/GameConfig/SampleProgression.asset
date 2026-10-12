@@ -21,6 +21,7 @@ MonoBehaviour:
       value: 500
     - key: population
       value: 20
+    newCapacityIncrease: 20
   - costTag: second plot
     resourceRequirements:
     - key: fertilizer
@@ -29,8 +30,9 @@ MonoBehaviour:
       value: 5000
     - key: population
       value: 20
+    newCapacityIncrease: 20
   plotExpansionCosts:
-  - costTag: level 1
+  - costTag: plot1
     resourceRequirements:
     - key: fertilizer
       value: 10
@@ -38,7 +40,8 @@ MonoBehaviour:
       value: 50
     - key: population
       value: 20
-  - costTag: level 2
+    newCapacityIncrease: 20
+  - costTag: plot2
     resourceRequirements:
     - key: population
       value: 20
@@ -46,7 +49,8 @@ MonoBehaviour:
       value: 100
     - key: fertilizer
       value: 40
-  - costTag: level 3
+    newCapacityIncrease: 20
+  - costTag: plot3
     resourceRequirements:
     - key: fertilizer
       value: 100
@@ -54,7 +58,8 @@ MonoBehaviour:
       value: 200
     - key: population
       value: 20
-  - costTag: level 4
+    newCapacityIncrease: 20
+  - costTag: plot4
     resourceRequirements:
     - key: fertilizer
       value: 300
@@ -62,15 +67,18 @@ MonoBehaviour:
       value: 300
     - key: population
       value: 20
+    newCapacityIncrease: 20
   specialPlotUpgradeCosts:
-  - costTag: 
+  - costTag: fertilizer_creator_1
     resourceRequirements:
     - key: population
       value: 40
-  - costTag: 
+    newCapacityIncrease: 20
+  - costTag: fertilizer_creator_2
     resourceRequirements:
     - key: population
       value: 200
+    newCapacityIncrease: 20
   maxPlotCount: 4
   startingPopulation: 25
   startingFood: 100

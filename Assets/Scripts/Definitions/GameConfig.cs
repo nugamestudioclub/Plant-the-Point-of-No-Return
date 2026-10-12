@@ -45,6 +45,7 @@ public class GameConfig : ScriptableObject
 
     /// <summary>
     /// Cost Represents the purchase cost to purchase something once. (like an upgrade).
+    /// Also represents the maximum capacity of workers a plot can take.
     /// </summary>
     [System.Serializable]
     public class Cost
@@ -53,6 +54,8 @@ public class GameConfig : ScriptableObject
         public string costTag;
         [SerializeField]
         public Dictionary<string, int> resourceRequirements;
+        [SerializeField]
+        public int newCapacityIncrease;
     }
 
     /// <summary>
