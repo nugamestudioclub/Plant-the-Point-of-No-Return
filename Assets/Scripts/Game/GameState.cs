@@ -174,9 +174,23 @@ public class GameState : MonoBehaviour
         }
         return config.plotUpgradeCosts[level].resourceRequirements;
     }
+    public int GetUpgradeCapcityIncrease(int level)
+    {
+        level = level - 2;
+        if (level >= config.plotUpgradeCosts.Length || level < 0)
+        {
+            print($"[Game State] Invalid Level: {level} for capacity increase request.");
+            return 0;
+        }
+        return config.plotUpgradeCosts[level].newCapacityIncrease;
+    }
     public Dictionary<string, int> GetExpansionRequirements(int alreadyExisitingCount)
     {
         return config.plotExpansionCosts[alreadyExisitingCount].resourceRequirements;
+    }
+    public int GetExpansionCapacityIncrease(int alreaydExistingCount)
+    {
+        return config.plotExpansionCosts[alreaydExistingCount].newCapacityIncrease;
     }
     public int GetNumberOfActivePlots()
     {
@@ -211,6 +225,7 @@ public class GameState : MonoBehaviour
         public Dictionary<string, float> outputs;
 
         public string plant;
+        public int capacityLimit;
 
         public Plot()
         {
@@ -218,6 +233,7 @@ public class GameState : MonoBehaviour
             inputs = new Dictionary<string, float>();
             outputs = new Dictionary<string, float>();
             plant = "";
+            capacityLimit = 0;
 
         }
 
@@ -279,16 +295,20 @@ public class GameState : MonoBehaviour
             Dictionary<string, int> costs;
             if(this.level == 0)
             {
-                costs = GameState.Instance.GetExpansionRequirements(GameState.Instance.GetNumberOfActivePlots());
+                int activeCount = GameState.Instance.GetNumberOfActivePlots();
+                costs = GameState.Instance.GetExpansionRequirements(activeCount);
+                this.capacityLimit += GameState.Instance.GetExpansionCapacityIncrease(activeCount);
             }
             else
             {
                 costs = GameState.Instance.GetUpgradeRequirements(this.level-1);
+                this.capacityLimit += GameState.Instance.GetUpgradeCapcityIncrease(this.level - 1);
             }
             foreach (string name in costs.Keys)
             {
                 GameState.Instance.Spend(name,costs[name]);
             }
+            
             
             this.level += 1;
             print($"[Game State] Set Plot's Level to {level}.");
