@@ -226,6 +226,7 @@ public class GameState : MonoBehaviour
 
         public string plant;
         public int capacityLimit;
+        public int assigned;
 
         public Plot()
         {
@@ -234,7 +235,23 @@ public class GameState : MonoBehaviour
             outputs = new Dictionary<string, float>();
             plant = "";
             capacityLimit = 0;
+            assigned = 0;
 
+        }
+        /// <summary>
+        /// Sets the # of people assigned to current plot. Returns # of overflow people that could not be assigned.
+        /// </summary>
+        /// <param name="count"># of people being assigned</param>
+        /// <returns>Overflow count of people that were not assigned.</returns>
+        public int AssignNewAssignmentCount(int count)
+        {
+            if(count >= capacityLimit)
+            {
+                this.assigned = capacityLimit;
+                return this.capacityLimit - count;
+            }
+            this.assigned = count;
+            return 0;
         }
 
         private float ScaleOutputByResourceLeft(string resource, float pull, int level)
@@ -308,7 +325,6 @@ public class GameState : MonoBehaviour
             {
                 GameState.Instance.Spend(name,costs[name]);
             }
-            
             
             this.level += 1;
             print($"[Game State] Set Plot's Level to {level}.");
