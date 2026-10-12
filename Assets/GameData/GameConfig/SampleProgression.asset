@@ -115,4 +115,4 @@ MonoBehaviour:
     - key: food
       value: 1
     functionTags:
-    - POTATO_EVENTS
+    - FUNGI_EVENTS

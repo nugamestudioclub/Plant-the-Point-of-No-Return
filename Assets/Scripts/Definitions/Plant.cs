@@ -8,6 +8,8 @@ public class PlantType : ScriptableObject
     [SerializeField, TextArea(3, 10)]
     private string description;
     [SerializeField]
-    private Sprite Icon;
+    public Sprite Icon;
+    [SerializeField]
+    public Sprite FieldIcon;
 
 }
