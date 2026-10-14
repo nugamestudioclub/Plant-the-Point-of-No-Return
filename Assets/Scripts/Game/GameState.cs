@@ -64,6 +64,7 @@ public class GameState : MonoBehaviour
             }
 
             Ticker();
+            UpdateAllocationNumbers();
         }
     }
 
@@ -147,6 +148,15 @@ public class GameState : MonoBehaviour
     {
         resourceSupplyCounts[registry.PopulationResourceTagName] += config.passivePopulationGrowth;
         resourceSupplyCounts[registry.FertilizeResouceTagName] += config.passiveFertilizerIncome;
+    }
+
+    private void UpdateAllocationNumbers()
+    {
+        resourceSupplyCounts[registry.AllocatedPopulationResourceTagName] = 0;
+        foreach(Plot p in plots)
+        {
+            resourceSupplyCounts[registry.AllocatedPopulationResourceTagName] += p.assigned;
+        }
     }
 
     public string[] GetResources()
@@ -236,6 +246,7 @@ public class GameState : MonoBehaviour
         public string plant;
         public int capacityLimit;
         public int assigned;
+        
 
         public Plot()
         {
@@ -254,11 +265,12 @@ public class GameState : MonoBehaviour
         /// <returns>Overflow count of people that were not assigned.</returns>
         public int AssignNewAssignmentCount(int count)
         {
-            if(count >= capacityLimit)
+            if (count >= capacityLimit)
             {
                 this.assigned = capacityLimit;
                 return this.capacityLimit - count;
             }
+
             this.assigned = count;
             return 0;
         }

@@ -19,8 +19,6 @@ MonoBehaviour:
       value: 500
     - key: food
       value: 500
-    - key: population
-      value: 20
     newCapacityIncrease: 20
   - costTag: second plot
     resourceRequirements:
@@ -28,8 +26,6 @@ MonoBehaviour:
       value: 1000
     - key: food
       value: 5000
-    - key: population
-      value: 20
     newCapacityIncrease: 20
   plotExpansionCosts:
   - costTag: plot1
@@ -38,13 +34,9 @@ MonoBehaviour:
       value: 10
     - key: food
       value: 50
-    - key: population
-      value: 20
     newCapacityIncrease: 20
   - costTag: plot2
     resourceRequirements:
-    - key: population
-      value: 20
     - key: food
       value: 100
     - key: fertilizer
@@ -56,8 +48,6 @@ MonoBehaviour:
       value: 100
     - key: food
       value: 200
-    - key: population
-      value: 20
     newCapacityIncrease: 20
   - costTag: plot4
     resourceRequirements:
@@ -65,8 +55,6 @@ MonoBehaviour:
       value: 300
     - key: food
       value: 300
-    - key: population
-      value: 20
     newCapacityIncrease: 20
   specialPlotUpgradeCosts:
   - costTag: fertilizer_creator_1
@@ -83,6 +71,8 @@ MonoBehaviour:
   startingPopulation: 25
   startingFood: 100
   startingFertilizer: 20
+  passivePopulationGrowth: 0.25
+  passiveFertilizerIncome: 4
   resourceCosts:
   - resourceTag: corn
     costTag: corn_production
