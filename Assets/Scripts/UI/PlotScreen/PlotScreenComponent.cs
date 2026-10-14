@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -111,9 +112,11 @@ public class PlotScreenComponent : MonoBehaviour
         levelUpConfirmBtn.onClick.AddListener(() => {
             GameState.Instance.GamePlots[this.index].SetPlant("potato");
             GameState.Instance.GamePlots[this.index].LevelUp();
+            
             this.ExitView();
         });
         isUpgradeOpen = true;
+
 
     }
 

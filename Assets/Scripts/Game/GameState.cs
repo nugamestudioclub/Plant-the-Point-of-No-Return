@@ -107,9 +107,10 @@ public class GameState : MonoBehaviour
 
         // Apply starting resources
         resourceSupplyCounts[registry.PopulationResourceTagName] = config.startingPopulation;
+        resourceSupplyCounts[registry.AllocatedPopulationResourceTagName] = 0;
         resourceSupplyCounts[registry.FoodResourceTagName] = config.startingFood;
         resourceSupplyCounts[registry.FertilizeResouceTagName] = config.startingFertilizer;
-
+        
 
     }
 
@@ -134,10 +135,18 @@ public class GameState : MonoBehaviour
     /// </summary>
     private void OnTick()
     {
+        GetPassiveResources();
         foreach (Plot p in plots)
         {
             p.Produce();
         }
+        
+    }
+
+    private void GetPassiveResources()
+    {
+        resourceSupplyCounts[registry.PopulationResourceTagName] += config.passivePopulationGrowth;
+        resourceSupplyCounts[registry.FertilizeResouceTagName] += config.passiveFertilizerIncome;
     }
 
     public string[] GetResources()
@@ -254,6 +263,11 @@ public class GameState : MonoBehaviour
             return 0;
         }
 
+        public float GetPercAvailable(int assigned, int capacity)
+        {
+            return (float)assigned / (float)capacity;
+        }
+
         private float ScaleOutputByResourceLeft(string resource, float pull, int level)
         {
             //Example: say we pull 15
@@ -280,10 +294,19 @@ public class GameState : MonoBehaviour
             if(inputs!=null && outputs != null && level >= 1)
             {
                 float scale = 1;
+                scale *= GetPercAvailable(assigned, capacityLimit);
+                print($"[Game State] Assigned:{assigned} / Capacity: {capacityLimit} ==> {scale}");
+                if(scale == 0)
+                {
+                    //nothing produced.
+                    print($"[Game State] Nothing to produce due to Scale={scale}");
+                    return;
+                }
+
                 foreach(string input in inputs.Keys)
                 {
                     float mod = inputs[input] * level;
-                    scale = ScaleOutputByResourceLeft(input, scale, level);
+                    scale *= ScaleOutputByResourceLeft(input, scale, level);
                     print($"[Game State] Plot spent {mod*scale} {input}");
                     Instance.resourceSupplyCounts[input] -= mod*scale;
                 }

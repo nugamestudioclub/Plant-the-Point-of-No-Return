@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GameConfig", menuName = "PlantGame/GameConfig")]
 public class GameConfig : ScriptableObject
 {
-
+    [Header("Purchase Costs")]
     [SerializeField]
     public Cost[] plotUpgradeCosts;
 
@@ -17,13 +17,21 @@ public class GameConfig : ScriptableObject
 
     [SerializeField]
     public int maxPlotCount = 4;
-
+    [Header("Starting Resources")]
     [SerializeField]
     public int startingPopulation = 20;
     [SerializeField]
     public int startingFood = 100;
     [SerializeField]
     public int startingFertilizer = 20;
+
+    [Header("Passive Income")]
+    [SerializeField]
+    public float passivePopulationGrowth = 0.25f;
+    [SerializeField]
+    public float passiveFertilizerIncome = 1f;
+
+    [Header("Ongoing Costs")]
     [SerializeField]
     public OngoingCost[] resourceCosts;
     private Dictionary<string,OngoingCost> resourceCostsDict;

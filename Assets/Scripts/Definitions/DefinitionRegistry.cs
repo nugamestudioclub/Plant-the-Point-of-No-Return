@@ -13,6 +13,7 @@ public class DefinitionRegistry : ScriptableObject
     public Dictionary<string, PlantType> PlantTypes { get { return plantTypes; } }
 
     public string PopulationResourceTagName { get; private set; } = "population";
+    public string AllocatedPopulationResourceTagName { get; private set; } = "allocated";
     public string FoodResourceTagName { get; private set; } = "food";
     public string FertilizeResouceTagName { get; private set; } = "fertilizer";
 

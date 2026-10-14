@@ -134,6 +134,7 @@ public class GameUI : MonoBehaviour
         {
             int count = GameState.Instance.GetNumberOfActivePlots();
             requirements = GameState.Instance.GetExpansionRequirements(count);
+            
         }
         List<string> availableResources = new List<string>();
         foreach (string resource in requirements.Keys)
@@ -146,7 +147,7 @@ public class GameUI : MonoBehaviour
         }
         plotScreenComponents[index].LevelUpRequested(index, requirements, availableResources.ToArray());
     }
-
+   
     
     public struct IndexI
     {
