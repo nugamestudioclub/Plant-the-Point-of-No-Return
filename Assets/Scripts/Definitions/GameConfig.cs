@@ -36,6 +36,12 @@ public class GameConfig : ScriptableObject
     public OngoingCost[] resourceCosts;
     private Dictionary<string,OngoingCost> resourceCostsDict;
 
+    [Header("Population Costs")]
+    [SerializeField]
+    public float basePopulationFoodRequiremnet = 0.02f;
+    [SerializeField]
+    public float allocatedWorkerFoodRequirement = 0.03f;
+
     public OngoingCost GetResourceOngoingCost(string resource)
     {
         if(resourceCostsDict == null)

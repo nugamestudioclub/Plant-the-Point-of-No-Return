@@ -77,12 +77,12 @@ public class GameState : MonoBehaviour
     public void TogglePause()
     {
         this.isTickerRunning = !this.isTickerRunning;
-        print($"[Game State] Ticker Paused: {isTickerRunning}");
+        print($"[Game State] Ticker Paused: {!isTickerRunning}");
     }
     public void Pause()
     {
         this.isTickerRunning = false;
-        print($"[Game State] Ticker Paused: {isTickerRunning}");
+        print($"[Game State] Ticker Paused: {!isTickerRunning}");
     }
 
     /// <summary>
@@ -136,11 +136,17 @@ public class GameState : MonoBehaviour
     /// </summary>
     private void OnTick()
     {
+        // Passive Income
         GetPassiveResources();
+
+        //Active Income/Costs
         foreach (Plot p in plots)
         {
             p.Produce();
         }
+
+        //Passive Costs
+        ApplyPopulationFoodNeeds();
         
     }
 
@@ -148,6 +154,20 @@ public class GameState : MonoBehaviour
     {
         resourceSupplyCounts[registry.PopulationResourceTagName] += config.passivePopulationGrowth;
         resourceSupplyCounts[registry.FertilizeResouceTagName] += config.passiveFertilizerIncome;
+    }
+
+    private void ApplyPopulationFoodNeeds()
+    {
+        float numberOfAllocated = this.resourceSupplyCounts[registry.AllocatedPopulationResourceTagName];
+        float numberOfUnallocated = this.resourceSupplyCounts[registry.PopulationResourceTagName] - numberOfAllocated;
+        // since number of Allocated is forced to integer already and a 1/2 person cannot consume food, I correct for partial values.
+        numberOfUnallocated = Mathf.Floor(numberOfUnallocated);
+
+        float foodCostUnallocated = this.config.basePopulationFoodRequiremnet * numberOfUnallocated;
+        float foodCostAllocated = this.config.allocatedWorkerFoodRequirement * numberOfAllocated;
+
+        float sumCost = foodCostAllocated + foodCostUnallocated;
+        this.resourceSupplyCounts[registry.FoodResourceTagName] -= sumCost;
     }
 
     private void UpdateAllocationNumbers()
