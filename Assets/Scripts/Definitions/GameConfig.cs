@@ -42,6 +42,13 @@ public class GameConfig : ScriptableObject
     [SerializeField]
     public float allocatedWorkerFoodRequirement = 0.03f;
 
+    [Header("Fertilizer Creator Stats")]
+    [SerializeField]
+    public Dictionary<string, float> fertilizerCreatorInputs;
+    [SerializeField]
+    public Dictionary<string, float> fertilizerCreatorOuputs;
+
+
     public OngoingCost GetResourceOngoingCost(string resource)
     {
         if(resourceCostsDict == null)

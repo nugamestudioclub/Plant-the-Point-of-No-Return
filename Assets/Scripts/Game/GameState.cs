@@ -7,6 +7,8 @@ using UnityEngine.Events;
 public class GameState : MonoBehaviour
 {
     
+    
+
     private DefinitionRegistry registry;
     protected GameConfig config;
     private static GameState instance;
@@ -38,8 +40,14 @@ public class GameState : MonoBehaviour
 
     public UnityEvent onTick;
 
+    private int durationWithoutFood = 0;
+
 
     private float _t = 0;
+
+    private FertilizerCreator fertCreator;
+    public enum EGameSubState { FIRST_PHASE, SECOND_PHASE }
+    public EGameSubState SubState { get; private set; } = EGameSubState.FIRST_PHASE;
 
 
     private void Awake()
@@ -65,6 +73,7 @@ public class GameState : MonoBehaviour
 
             Ticker();
             UpdateAllocationNumbers();
+
         }
     }
 
@@ -92,11 +101,11 @@ public class GameState : MonoBehaviour
     {
         //Create a number of plots equal to teh maxPlotCount and start them at level 0 (aka not in operation).
         int plotCount = config.maxPlotCount;
-        plots=  new Plot[plotCount];
+        plots = new Plot[plotCount];
         int i;
         for (i = 0; i < plotCount; i++)
         {
-            plots[i]= new Plot();
+            plots[i] = new Plot();
         }
         print($"[Game State] Create {plotCount} plots!");
 
@@ -147,6 +156,11 @@ public class GameState : MonoBehaviour
 
         //Passive Costs
         ApplyPopulationFoodNeeds();
+
+        if(this.SubState == EGameSubState.SECOND_PHASE)
+        {
+            fertCreator.Produce();
+        }
         
     }
 
@@ -168,6 +182,25 @@ public class GameState : MonoBehaviour
 
         float sumCost = foodCostAllocated + foodCostUnallocated;
         this.resourceSupplyCounts[registry.FoodResourceTagName] -= sumCost;
+
+        if (this.resourceSupplyCounts[registry.FoodResourceTagName] < 0)
+        {
+            if (this.resourceSupplyCounts[registry.PopulationResourceTagName] < 2)
+            {
+                this.resourceSupplyCounts[registry.FoodResourceTagName] -= 10000;
+            }
+            durationWithoutFood += 1;
+            this.resourceSupplyCounts[registry.PopulationResourceTagName] += this.resourceSupplyCounts[registry.FoodResourceTagName] * durationWithoutFood;
+            this.resourceSupplyCounts[registry.FoodResourceTagName] = 0;
+
+            
+        }
+        else
+        {
+            durationWithoutFood = 0;
+        }
+        if (this.resourceSupplyCounts[registry.PopulationResourceTagName] < 0)
+            this.resourceSupplyCounts[registry.PopulationResourceTagName] = 0;
     }
 
     private void UpdateAllocationNumbers()
@@ -242,6 +275,11 @@ public class GameState : MonoBehaviour
             }
         }
         return count;
+    }
+
+    public bool isOver()
+    {
+        return this.resourceSupplyCounts[registry.PopulationResourceTagName] < 0;
     }
     
     private void OnDestroy()
@@ -386,6 +424,61 @@ public class GameState : MonoBehaviour
         }
     }
 
+
+    public class FertilizerCreator
+    {
+        private float popInput;
+        private float fertOutput;
+        private Dictionary<string, float> inputs;
+        private Dictionary<string, float> outputs;
+
+
+        public FertilizerCreator()
+        {
+            string popTag = GameState.Instance.registry.PopulationResourceTagName;
+            string fertTag = GameState.Instance.registry.FertilizeResouceTagName;
+            inputs = GameState.Instance.config.fertilizerCreatorInputs;
+            outputs = GameState.Instance.config.fertilizerCreatorOuputs;
+            popInput = inputs[popTag];
+            fertOutput = outputs[fertTag];
+
+        }
+
+        public void Produce()
+        {
+            foreach (string resource in inputs.Keys)
+            {
+                GameState.Instance.Spend(resource,inputs[resource]);
+            }
+            foreach(string resource in outputs.Keys)
+            {
+                GameState.Instance.resourceSupplyCounts[resource] += outputs[resource];
+            }
+        }
+
+        public void ModifyInputs(string resource, float modification, bool isOverride = false)
+        {
+            if (isOverride)
+            {
+                this.inputs[resource] = modification;
+            }
+            else
+            {
+                this.inputs[resource] += modification;
+            }
+        }
+        public void ModifyOutputs(string resource, float modification, bool isOverride = false)
+        {
+            if (isOverride)
+            {
+                this.outputs[resource] = modification;
+            }
+            else
+            {
+                this.outputs[resource] = modification;
+            }
+        }
+    }
 
 }
 

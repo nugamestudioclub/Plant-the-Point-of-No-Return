@@ -102,10 +102,17 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case EGameState.GAME:
+                if(destState == EGameState.POSTGAME)
+                {
+                    print("[GAME STATE] GAME OVER! TRANSITIONING INTO POST GAME");
+                    // Make sure to add game state transition into which ending...
+                    
+                }
                 break;
 
             case EGameState.POSTGAME:
-                break;
+                return transition(destState);
+               
         }
 
         // Returns game state on success otherwise maintains original state.
@@ -136,6 +143,10 @@ public class GameManager : MonoBehaviour
     public void GameRun()
     {
         // Trigger logic in GameRunner while in this mode on Update Basis.
+        if (gameState.isOver())
+        {
+            TransitionToState(EGameState.POSTGAME);
+        }
     }
     public void PostGame()
     {
