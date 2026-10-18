@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555ab5d1a69b0b440ae385e9d937c0d7, type: 3}
+  m_Name: Beauty-0-1-1
+  m_EditorClassIdentifier: Assembly-CSharp::EventChain
+  title: The Spark of Creativity
+  art: {fileID: 0}
+  textDisplay: Art has stirred the potatoes' minds, causing their intelligence to skyrocket. They've started learning rocket science and have synthesized 10 brand new elements. It's a bit unsettling how smart they're getting, but with time those brains could give better nutrients...
+  choice1: They're getting too smart. Harvest them.
+  choice2: For SCIENCE!
+  choice1Effects:
+  - key: food
+    value: 160
+  choice2Effects: []
+  baseWeight: 0
+  path1: {fileID: 11400000, guid: df0073074cac0304a80927e6a030d880, type: 2}
+  path2: {fileID: 11400000, guid: eb0dac16af0d08d418a07b183cf0707e, type: 2}

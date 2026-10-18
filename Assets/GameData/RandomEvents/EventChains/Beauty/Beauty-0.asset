@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555ab5d1a69b0b440ae385e9d937c0d7, type: 3}
+  m_Name: Beauty-0
+  m_EditorClassIdentifier: Assembly-CSharp::EventChain
+  title: True Beauty
+  art: {fileID: 0}
+  textDisplay: Perfection... many have spoke of it being unnatainable by man. Yet through potato, maybe it can be achieved. They've discovered the arts - painting, sculpting, even handdrawn animation. Should we encourage it?
+  choice1: They're just food for us. Destroy any sign of intelligence.
+  choice2: We'll wait and see how far they grow.
+  choice1Effects:
+  - key: food
+    value: 40
+  choice2Effects: []
+  baseWeight: 10
+  path1: {fileID: 11400000, guid: 1ae5a1e9a87e2de418dfd4f3ee26f043, type: 2}
+  path2: {fileID: 11400000, guid: ec3e45e8fd90fd64aba4c7a5c0e24e07, type: 2}

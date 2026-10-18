@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: DefinitionRegistry
   m_EditorClassIdentifier: Assembly-CSharp::DefinitionRegistry
   randomEvents:
-  - key: sample_event
-    value: {fileID: 11400000, guid: f08dfd57b1d442348b3c9c3e5f2307e0, type: 2}
+  - key: random
+    value: {fileID: 11400000, guid: 700bfde38cba3ca40bb3ab9ccab715bb, type: 2}
+  - key: beauty
+    value: {fileID: 11400000, guid: 51b448ae8b4d88942adf68cbca90bf6a, type: 2}
   plantTypes:
   - key: corn
     value: {fileID: 11400000, guid: 33a21140c2af47147a30c18b3c3653cd, type: 2}
