@@ -47,25 +47,27 @@ public class RandomEventsTracker : MonoBehaviour
 
     public RandomEvent PullRandomEvent()
     {
-        while (true)
-        {
-            List<int> eventWeights = eventPool.Values.ToList();
-            int sum = 0;
+      
+        List<int> eventWeights = eventPool.Values.ToList();
+        int sum = 0;
 
-            for (int j = 0; j < eventWeights.Count; j++)
+        for (int j = 0; j < eventWeights.Count; j++)
+        {
+            sum += eventWeights[j];
+        }
+        int instance = Random.Range(0, sum) + 1;
+        for (int i = 0; i < eventPool.Count; i++)
+        {
+            instance -= eventPool[eventPool.Keys.ToList()[i]];
+            if (instance <= 0)
             {
-                sum += eventWeights[j];
-            }
-            int instance = Random.Range(0, sum) + 1;
-            for (int i = 0; i < eventPool.Count; i++)
-            {
-                instance -= eventPool[eventPool.Keys.ToList()[i]];
-                if (instance <= 0)
-                {
-                    return eventPool.Keys.ToList()[i];
-                }
+                return eventPool.Keys.ToList()[i];
             }
         }
+        // If for some strange reason (which can only happen if something else somehow affects this) the weights don't subtract the sum to 0, return last element.
+        int len = eventWeights.Count - 1;
+        return eventPool.Keys.ToList()[len];
+        
     }
     public void ResolveEvent(RandomEvent randEvent, int choice)
     {
