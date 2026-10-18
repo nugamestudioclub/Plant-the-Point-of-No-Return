@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555ab5d1a69b0b440ae385e9d937c0d7, type: 3}
+  m_Name: EventChain
+  m_EditorClassIdentifier: Assembly-CSharp::EventChain
+  title: 
+  art: {fileID: 0}
+  textDisplay: 
+  choice1: 
+  choice2: 
+  choice1Effects: []
+  choice2Effects: []
+  baseWeight: 10
+  path1: {fileID: 0}
+  path2: {fileID: 0}
