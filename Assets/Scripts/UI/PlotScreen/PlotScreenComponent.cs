@@ -40,6 +40,8 @@ public class PlotScreenComponent : MonoBehaviour
         plantSelectionDropDown.onValueChanged.AddListener((value) => {
             UpdatePlantSelection(value);
         });
+
+        fieldImage.color = new Color(0, 0, 0, 0);
     }
 
     // Update is called once per frame
@@ -158,6 +160,7 @@ public class PlotScreenComponent : MonoBehaviour
         {
             Sprite image = GameManager.Instance.GameDefinitionRegistry.Registry.PlantTypes[selectedPlant].FieldIcon;
             fieldImage.sprite = image;
+            fieldImage.color = new Color(1, 1, 1, 1);
         }
     }
 }

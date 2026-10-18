@@ -11,10 +11,16 @@ Shader "Custom/VCRUIShader"
         _WobbleFrequency ("Wobble Frequency", Range(0,110)) = 40
         _WobbleSpeed ("Wobble Speed", Range(0,20)) = 1
         _TimeParam ("Time Override", Float) = 0
-        
+        _StencilComp ("Stencil Comparison", Float) = 8
+
+        _Stencil ("Stencil ID", Float) = 0
+        _StencilOp ("Stencil Operation", Float) = 0
+        _StencilWriteMask ("Stencil Write Mask", Float) = 255
+        _StencilReadMask ("Stencil Read Mask", Float) = 255
         
         _ColorMask ("Color Mask", Float) = 15
         [Toggle(UNITY_UI_ALPHACLIP)] _UseUIAlphaClip ("Use Alpha Clip", Float) = 0
+
     }
     
     SubShader
@@ -36,6 +42,16 @@ Shader "Custom/VCRUIShader"
         Blend SrcAlpha OneMinusSrcAlpha
         ColorMask [_ColorMask]
 
+        Stencil
+        {
+            Ref [_Stencil]
+            Comp [_StencilComp]
+            Pass [_StencilOp]
+            ReadMask [_StencilReadMask]
+            WriteMask [_StencilWriteMask]
+        }
+
+
         Pass
         {
             Name "Default"
@@ -47,7 +63,10 @@ Shader "Custom/VCRUIShader"
             #include "UnityCG.cginc"
             #include "UnityUI.cginc"
 
+
+
             #pragma shader_feature_local UNITY_UI_ALPHACLIP
+
 
             struct appdata
             {
@@ -62,12 +81,14 @@ Shader "Custom/VCRUIShader"
                 fixed4 color    : COLOR;
                 float2 uv       : TEXCOORD0;
                 float4 worldPosition : TEXCOORD1;
+                float4 mask : TEXCOORD2;
             };
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
             fixed4 _TextureSampleAdd;
             float4 _ClipRect;
+            float4 _UIMaskSoftnessX;
             
             float _ScanlineIntensity;
             float _NoiseIntensity;
@@ -84,6 +105,11 @@ Shader "Custom/VCRUIShader"
                 o.vertex = UnityObjectToClipPos(o.worldPosition);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 o.color = v.color;
+                o.mask = float4(
+                    v.vertex.xy,
+                    0,
+                    0
+                );
                 return o;
             }
 
@@ -142,9 +168,9 @@ Shader "Custom/VCRUIShader"
                 col *= i.color;
 
                 
-                #ifdef UNITY_UI_ALPHACLIP
-                clip (col.a - 0.001);
-                #endif
+               #ifdef UNITY_UI_CLIP_RECT
+                col.a *= UnityGet2DClipping(i.worldPosition.xy, _ClipRect);
+               #endif
 
                 return col;
             }
