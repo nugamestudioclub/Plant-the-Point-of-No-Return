@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
@@ -8,25 +7,30 @@ public class CameraManager : MonoBehaviour
     [Header("Target Resolution")]
     [SerializeField] private float targetWidth = 1920f;
     [SerializeField] private float targetHeight = 1080f;
-    
+
     [Space]
     [Header("Edge Pan Settings")]
-    [SerializeField, Range(0.05f, 0.5f)] private float edgeZone = 0.2f;  //the fraction of screen width on each side that triggers the panning
-    [SerializeField] private float maxShift = 1f;                        //max camera offset in world units
-    [SerializeField] private float smoothing = 10f;                      //higher value => snappier camera
+    [SerializeField, Range(0.05f, 0.5f)] private float edgeZone = 0.2f; // fraction of screen width on each side that triggers panning
+    [SerializeField] private float maxShift = 1f;                       // max camera offset in world units
+    [SerializeField] private float smoothing = 10f;                     // higher value => snappier camera
+
+    public float BaseOrthoSize { get; private set; }
 
     private Camera cam;
     private Vector2 mouseTracking;
+    private float baseLocalX;
+    private bool isTransitioning;
 
-    void Start()
+    void Awake()
     {
         cam = GetComponent<Camera>();
+        baseLocalX = transform.localPosition.x;
         ScaleCamera();
-       
     }
+
     private void Update()
     {
-        if (GameManager.GameState == GameManager.EGameState.GAME)
+        if (GameManager.GameState == GameManager.EGameState.GAME && !isTransitioning)
         {
             ShiftCamera();
         }
@@ -39,13 +43,11 @@ public class CameraManager : MonoBehaviour
         float baseSize = targetHeight / 2f / 100f;
 
         if (currentAspect < targetAspect)
-        {
             cam.orthographicSize = baseSize * (targetAspect / currentAspect);
-        }
         else
-        {
             cam.orthographicSize = baseSize;
-        }
+
+        BaseOrthoSize = cam.orthographicSize;
     }
 
     private void ShiftCamera()
@@ -55,34 +57,45 @@ public class CameraManager : MonoBehaviour
 
         float diff = 0f;
         if (mouseX < edgeZone)
-        {
             diff = -(edgeZone - mouseX);
-        }
         else if (mouseX > 1f - edgeZone)
-        {
             diff = mouseX - (1f - edgeZone);
-        }
         diff *= maxShift / edgeZone;
 
-        Vector3 targetPos = new Vector3(diff, cam.transform.position.y, cam.transform.position.z);
+        Vector3 local = transform.localPosition;
+        Vector3 targetPos = new Vector3(baseLocalX + diff, local.y, local.z);
         float t = 1f - Mathf.Exp(-smoothing * Time.deltaTime);
-        cam.transform.position = Vector3.Lerp(cam.transform.position, targetPos, t);
+        transform.localPosition = Vector3.Lerp(local, targetPos, t);
+    }
+
+    public void SetOrthoSize(float size)
+    {
+        cam.orthographicSize = size;
+    }
+
+    public float GetOrthoSize()
+    {
+        return cam.orthographicSize;
     }
 
     public void TransitionIn()
     {
-        Vector3 targetPos = cam.transform.position;
-        cam.transform.position = cam.transform.position + cam.orthographicSize * Vector3.up*2;
-        StartCoroutine(RunInTransition(targetPos));
+        Vector3 targetLocal = transform.localPosition;
+        transform.localPosition += cam.orthographicSize * 2f * Vector3.up;
+        StartCoroutine(RunInTransition(targetLocal));
     }
 
-    private IEnumerator RunInTransition(Vector3 targetPos)
+    private IEnumerator RunInTransition(Vector3 targetLocal)
     {
-        while(Vector3.Distance(cam.transform.position,targetPos)> 0.01)
+        isTransitioning = true;
+
+        while (Vector3.Distance(transform.localPosition, targetLocal) > 0.01f)
         {
-            cam.transform.position = Vector3.Lerp(cam.transform.position, targetPos, Time.deltaTime);
+            transform.localPosition = Vector3.Lerp(transform.localPosition, targetLocal, Time.deltaTime);
             yield return null;
         }
-        cam.transform.position = targetPos;
+
+        transform.localPosition = targetLocal;
+        isTransitioning = false;
     }
 }
