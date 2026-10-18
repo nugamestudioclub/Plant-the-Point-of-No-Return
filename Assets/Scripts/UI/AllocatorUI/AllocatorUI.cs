@@ -27,14 +27,6 @@ public class AllocatorUI : MonoBehaviour
         );
     }
 
-    private int GetAllocated()
-    {
-        return Mathf.FloorToInt(
-            GameState.Instance.GetResourceCount(
-                GameDefinitionRegistry.Instance.Registry.AllocatedPopulationResourceTagName
-            )
-        );
-    }
     private int GetAssignedElsewhere(int plotIndex)
     {
         int total = 0;
