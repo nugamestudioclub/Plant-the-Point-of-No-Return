@@ -16,16 +16,19 @@ public class RandomEventsTracker : MonoBehaviour
 		registry = GameDefinitionRegistry.Instance.Registry;
 	}
 
-	private void AddPool(string eventTag, string type)
+	public void AddPool(string eventTag)
     {
         EventPool instance = eventPoolRegistry[eventTag];
         for (int i = 0; i < instance.Events.Count; i++)
         {
-            eventPool[instance.Events[i]] = instance.Events[i].BaseWeight;
+            if (!eventPool.Keys.Contains(instance.Events[i]))
+            {
+                eventPool[instance.Events[i]] = instance.Events[i].BaseWeight;
+            }
         }
     }
 
-    private void RemovePool(string eventTag, string type)
+    public void RemovePool(string eventTag)
     {
         EventPool instance = eventPoolRegistry[eventTag];
         for (int i = 0; i < instance.Events.Count; i++)
@@ -37,7 +40,7 @@ public class RandomEventsTracker : MonoBehaviour
         }
     }
 
-    private void LoadEventsFromRegistry()
+    public void LoadEventsFromRegistry()
     {
         eventPoolRegistry = registry.RandomEvents;
     }

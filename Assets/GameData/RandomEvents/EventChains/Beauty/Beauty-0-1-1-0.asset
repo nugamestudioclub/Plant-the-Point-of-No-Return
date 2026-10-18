@@ -10,15 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 555ab5d1a69b0b440ae385e9d937c0d7, type: 3}
-  m_Name: EventChain
+  m_Name: Beauty-0-1-1-0
   m_EditorClassIdentifier: Assembly-CSharp::EventChain
-  title: 
+  title: From Science to Revolution
   art: {fileID: 0}
-  textDisplay: 
-  choice1: 
-  choice2: 
-  choice1Effects: []
-  choice2Effects: []
-  baseWeight: 10
+  textDisplay: 'Turns out, the potatoes developed more than just new elements when they gained intelligence, and sent a bomb to your doorstep. It explodes before you can react. '
+  choice1: Oh...
+  choice2: Oh...
+  choice1Effects:
+  - key: humans
+    value: -50
+  choice2Effects:
+  - key: humans
+    value: -50
+  baseWeight: 0
   path1: {fileID: 0}
   path2: {fileID: 0}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccdf1a5296b2834cac3b8ab0a7b8ff7, type: 3}
+  m_Name: Trade
+  m_EditorClassIdentifier: Assembly-CSharp::RandomEvent
+  title: Capitalism
+  art: {fileID: 0}
+  textDisplay: 'A somewhat large group comes to your colony saying they need some food. They say they''re willing to work if it means they get fed. '
+  choice1: Sure, we'll have you on.
+  choice2: We're full.
+  choice1Effects:
+  - key: humans
+    value: 10
+  - key: food
+    value: -10
+  choice2Effects: []
+  baseWeight: 10

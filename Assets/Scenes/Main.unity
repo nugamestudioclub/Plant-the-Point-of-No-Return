@@ -1671,7 +1671,7 @@ MonoBehaviour:
   screensObjects: []
   plotButtons: []
   plotUpgradeButtons: []
-  resourceTexts: {fileID: 0}
+  resourceTexts: {fileID: 728530710}
   plotLevelTexts: []
   plotScreenComponents: []
 --- !u!114 &793207377
@@ -1700,10 +1700,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada2f14b30cb9a548ac1b24fa4a5aaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameState
-  isTickerRunning: 0
+  isTickerRunning: 1
   tickDuration: 5
-  minTimeRandEvents: 30
-  maxTimeRandEvents: 50
+  minTimeRandEvents: 10
+  maxTimeRandEvents: 10
   onTick:
     m_PersistentCalls:
       m_Calls: []

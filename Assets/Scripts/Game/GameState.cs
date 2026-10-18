@@ -40,8 +40,8 @@ public class GameState : MonoBehaviour
     /// <summary>
     /// Number of real world seconds per random event fire.
     /// </summary>
-    public float minTimeRandEvents = 30;
-    public float maxTimeRandEvents = 50;
+    public float minTimeRandEvents = 10;
+    public float maxTimeRandEvents = 10;
     private float randEventFireTime = 0;
     private float timeElapsedRandEvent = 0;
 
@@ -136,6 +136,9 @@ public class GameState : MonoBehaviour
         //set eventvisuals and canvas to be disabled and assigned properly
         eventCanvas.SetActive(false);
         eventVisual = eventCanvas.GetComponent<EventVisual>();
+        randEventTracker.LoadEventsFromRegistry();
+        randEventTracker.AddPool("beauty");
+        randEventTracker.AddPool("random");
     }
 
     
@@ -177,6 +180,7 @@ public class GameState : MonoBehaviour
     private void IsRandomTime()
     {
         timeElapsedRandEvent += tickDuration;
+        print(timeElapsedRandEvent);
         
         if (timeElapsedRandEvent >= randEventFireTime)
         {

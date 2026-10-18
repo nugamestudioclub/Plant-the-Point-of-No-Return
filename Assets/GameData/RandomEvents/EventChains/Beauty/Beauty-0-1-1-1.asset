@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555ab5d1a69b0b440ae385e9d937c0d7, type: 3}
+  m_Name: Beauty-0-1-1-1
+  m_EditorClassIdentifier: Assembly-CSharp::EventChain
+  title: A Starward Journey
+  art: {fileID: 0}
+  textDisplay: With the launch of the Potato 11, the first potato landed on the moon. With the Potato 12, 100 more potatoes landed on the moon, and officially took it over to declare the new nation Potatopia. They've grown beyond our capabilities now. But at least that rocket fuel makes good fertilizer!
+  choice1: Oh...
+  choice2: Oh...
+  choice1Effects:
+  - key: food
+    value: -101
+  - key: fertilizer
+    value: 30
+  choice2Effects:
+  - key: food
+    value: -101
+  - key: fertilizer
+    value: 30
+  baseWeight: 0
+  path1: {fileID: 0}
+  path2: {fileID: 0}
