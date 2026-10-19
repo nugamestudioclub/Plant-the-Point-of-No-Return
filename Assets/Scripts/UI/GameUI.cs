@@ -77,7 +77,7 @@ public class GameUI : MonoBehaviour
         foreach (string resource in resources)
         {
             float count = Mathf.RoundToInt(GameState.Instance.GetResourceCount(resource));
-            displayText += $"<color=black><b>{resource}:";
+            displayText += $"<color=white><b>{resource}:";
             if (count < 21) {
                 displayText += "<color=red>" + count + "</color>\n";
             } else if (count < 30) {

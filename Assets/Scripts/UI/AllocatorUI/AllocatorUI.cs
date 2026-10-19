@@ -76,8 +76,7 @@ public class AllocatorUI : MonoBehaviour
         allocationSlider.minValue = 0;
         allocationSlider.onValueChanged.AddListener(OnAllocationChange);
 
-        RefreshSelectors();
-
+        /*RefreshSelectors();
         
         for (int i = 0; i < selectors.Length; i++)
         {
@@ -86,7 +85,7 @@ public class AllocatorUI : MonoBehaviour
                 PointPointerAt(selectors[i]);
                 break;
             }
-        }
+        }*/
 
         if (selected < 0)
             RefreshSlider();
@@ -97,7 +96,7 @@ public class AllocatorUI : MonoBehaviour
         var plots = GameState.Instance.GamePlots;
 
         countEnabled = 0;
-
+       
         int count = Mathf.Min(selectors.Length, plots.Length);
 
         for (int i = 0; i < count; i++)
@@ -199,9 +198,13 @@ public class AllocatorUI : MonoBehaviour
 
     private void Update()
     {
-        RefreshSelectors();
+        if(GameManager.GameState == GameManager.EGameState.GAME)
+        {
+            RefreshSelectors();
 
-        if (selected >= 0)
-            RefreshSlider();
+            if (selected >= 0)
+                RefreshSlider();
+        }
+       
     }
 }
