@@ -9,6 +9,7 @@ public class GameState : MonoBehaviour
     
     
 
+{   
     private DefinitionRegistry registry;
     protected GameConfig config;
     private static GameState instance;
@@ -19,6 +20,7 @@ public class GameState : MonoBehaviour
     /// </summary>
     private Plot[] plots;
     public Plot[] GamePlots { get { return plots; }  }
+
     /// <summary>
     /// The Number of each type of resource currently in the supply
     /// </summary>
@@ -123,7 +125,6 @@ public class GameState : MonoBehaviour
         
 
     }
-
     
     private void Ticker()
     {
@@ -138,7 +139,6 @@ public class GameState : MonoBehaviour
             }
         }
     }
-
 
     /// <summary>
     /// Whenever we hit a tick we run a produce operation on all plots.
@@ -246,6 +246,7 @@ public class GameState : MonoBehaviour
         }
         return config.plotUpgradeCosts[level].resourceRequirements;
     }
+
     public int GetUpgradeCapcityIncrease(int level)
     {
         level = level - 2;
@@ -256,14 +257,17 @@ public class GameState : MonoBehaviour
         }
         return config.plotUpgradeCosts[level].newCapacityIncrease;
     }
+
     public Dictionary<string, int> GetExpansionRequirements(int alreadyExisitingCount)
     {
         return config.plotExpansionCosts[alreadyExisitingCount].resourceRequirements;
     }
+
     public int GetExpansionCapacityIncrease(int alreaydExistingCount)
     {
         return config.plotExpansionCosts[alreaydExistingCount].newCapacityIncrease;
     }
+
     public int GetNumberOfActivePlots()
     {
         int count = 0;
@@ -291,10 +295,8 @@ public class GameState : MonoBehaviour
         }
     }
     
-    
     public class Plot
     {
-
         public int level = 0;
         // inputs per day
         public Dictionary<string, float> inputs;
@@ -304,7 +306,6 @@ public class GameState : MonoBehaviour
         public string plant;
         public int capacityLimit;
         public int assigned;
-        
 
         public Plot()
         {
