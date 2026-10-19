@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 98b45982fcc986241b2b0ec7b795cac9
+guid: 055510f61eb5f2742af616fd75fa5c8f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3352540126919150417
-    second: JoL26ResourceMonitor_Front_Iso_0
+      213: -9153558392185061637
+    second: MainBGAssets_EndButtonIsolated_0
   - first:
-      213: 4422711255520562977
-    second: JoL26ResourceMonitor_Front_Iso_1
+      213: 3905260447181793970
+    second: MainBGAssets_EndButtonIsolated_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -101,17 +101,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JoL26ResourceMonitor_Front_Iso_0
+      name: MainBGAssets_EndButtonIsolated_0
       rect:
         serializedVersion: 2
-        x: 115
-        y: 31
-        width: 542
-        height: 1358
+        x: 118
+        y: 240
+        width: 675
+        height: 467
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa4bdbf54826971d0800000000000000
-      internalID: -3352540126919150417
+      spriteID: bfe7303d32708f080800000000000000
+      internalID: -9153558392185061637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JoL26ResourceMonitor_Front_Iso_1
+      name: MainBGAssets_EndButtonIsolated_1
       rect:
         serializedVersion: 2
-        x: 176
-        y: 26
-        width: 93
-        height: 6
+        x: 550
+        y: 218
+        width: 106
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12fcc615470a06d30800000000000000
-      internalID: 4422711255520562977
+      spriteID: 2ba67ad8fa5423630800000000000000
+      internalID: 3905260447181793970
       vertices: []
       indices: 
       edges: []
@@ -162,8 +188,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      JoL26ResourceMonitor_Front_Iso_0: -3352540126919150417
-      JoL26ResourceMonitor_Front_Iso_1: 4422711255520562977
+      MainBGAssets_EndButtonIsolated_0: -9153558392185061637
+      MainBGAssets_EndButtonIsolated_1: 3905260447181793970
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
