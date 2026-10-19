@@ -7,9 +7,7 @@ using UnityEngine.Events;
 public class GameState : MonoBehaviour
 {
     
-    
-
-{   
+  
     private DefinitionRegistry registry;
     protected GameConfig config;
     private static GameState instance;
