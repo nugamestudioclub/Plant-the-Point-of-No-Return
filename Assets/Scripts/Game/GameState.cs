@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 using UnityEngine.Events;
 
 public class GameState : MonoBehaviour
@@ -38,8 +39,23 @@ public class GameState : MonoBehaviour
     /// </summary>
     public float tickDuration = 5;
 
+    /// <summary>
+    /// Number of real world seconds per random event fire.
+    /// </summary>
+    public float minTimeRandEvents = 10;
+    public float maxTimeRandEvents = 10;
+    private float randEventFireTime = 0;
+    private float timeElapsedRandEvent = 0;
+
     public UnityEvent onTick;
 
+    //i kinda just put it here and click and dragged in the file but there's prob a better way to do this
+    [SerializeField]
+    private RandomEventsTracker randEventTracker;
+    [SerializeField]
+    private GameObject eventCanvas;
+    private EventVisual eventVisual;
+    private RandomEvent currentEvent = null;
     private int durationWithoutFood = 0;
 
 
@@ -59,6 +75,7 @@ public class GameState : MonoBehaviour
     {
         registry = GameDefinitionRegistry.Instance.Registry;
         config = GameDefinitionRegistry.Instance.GameConfig;
+
     }
 
     // Update is called once per frame
@@ -120,8 +137,16 @@ public class GameState : MonoBehaviour
         resourceSupplyCounts[registry.AllocatedPopulationResourceTagName] = 0;
         resourceSupplyCounts[registry.FoodResourceTagName] = config.startingFood;
         resourceSupplyCounts[registry.FertilizeResouceTagName] = config.startingFertilizer;
-        
 
+        //set a time for the first random event to fire
+        randEventFireTime = Random.Range(minTimeRandEvents, maxTimeRandEvents);
+
+        //set eventvisuals and canvas to be disabled and assigned properly
+        eventCanvas.SetActive(false);
+        eventVisual = eventCanvas.GetComponent<EventVisual>();
+        randEventTracker.LoadEventsFromRegistry();
+        randEventTracker.AddPool("beauty");
+        randEventTracker.AddPool("random");
     }
     
     private void Ticker()
@@ -160,6 +185,38 @@ public class GameState : MonoBehaviour
             fertCreator.Produce();
         }
         
+        IsRandomTime();
+    }
+
+    private void IsRandomTime()
+    {
+        timeElapsedRandEvent += tickDuration;
+        print(timeElapsedRandEvent);
+        
+        if (timeElapsedRandEvent >= randEventFireTime)
+        {
+            timeElapsedRandEvent = 0;
+            randEventFireTime = Random.Range(minTimeRandEvents, maxTimeRandEvents);
+            RandomEvent randEvent = randEventTracker.PullRandomEvent();
+            Event(randEvent);
+        }
+    }
+
+    private void Event(RandomEvent randomEvent)
+    {
+        eventVisual.title.text = randomEvent.Title;
+        eventVisual.textDisplay.text = randomEvent.TextDisplay;
+        eventVisual.choice1.text = randomEvent.Choice1;
+        eventVisual.choice2.text = randomEvent.Choice2;
+        eventCanvas.SetActive(true);
+        currentEvent = randomEvent;
+    }
+
+    public void EventOptionPicked(int choice)
+    {
+        randEventTracker.ResolveEvent(currentEvent, choice);
+        eventCanvas.SetActive(false);
+        currentEvent = null;
     }
 
     private void GetPassiveResources()

@@ -5,8 +5,8 @@ using UnityEngine;
 public class DefinitionRegistry : ScriptableObject
 {
     [SerializeField]
-    private Dictionary<string, RandomEvent> randomEvents;
-    public Dictionary<string, RandomEvent> RandomEvents { get { return randomEvents; } }
+    private Dictionary<string, EventPool> randomEvents;
+    public Dictionary<string, EventPool> RandomEvents { get { return randomEvents; } }
 
     [SerializeField]
     private Dictionary<string, PlantType> plantTypes;

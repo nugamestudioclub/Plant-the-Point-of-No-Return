@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555ab5d1a69b0b440ae385e9d937c0d7, type: 3}
+  m_Name: Beauty-0-1
+  m_EditorClassIdentifier: Assembly-CSharp::EventChain
+  title: Built in a Day
+  art: {fileID: 0}
+  textDisplay: To accomodate their new pieces of art, potato infrastructure was built. Drive-in movie theaters, art galleries, museums, and maybe a house or two sprung up within hours. All this has made their population grow further, though it seems like they still have room to grow...
+  choice1: Aren't they just plants to be eaten?
+  choice2: This could be the birth of something great...
+  choice1Effects:
+  - key: food
+    value: 80
+  choice2Effects: []
+  baseWeight: 0
+  path1: {fileID: 11400000, guid: 1ae5a1e9a87e2de418dfd4f3ee26f043, type: 2}
+  path2: {fileID: 11400000, guid: 08ecc426ac0b7394f84b6c02ddff119e, type: 2}
