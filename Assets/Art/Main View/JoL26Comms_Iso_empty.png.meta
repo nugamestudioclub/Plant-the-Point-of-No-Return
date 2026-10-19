@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c1bffb8081f362144ae5b05eaa9226ed
+guid: c4a16888f9aa92f4f9bc8021234106c1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3134237347898075724
-    second: ButtonFront_0
+      213: 6863885710152951720
+    second: JoL26Comms_Iso_empty_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -98,17 +98,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ButtonFront_0
+      name: JoL26Comms_Iso_empty_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 156
-        height: 98
+        x: 0
+        y: 0
+        width: 491
+        height: 341
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b5d5ccecb3f084d0800000000000000
-      internalID: -3134237347898075724
+      spriteID: 8a7eb8cdfab614f50800000000000000
+      internalID: 6863885710152951720
       vertices: []
       indices: 
       edges: []
@@ -137,7 +163,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ButtonFront_0: -3134237347898075724
+      JoL26Comms_Iso_empty_0: 6863885710152951720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
