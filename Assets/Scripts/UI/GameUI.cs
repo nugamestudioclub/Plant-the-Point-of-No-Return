@@ -148,9 +148,4 @@ public class GameUI : MonoBehaviour
         plotScreenComponents[index].LevelUpRequested(index, requirements, availableResources.ToArray());
     }
    
-    
-    public struct IndexI
-    {
-        public int index;
-    }
 }
