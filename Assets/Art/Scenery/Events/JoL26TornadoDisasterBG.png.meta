@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 659e18bb68f31294dbf6d5d6d19bbc9d
+guid: 5d2d202f0c61b02458ede559a9adbf26
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9108271832471260235
-    second: JoLOpener3NewWorld_0
+      213: 5044175378166139183
+    second: JoL26TornadoDisasterBG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -98,11 +98,37 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JoLOpener3NewWorld_0
+      name: JoL26TornadoDisasterBG_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b3badba60be89180800000000000000
-      internalID: -9108271832471260235
+      spriteID: f294d5008c2800640800000000000000
+      internalID: 5044175378166139183
       vertices: []
       indices: 
       edges: []
@@ -127,7 +153,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -137,7 +163,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      JoLOpener3NewWorld_0: -9108271832471260235
+      JoL26TornadoDisasterBG_0: 5044175378166139183
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

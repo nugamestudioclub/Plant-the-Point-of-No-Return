@@ -56,7 +56,6 @@ public class GameState : MonoBehaviour
     private RandomEventsTracker randEventTracker;
     [SerializeField]
     private GameObject eventCanvas;
-    private EventVisual eventVisual;
     private RandomEvent currentEvent = null;
     private int durationWithoutFood = 0;
 
@@ -66,7 +65,8 @@ public class GameState : MonoBehaviour
     private FertilizerCreator fertCreator;
     public enum EGameSubState { FIRST_PHASE, SECOND_PHASE }
     public EGameSubState SubState { get; private set; } = EGameSubState.FIRST_PHASE;
-
+    private int pauseSemaphore = 0;
+    public int IsLocked { get { return pauseSemaphore; } }
 
     private void Awake()
     {
@@ -104,13 +104,30 @@ public class GameState : MonoBehaviour
 
     public void TogglePause()
     {
+        if (pauseSemaphore>0)
+        {
+            return;
+        }
         this.isTickerRunning = !this.isTickerRunning;
         print($"[Game State] Ticker Paused: {!isTickerRunning}");
     }
     public void Pause()
     {
+        if (pauseSemaphore>0)
+        {
+            return;
+        }
         this.isTickerRunning = false;
         print($"[Game State] Ticker Paused: {!isTickerRunning}");
+    }
+
+    public void LockPause()
+    {
+        this.pauseSemaphore++;
+    }
+    public void UnlockPause()
+    {
+        this.pauseSemaphore--;
     }
 
     /// <summary>
@@ -145,7 +162,7 @@ public class GameState : MonoBehaviour
 
         //set eventvisuals and canvas to be disabled and assigned properly
         eventCanvas.SetActive(false);
-        eventVisual = eventCanvas.GetComponent<EventVisual>();
+
         randEventTracker.LoadEventsFromRegistry();
         randEventTracker.AddPool("beauty");
         randEventTracker.AddPool("random");
@@ -203,17 +220,15 @@ public class GameState : MonoBehaviour
             timeElapsedRandEvent = 0;
             randEventFireTime = Random.Range(minTimeRandEvents, maxTimeRandEvents);
             RandomEvent randEvent = randEventTracker.PullRandomEvent();
+            print($"PULL RANDOM EVENT {randEvent.Title}");
             Event(randEvent);
         }
     }
 
     private void Event(RandomEvent randomEvent)
     {
-        eventVisual.title.text = randomEvent.Title;
-        eventVisual.textDisplay.text = randomEvent.TextDisplay;
-        eventVisual.choice1.text = randomEvent.Choice1;
-        eventVisual.choice2.text = randomEvent.Choice2;
-        eventCanvas.SetActive(true);
+        EventMonitorController.Instance.SubmitEvent(randomEvent);
+        
         currentEvent = randomEvent;
     }
 

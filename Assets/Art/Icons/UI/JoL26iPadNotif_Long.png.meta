@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 58781f0db6b7e344bbcb9e325e2fdcb3
+guid: 1d27ab6777e32744c8a67f1a57583a8f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2659946080364332183
-    second: JoL26Opener1HappyDay_0
+      213: -8066647388194477885
+    second: JoL26iPadNotif_Long_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -98,17 +98,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JoL26Opener1HappyDay_0
+      name: JoL26iPadNotif_Long_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3480
-        height: 2160
+        x: 110
+        y: 10
+        width: 5840
+        height: 823
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 96bf0360229f51bd0800000000000000
-      internalID: -2659946080364332183
+      spriteID: 3c8e55a70f28d0090800000000000000
+      internalID: -8066647388194477885
       vertices: []
       indices: 
       edges: []
@@ -127,7 +153,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -137,7 +163,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      JoL26Opener1HappyDay_0: -2659946080364332183
+      JoL26iPadNotif_Long_0: -8066647388194477885
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

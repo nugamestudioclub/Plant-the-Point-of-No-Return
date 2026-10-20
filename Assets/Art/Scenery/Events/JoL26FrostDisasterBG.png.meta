@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 77603af6196af8948bb2bcfcf5ca14aa
+guid: 7e3abe2ce1480124987e3b34427f6d12
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8210812903307435353
-    second: JoL26Opener2NightGlowEyes_0
+      213: -2316363744810171048
+    second: JoL26FrostDisasterBG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -98,11 +98,37 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JoL26Opener2NightGlowEyes_0
+      name: JoL26FrostDisasterBG_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a2aa2dca255d0e80800000000000000
-      internalID: -8210812903307435353
+      spriteID: 8550ffb527f9adfd0800000000000000
+      internalID: -2316363744810171048
       vertices: []
       indices: 
       edges: []
@@ -127,7 +153,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -137,7 +163,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      JoL26Opener2NightGlowEyes_0: -8210812903307435353
+      JoL26FrostDisasterBG_0: -2316363744810171048
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

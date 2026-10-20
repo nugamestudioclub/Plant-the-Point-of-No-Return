@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3e9e431326dc0524ba4b213a8a49e51a
+guid: 7ce8047851bd6cb46b25b51809acafff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5044175378166139183
-    second: JoL26TornadoDisasterBG_0
+      213: -588706087152225891
+    second: JoL26Opener2NightNoEyes_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -98,11 +98,37 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JoL26TornadoDisasterBG_0
+      name: JoL26Opener2NightNoEyes_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f294d5008c2800640800000000000000
-      internalID: 5044175378166139183
+      spriteID: d917e2eceee74d7f0800000000000000
+      internalID: -588706087152225891
       vertices: []
       indices: 
       edges: []
@@ -137,7 +163,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      JoL26TornadoDisasterBG_0: 5044175378166139183
+      JoL26Opener2NightNoEyes_0: -588706087152225891
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

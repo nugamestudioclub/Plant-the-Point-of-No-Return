@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InteractableZoom : MonoBehaviour
 {
     [SerializeField] private CameraOrthographicZoom cameraZoomController;
     [SerializeField] private Transform zoomOffset;
+    [SerializeField] private float overrideVal = -1;
+
+    [SerializeField] private UnityEvent onSelected;
 
     public class Comment : MonoBehaviour
     {
@@ -18,6 +22,9 @@ public class InteractableZoom : MonoBehaviour
 
     void OnMouseDown()
     {
-        cameraZoomController.OnZoomRequested(zoomOffset.position);
+        cameraZoomController.OnZoomRequested(zoomOffset.position,overrideVal);
+        
+        onSelected.Invoke();
+        
     }
 }

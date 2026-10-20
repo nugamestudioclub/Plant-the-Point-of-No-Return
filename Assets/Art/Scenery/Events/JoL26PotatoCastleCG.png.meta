@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7ce8047851bd6cb46b25b51809acafff
+guid: b7de3a40ab9865442af7e50aa31d43d9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -588706087152225891
-    second: JoL26Opener2NightNoEyes_0
+      213: -99911068698908172
+    second: JoL26PotatoCastleCG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -98,11 +98,37 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JoL26Opener2NightNoEyes_0
+      name: JoL26PotatoCastleCG_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d917e2eceee74d7f0800000000000000
-      internalID: -588706087152225891
+      spriteID: 4f96211996b0d9ef0800000000000000
+      internalID: -99911068698908172
       vertices: []
       indices: 
       edges: []
@@ -127,7 +153,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -137,7 +163,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      JoL26Opener2NightNoEyes_0: -588706087152225891
+      JoL26PotatoCastleCG_0: -99911068698908172
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

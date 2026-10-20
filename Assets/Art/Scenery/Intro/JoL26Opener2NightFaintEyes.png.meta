@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3b1aed5dbac3ace4ba57e4d951499c0d
+guid: a2af02469a1178643848ba046645189b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8286124705039761576
-    second: JoL26Opener2NightEyes_0
+      213: 5998646990701259740
+    second: JoL26Opener2NightFaintEyes_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -98,11 +98,37 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JoL26Opener2NightEyes_0
+      name: JoL26Opener2NightFaintEyes_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a0cb78748a3ef270800000000000000
-      internalID: 8286124705039761576
+      spriteID: cdbe6b5e7a97f3350800000000000000
+      internalID: 5998646990701259740
       vertices: []
       indices: 
       edges: []
@@ -137,7 +163,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      JoL26Opener2NightEyes_0: 8286124705039761576
+      JoL26Opener2NightFaintEyes_0: 5998646990701259740
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

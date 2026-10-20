@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Frost
   m_EditorClassIdentifier: Assembly-CSharp::RandomEvent
   title: Frost
-  art: {fileID: 0}
+  art: {fileID: 5044175378166139183, guid: 3e9e431326dc0524ba4b213a8a49e51a, type: 3}
   textDisplay: The frost has descended accross the land. Plants are freezing!
-  choice1: 
-  choice2: 
+  choice1: Oh well
+  choice2: Crap
+  choice1Effects: []
+  choice2Effects: []
+  baseWeight: 10
