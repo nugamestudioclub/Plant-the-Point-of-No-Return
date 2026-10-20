@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
+using System.Runtime.CompilerServices;
 
 public class GameState : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class GameState : MonoBehaviour
     /// The Number of each type of resource currently in the supply
     /// </summary>
     private Dictionary<string, float> resourceSupplyCounts;
+    private Dictionary<string, float> prevResourceSupplyDeltas;
     /// <summary>
     /// List of relevant plantTags loaded out of registry during entry into Early Game State.
     /// </summary>
@@ -147,6 +149,8 @@ public class GameState : MonoBehaviour
         randEventTracker.LoadEventsFromRegistry();
         randEventTracker.AddPool("beauty");
         randEventTracker.AddPool("random");
+
+        prevResourceSupplyDeltas = new Dictionary<string, float>(resourceSupplyCounts);
     }
     
     private void Ticker()
@@ -168,6 +172,7 @@ public class GameState : MonoBehaviour
     /// </summary>
     private void OnTick()
     {
+        prevResourceSupplyDeltas = new Dictionary<string, float>(resourceSupplyCounts);
         // Passive Income
         GetPassiveResources();
 
@@ -275,6 +280,11 @@ public class GameState : MonoBehaviour
     public float GetResourceCount(string resource)
     {
         return this.resourceSupplyCounts[resource];
+    }
+
+    public float GetResourceDeltaCount(string resource)
+    {
+        return GetResourceCount(resource) - prevResourceSupplyDeltas[resource];
     }
     
     public void Spend(string resource, float count)

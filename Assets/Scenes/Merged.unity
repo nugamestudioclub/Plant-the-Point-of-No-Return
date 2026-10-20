@@ -453,7 +453,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <color=white><b>Test</b></color>
+  m_text: '<color=red><size=25><b>Paused:</size></b> <size=15><voffset=0.1em>Hit [Space] to Unpause</voffset></color></size>
+
+    <color=white><b>Test</b></color>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 31c8bd0b2c9bc554b9623468c5893593, type: 2}
   m_sharedMaterial: {fileID: -3711380368882044814, guid: 31c8bd0b2c9bc554b9623468c5893593, type: 2}
@@ -462,8 +464,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278212362
-  m_fontColor: {r: 0.03826834, g: 0.33962262, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
