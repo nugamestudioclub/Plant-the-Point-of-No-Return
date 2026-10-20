@@ -1,0 +1,78 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class CameraOrthographicZoom : MonoBehaviour
+{
+    [SerializeField] private CameraManager cameraManager;
+    [SerializeField] private float cameraZoomSpeed = 5f;
+    [SerializeField] private float zoomedOrthoSize = 3f;   // size used when zoomed in
+
+    private Vector3 startingPosition;
+    private Vector3 zoomTarget;
+    private float targetOrthoSize;
+    private bool zoomRequested;
+
+    void Awake()
+    {
+        startingPosition = transform.position;
+        zoomTarget = startingPosition;
+        targetOrthoSize = cameraManager.BaseOrthoSize;
+    }
+
+    void Update()
+    {
+        if (Mouse.current.rightButton.wasPressedThisFrame)
+        {
+            ResetZoom();
+        }
+    }
+
+    void LateUpdate()
+    {
+        if (zoomRequested) ZoomCameraToTarget();
+    }
+
+    public void OnZoomRequested(Vector3 targetWorldPosition)
+    {
+        cameraManager.IsZoomed = true;
+
+        Transform camTransform = cameraManager.transform;
+        Vector3 toTarget = targetWorldPosition - transform.position;
+        float distanceAlongLookVector = Vector3.Dot(toTarget, camTransform.forward);
+
+        Vector3 lookAtPointOnAxis = transform.position + (camTransform.forward * distanceAlongLookVector);
+        Vector3 offset = transform.position - lookAtPointOnAxis;
+
+        zoomTarget = targetWorldPosition + offset;
+        targetOrthoSize = zoomedOrthoSize;
+        zoomRequested = true;
+    }
+
+    public void ResetZoom()
+    {
+        cameraManager.IsZoomed = false;
+        zoomTarget = startingPosition;
+        targetOrthoSize = cameraManager.BaseOrthoSize;
+        zoomRequested = true;
+    }
+
+    private void ZoomCameraToTarget()
+    {
+        float t = 1f - Mathf.Exp(-cameraZoomSpeed * Time.deltaTime);
+
+        transform.position = Vector3.Lerp(transform.position, zoomTarget, t);
+
+        float newSize = Mathf.Lerp(cameraManager.GetOrthoSize(), targetOrthoSize, t);
+        cameraManager.SetOrthoSize(newSize);
+
+        bool positionDone = Vector3.Distance(transform.position, zoomTarget) < 0.01f;
+        bool sizeDone = Mathf.Abs(newSize - targetOrthoSize) < 0.01f;
+
+        if (positionDone && sizeDone)
+        {
+            transform.position = zoomTarget;
+            cameraManager.SetOrthoSize(targetOrthoSize);
+            zoomRequested = false;
+        }
+    }
+}
