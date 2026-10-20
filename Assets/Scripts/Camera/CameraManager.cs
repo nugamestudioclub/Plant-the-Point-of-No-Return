@@ -31,7 +31,7 @@ public class CameraManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.GameState == GameManager.EGameState.GAME && !isTransitioning && !IsZoomed)
+        if (GameManager.GameState == GameManager.EGameState.GAME  && !IsZoomed)
         {
             ShiftCamera();
         }
