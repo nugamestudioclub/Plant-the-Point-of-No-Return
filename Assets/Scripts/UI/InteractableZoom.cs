@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InteractableZoom : MonoBehaviour
 {
-    [SerializeField] private CameraZoom cameraZoomController;
+    [SerializeField] private CameraOrthographicZoom cameraZoomController;
     [SerializeField] private Transform zoomOffset;
 
     public class Comment : MonoBehaviour

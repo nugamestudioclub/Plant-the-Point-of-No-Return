@@ -10,11 +10,12 @@ public class CameraManager : MonoBehaviour
 
     [Space]
     [Header("Edge Pan Settings")]
-    [SerializeField, Range(0.05f, 0.5f)] private float edgeZone = 0.2f; // fraction of screen width on each side that triggers panning
-    [SerializeField] private float maxShift = 1f;                       // max camera offset in world units
-    [SerializeField] private float smoothing = 10f;                     // higher value => snappier camera
+    [SerializeField, Range(0.05f, 0.5f)] private float edgeZone = 0.2f; 
+    [SerializeField] private float maxShift = 1f;                       
+    [SerializeField] private float smoothing = 10f;                     
 
     public float BaseOrthoSize { get; private set; }
+    public bool IsZoomed { get; set; } = false;
 
     private Camera cam;
     private Vector2 mouseTracking;
@@ -30,7 +31,7 @@ public class CameraManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.GameState == GameManager.EGameState.GAME && !isTransitioning)
+        if (GameManager.GameState == GameManager.EGameState.GAME  && !IsZoomed)
         {
             ShiftCamera();
         }

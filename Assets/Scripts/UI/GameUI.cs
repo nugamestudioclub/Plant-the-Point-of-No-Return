@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
+    
     [SerializeField]
     private Canvas screensCanvas;
 
@@ -74,19 +75,44 @@ public class GameUI : MonoBehaviour
     {
         string displayText = "";
         string[] resources = GameState.Instance.GetResources();
+        if (GameState.Instance.isTickerRunning)
+        {
+            displayText += "<color=green><size=25><b>Running...</size></b><br><br>";
+        }
+        else
+        {
+            displayText += "<color=red><size=25><b>Paused:</size></b> <size=15><voffset=0.1em>Hit [Space] to Unpause</voffset></color></size><br><br>";
+        }
+        
         foreach (string resource in resources)
         {
+
             float count = Mathf.RoundToInt(GameState.Instance.GetResourceCount(resource));
             displayText += $"<color=white><b>{resource}:";
             if (count < 21) {
-                displayText += "<color=red>" + count + "</color>\n";
+                displayText += "<color=red>" + count + "</color>";
             } else if (count < 30) {
-                displayText += "<color=#B78900>" + count + "</color>\n";
+                displayText += "<color=#B78900>" + count + "</color>";
             }
             else
             {
-                displayText += "<color=#0A5700>" + count + "</color>\n";
+                displayText += "<color=green>" + count + "</color>";
             }
+            displayText += " (";
+            float deltas = (float)Math.Round(GameState.Instance.GetResourceDeltaCount(resource), 2);
+            if (deltas > 0)
+            {
+                displayText += "<color=green>+" + deltas.ToString() + "</color>";
+            }
+            else if (deltas == 0)
+            {
+                displayText += "<color=white>" + deltas.ToString() + "</color>";
+            }
+            else
+            {
+                displayText += "<color=red>" + deltas.ToString() + "</color>";
+            }
+            displayText += ")\n";
         }
         resourceTexts.text = displayText;
     }
@@ -148,9 +174,4 @@ public class GameUI : MonoBehaviour
         plotScreenComponents[index].LevelUpRequested(index, requirements, availableResources.ToArray());
     }
    
-    
-    public struct IndexI
-    {
-        public int index;
-    }
 }
