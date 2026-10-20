@@ -1,0 +1,3499 @@
+fileFormatVersion: 2
+guid: f66ff356f9715a047b7d6bbdbe6fb156
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4518062871676867173
+    second: MenuMask_0
+  - first:
+      213: 5715647231803561576
+    second: MenuMask_1
+  - first:
+      213: -8230396002315102194
+    second: MenuMask_2
+  - first:
+      213: 5154471656153994381
+    second: MenuMask_3
+  - first:
+      213: -1523172891880609503
+    second: MenuMask_4
+  - first:
+      213: -1551947481911085199
+    second: MenuMask_5
+  - first:
+      213: 7368782873657459497
+    second: MenuMask_6
+  - first:
+      213: 6726453123191232377
+    second: MenuMask_7
+  - first:
+      213: 330186272696372402
+    second: MenuMask_8
+  - first:
+      213: -415852761874742814
+    second: MenuMask_9
+  - first:
+      213: -3231215169787108260
+    second: MenuMask_10
+  - first:
+      213: 4672163686459274573
+    second: MenuMask_11
+  - first:
+      213: 2300386146827859105
+    second: MenuMask_12
+  - first:
+      213: 6596939118880487725
+    second: MenuMask_13
+  - first:
+      213: -8674413838809181221
+    second: MenuMask_14
+  - first:
+      213: -5056721818754306226
+    second: MenuMask_15
+  - first:
+      213: -3659982845272482900
+    second: MenuMask_16
+  - first:
+      213: -4730381497032874349
+    second: MenuMask_17
+  - first:
+      213: -5536055296580011486
+    second: MenuMask_18
+  - first:
+      213: 215429824249854066
+    second: MenuMask_19
+  - first:
+      213: -4850678196757439076
+    second: MenuMask_20
+  - first:
+      213: -5595147227512000928
+    second: MenuMask_21
+  - first:
+      213: 8637295628162644783
+    second: MenuMask_22
+  - first:
+      213: -1338408026562294165
+    second: MenuMask_23
+  - first:
+      213: 1585238820260221192
+    second: MenuMask_24
+  - first:
+      213: 4825742906335192530
+    second: MenuMask_25
+  - first:
+      213: -8424271080102233512
+    second: MenuMask_26
+  - first:
+      213: -7362653455947725
+    second: MenuMask_27
+  - first:
+      213: -7289901834784141280
+    second: MenuMask_28
+  - first:
+      213: -8680044455403070774
+    second: MenuMask_29
+  - first:
+      213: -1238791160683707074
+    second: MenuMask_30
+  - first:
+      213: -5138689364319918488
+    second: MenuMask_31
+  - first:
+      213: 2206774255496259022
+    second: MenuMask_32
+  - first:
+      213: -254599016606703120
+    second: MenuMask_33
+  - first:
+      213: -7152286146867253490
+    second: MenuMask_34
+  - first:
+      213: -2425959949690745598
+    second: MenuMask_35
+  - first:
+      213: 2159758415968380623
+    second: MenuMask_36
+  - first:
+      213: -8516314303387993671
+    second: MenuMask_37
+  - first:
+      213: 2392985158427801767
+    second: MenuMask_38
+  - first:
+      213: 8540931076893687309
+    second: MenuMask_39
+  - first:
+      213: -5659654799116991260
+    second: MenuMask_40
+  - first:
+      213: -3790211139572141112
+    second: MenuMask_41
+  - first:
+      213: -3953867249631261000
+    second: MenuMask_42
+  - first:
+      213: 5765314643072558607
+    second: MenuMask_43
+  - first:
+      213: -4326280562295000035
+    second: MenuMask_44
+  - first:
+      213: 3455525822099981734
+    second: MenuMask_45
+  - first:
+      213: -2239891960687508079
+    second: MenuMask_46
+  - first:
+      213: -6808207060555628687
+    second: MenuMask_47
+  - first:
+      213: -1911990308372226321
+    second: MenuMask_48
+  - first:
+      213: -3168484417805818692
+    second: MenuMask_49
+  - first:
+      213: -217531793580065322
+    second: MenuMask_50
+  - first:
+      213: -3370611895236182087
+    second: MenuMask_51
+  - first:
+      213: -5111928048319939517
+    second: MenuMask_52
+  - first:
+      213: 1751258527314632315
+    second: MenuMask_53
+  - first:
+      213: -733916128414152524
+    second: MenuMask_54
+  - first:
+      213: 7276088054333937434
+    second: MenuMask_55
+  - first:
+      213: 146637478918648486
+    second: MenuMask_56
+  - first:
+      213: -2551707538774467906
+    second: MenuMask_57
+  - first:
+      213: 6723619857853508537
+    second: MenuMask_58
+  - first:
+      213: 4135332180979689773
+    second: MenuMask_59
+  - first:
+      213: 475554537830335209
+    second: MenuMask_60
+  - first:
+      213: 6725516184717939627
+    second: MenuMask_61
+  - first:
+      213: -6539545244117893140
+    second: MenuMask_62
+  - first:
+      213: 5299064068032191090
+    second: MenuMask_63
+  - first:
+      213: 4441452319185349535
+    second: MenuMask_64
+  - first:
+      213: -949421276832587646
+    second: MenuMask_65
+  - first:
+      213: 7781442214915336884
+    second: MenuMask_66
+  - first:
+      213: -5508357315029774459
+    second: MenuMask_67
+  - first:
+      213: -5890800327943265705
+    second: MenuMask_68
+  - first:
+      213: -2112660731531066418
+    second: MenuMask_69
+  - first:
+      213: -5344859055949342323
+    second: MenuMask_70
+  - first:
+      213: -5832649671727273663
+    second: MenuMask_71
+  - first:
+      213: -6515772994140335011
+    second: MenuMask_72
+  - first:
+      213: 1421602431932176794
+    second: MenuMask_73
+  - first:
+      213: 3017371727024321242
+    second: MenuMask_74
+  - first:
+      213: -5788961827544089080
+    second: MenuMask_75
+  - first:
+      213: -8809155567486851194
+    second: MenuMask_76
+  - first:
+      213: -7383235193354055149
+    second: MenuMask_77
+  - first:
+      213: 5370414652668282518
+    second: MenuMask_78
+  - first:
+      213: -4379060432368026947
+    second: MenuMask_79
+  - first:
+      213: 2929684509164029203
+    second: MenuMask_80
+  - first:
+      213: 3861282183156698380
+    second: MenuMask_81
+  - first:
+      213: 9029966776579776551
+    second: MenuMask_82
+  - first:
+      213: 5381946390916186508
+    second: MenuMask_83
+  - first:
+      213: 2987312959506242289
+    second: MenuMask_84
+  - first:
+      213: -2945307299263415863
+    second: MenuMask_85
+  - first:
+      213: -1969675241880647693
+    second: MenuMask_86
+  - first:
+      213: -2242881954039962077
+    second: MenuMask_87
+  - first:
+      213: -2736439377213447244
+    second: MenuMask_88
+  - first:
+      213: -6093405619184662719
+    second: MenuMask_89
+  - first:
+      213: -1745539129222356677
+    second: MenuMask_90
+  - first:
+      213: -4651694692478700243
+    second: MenuMask_91
+  - first:
+      213: 6642687613746505134
+    second: MenuMask_92
+  - first:
+      213: -3184704629007186290
+    second: MenuMask_93
+  - first:
+      213: 735861125131195427
+    second: MenuMask_94
+  - first:
+      213: 705812758498508891
+    second: MenuMask_95
+  - first:
+      213: 8465208443785737004
+    second: MenuMask_96
+  - first:
+      213: 7324470065453412228
+    second: MenuMask_97
+  - first:
+      213: -7938647684552384528
+    second: MenuMask_98
+  - first:
+      213: 2653555310025714211
+    second: MenuMask_99
+  - first:
+      213: 2585229195617290233
+    second: MenuMask_100
+  - first:
+      213: -8195300650075881371
+    second: MenuMask_101
+  - first:
+      213: -5351144518769375740
+    second: MenuMask_102
+  - first:
+      213: -2668595515485532645
+    second: MenuMask_103
+  - first:
+      213: -3672654088718476292
+    second: MenuMask_104
+  - first:
+      213: 5763078638593259226
+    second: MenuMask_105
+  - first:
+      213: 4507252668161895839
+    second: MenuMask_106
+  - first:
+      213: 3605802484212297968
+    second: MenuMask_107
+  - first:
+      213: 1881744599676909140
+    second: MenuMask_108
+  - first:
+      213: 5018399840942276229
+    second: MenuMask_109
+  - first:
+      213: -4130137240196433242
+    second: MenuMask_110
+  - first:
+      213: -8314806726351057880
+    second: MenuMask_111
+  - first:
+      213: -5570556840253612710
+    second: MenuMask_112
+  - first:
+      213: 5188603008860354111
+    second: MenuMask_113
+  - first:
+      213: -4031473483840765811
+    second: MenuMask_114
+  - first:
+      213: -4407427728384666355
+    second: MenuMask_115
+  - first:
+      213: 4823933159999885250
+    second: MenuMask_116
+  - first:
+      213: -4874347562939716217
+    second: MenuMask_117
+  - first:
+      213: -5589730267565128393
+    second: MenuMask_118
+  - first:
+      213: 2126867714422796451
+    second: MenuMask_119
+  - first:
+      213: -2359891062268556166
+    second: MenuMask_120
+  - first:
+      213: 6586375594008879092
+    second: MenuMask_121
+  - first:
+      213: 1519808785085393931
+    second: MenuMask_122
+  - first:
+      213: 4092625291341168037
+    second: MenuMask_123
+  - first:
+      213: 3193133180672649102
+    second: MenuMask_124
+  - first:
+      213: 3499857694252891211
+    second: MenuMask_125
+  - first:
+      213: -6668623192192424535
+    second: MenuMask_126
+  - first:
+      213: 7048065893210482860
+    second: MenuMask_127
+  - first:
+      213: 7483689391363101578
+    second: MenuMask_128
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MenuMask_0
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 1396
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9da1d481cd9c41c0800000000000000
+      internalID: -4518062871676867173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_1
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 1375
+        width: 69
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8669811efde025f40800000000000000
+      internalID: 5715647231803561576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_2
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 1354
+        width: 65
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0896314172c7cd80800000000000000
+      internalID: -8230396002315102194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_3
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 1378
+        width: 111
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d84d0e569ac588740800000000000000
+      internalID: 5154471656153994381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_4
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 1346
+        width: 230
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 129a3ff235a9cdae0800000000000000
+      internalID: -1523172891880609503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_5
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 1403
+        width: 18
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 177b0aedcff567ae0800000000000000
+      internalID: -1551947481911085199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_6
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 1372
+        width: 35
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 923c55b6bfc234660800000000000000
+      internalID: 7368782873657459497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_7
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 1363
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 977512e2a79295d50800000000000000
+      internalID: 6726453123191232377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_8
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1341
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc07c56aae059400800000000000000
+      internalID: 330186272696372402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_9
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1373
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e14799cd189a3af0800000000000000
+      internalID: -415852761874742814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_10
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 1330
+        width: 60
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c546cfb3cea6823d0800000000000000
+      internalID: -3231215169787108260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_11
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1359
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4572ef5e1cd6d040800000000000000
+      internalID: 4672163686459274573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_12
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1286
+        width: 117
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a477e7330d9cef10800000000000000
+      internalID: 2300386146827859105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_13
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 1229
+        width: 95
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29ffb13d290d8b50800000000000000
+      internalID: 6596939118880487725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_14
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 1345
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3db07929a4e9780800000000000000
+      internalID: -8674413838809181221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_15
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 1242
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4fae292c4ae2d9b0800000000000000
+      internalID: -5056721818754306226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_16
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1288
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cab928f5ef0253dc0800000000000000
+      internalID: -3659982845272482900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_17
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 1239
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3966641571f4a5eb0800000000000000
+      internalID: -4730381497032874349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_18
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1276
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22abd6ef90bfb23b0800000000000000
+      internalID: -5536055296580011486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_19
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 1266
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 278ff64a84c5df200800000000000000
+      internalID: 215429824249854066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_20
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 1143
+        width: 89
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d5a8a41edeeacb0800000000000000
+      internalID: -4850678196757439076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_21
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 1235
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06ea22ead3b0a52b0800000000000000
+      internalID: -5595147227512000928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_22
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 1183
+        width: 25
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2b3ba88c96ddd770800000000000000
+      internalID: 8637295628162644783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_23
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 1119
+        width: 46
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6e0934bdf40d6de0800000000000000
+      internalID: -1338408026562294165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_24
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 1236
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80115cdde46eff510800000000000000
+      internalID: 1585238820260221192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_25
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 1060
+        width: 70
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5687dfa9b78f240800000000000000
+      internalID: 4825742906335192530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_26
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 1164
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85af8ea161af61b80800000000000000
+      internalID: -8424271080102233512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_27
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 1050
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3386728a4b7d5eff0800000000000000
+      internalID: -7362653455947725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_28
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 971
+        width: 142
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0201932a7e015da90800000000000000
+      internalID: -7289901834784141280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_29
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 1096
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acad9118e894a8780800000000000000
+      internalID: -8680044455403070774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_30
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1094
+        width: 15
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e35cd84b00eeecee0800000000000000
+      internalID: -1238791160683707074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_31
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 1104
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86622a4cf35bfa8b0800000000000000
+      internalID: -5138689364319918488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_32
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 1091
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5e45e4e7900ae10800000000000000
+      internalID: 2206774255496259022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_33
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 1025
+        width: 62
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f16ef61b8b777cf0800000000000000
+      internalID: -254599016606703120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_34
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 984
+        width: 92
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0fa704d4a9fdbc90800000000000000
+      internalID: -7152286146867253490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_35
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1038
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20dcb5f6742455ed0800000000000000
+      internalID: -2425959949690745598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_36
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1032
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc6a47026d009fd10800000000000000
+      internalID: 2159758415968380623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_37
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 1023
+        width: 39
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9fafe2349ffc980800000000000000
+      internalID: -8516314303387993671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_38
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 1034
+        width: 21
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a8fed0b257953120800000000000000
+      internalID: 2392985158427801767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_39
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 945
+        width: 42
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0eb759009b778670800000000000000
+      internalID: 8540931076893687309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_40
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 899
+        width: 14
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e40c4342fdd471b0800000000000000
+      internalID: -5659654799116991260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_41
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 956
+        width: 14
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3f21acc07766bc0800000000000000
+      internalID: -3790211139572141112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_42
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 927
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8be8da85faa0129c0800000000000000
+      internalID: -3953867249631261000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_43
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 943
+        width: 77
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f06a2b63f13820050800000000000000
+      internalID: 5765314643072558607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_44
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 929
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d14babd00c6f5f3c0800000000000000
+      internalID: -4326280562295000035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_45
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 930
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a585725d6e74ff20800000000000000
+      internalID: 3455525822099981734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_46
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 933
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 195c7f3112e4ae0e0800000000000000
+      internalID: -2239891960687508079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_47
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 919
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17f7646ffb36481a0800000000000000
+      internalID: -6808207060555628687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_48
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 795
+        width: 28
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feedb77d1fe3775e0800000000000000
+      internalID: -1911990308372226321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_49
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 834
+        width: 43
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4e25895384704d0800000000000000
+      internalID: -3168484417805818692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_50
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 769
+        width: 34
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd7e4c7cfb2bfcf0800000000000000
+      internalID: -217531793580065322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_51
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 802
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bfbdbce65e2931d0800000000000000
+      internalID: -3370611895236182087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_52
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 801
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34cb8823688ce09b0800000000000000
+      internalID: -5111928048319939517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_53
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 796
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e567e1a58bd4810800000000000000
+      internalID: 1751258527314632315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_54
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 738
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8c1fe6b2b90d5f0800000000000000
+      internalID: -733916128414152524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_55
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 769
+        width: 11
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a179909f88bd9f460800000000000000
+      internalID: 7276088054333937434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_56
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 759
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a274b99206f80200800000000000000
+      internalID: 146637478918648486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_57
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 686
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eba59a45383869cd0800000000000000
+      internalID: -2551707538774467906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_58
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 701
+        width: 54
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bbee1033a81f4d50800000000000000
+      internalID: 6723619857853508537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_59
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 678
+        width: 37
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29298b65b6a36930800000000000000
+      internalID: 4135332180979689773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_60
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 723
+        width: 26
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e2c3b22552899600800000000000000
+      internalID: 475554537830335209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_61
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 700
+        width: 17
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba3d0413655d55d50800000000000000
+      internalID: 6725516184717939627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_62
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 629
+        width: 31
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceff1cb9f3ede35a0800000000000000
+      internalID: -6539545244117893140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_63
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 660
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a5819b1be0a8940800000000000000
+      internalID: 5299064068032191090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_64
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 564
+        width: 125
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ba0eb3a5533ad30800000000000000
+      internalID: 4441452319185349535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_65
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 664
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2802234016af2d2f0800000000000000
+      internalID: -949421276832587646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_66
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 675
+        width: 9
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bae144777c3dfb60800000000000000
+      internalID: 7781442214915336884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_67
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 639
+        width: 29
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58fc9bdd4326e83b0800000000000000
+      internalID: -5508357315029774459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_68
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 677
+        width: 57
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752ef22005caf3ea0800000000000000
+      internalID: -5890800327943265705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_69
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 680
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec38c2e02425ea2e0800000000000000
+      internalID: -2112660731531066418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_70
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 531
+        width: 40
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d891c93c10f33d5b0800000000000000
+      internalID: -5344859055949342323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_71
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 569
+        width: 21
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 149a569b6044e0fa0800000000000000
+      internalID: -5832649671727273663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_72
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 567
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d549e2fdbf25395a0800000000000000
+      internalID: -6515772994140335011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_73
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 587
+        width: 17
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99162f31eb8ab310800000000000000
+      internalID: 1421602431932176794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_74
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 574
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad27798599bdfd920800000000000000
+      internalID: 3017371727024321242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 482
+        width: 88
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e30fa93e979afa0800000000000000
+      internalID: -5788961827544089080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_76
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 537
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 687aacc2fa79fb580800000000000000
+      internalID: -8809155567486851194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_77
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 491
+        width: 15
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31218fea5ba798990800000000000000
+      internalID: -7383235193354055149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_78
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 491
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69688d44cab878a40800000000000000
+      internalID: 5370414652668282518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_79
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 444
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dba3cbeecb37a33c0800000000000000
+      internalID: -4379060432368026947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 453
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 315cfa8f98458a820800000000000000
+      internalID: 2929684509164029203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_81
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 352
+        width: 102
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d899800b7069530800000000000000
+      internalID: 3861282183156698380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_82
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 102
+        width: 166
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720ed93c0f2e05d70800000000000000
+      internalID: 9029966776579776551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_83
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 467
+        width: 38
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8141ce4ab380ba40800000000000000
+      internalID: 5381946390916186508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_84
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 384
+        width: 76
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa5a482f41157920800000000000000
+      internalID: 2987312959506242289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_85
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 309
+        width: 101
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9f901cd9a2027d0800000000000000
+      internalID: -2945307299263415863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_86
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 379
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f782d4adce4aa4e0800000000000000
+      internalID: -1969675241880647693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_87
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 242
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32660500fbeafd0e0800000000000000
+      internalID: -2242881954039962077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_88
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 218
+        width: 100
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b32dcb72e6360ad0800000000000000
+      internalID: -2736439377213447244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_89
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 282
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1470124afdfdf6ba0800000000000000
+      internalID: -6093405619184662719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_90
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 240
+        width: 76
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b312825096996c7e0800000000000000
+      internalID: -1745539129222356677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 188
+        width: 35
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d25bc3ba25cd17fb0800000000000000
+      internalID: -4651694692478700243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_92
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 192
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea56f33b0319f2c50800000000000000
+      internalID: 6642687613746505134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_93
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 223
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e860c716308adc3d0800000000000000
+      internalID: -3184704629007186290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_94
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 231
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 324d6776bcd463a00800000000000000
+      internalID: 735861125131195427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_95
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 223
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b500e3cd6fc8bc900800000000000000
+      internalID: 705812758498508891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_96
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 196
+        width: 60
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c237c71aa367a7570800000000000000
+      internalID: 8465208443785737004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_97
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 189
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48f2553c7beb5a560800000000000000
+      internalID: 7324470065453412228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_98
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 200
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ff174dddf144d190800000000000000
+      internalID: -7938647684552384528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_99
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 195
+        width: 24
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32a2fedce7253d420800000000000000
+      internalID: 2653555310025714211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 169
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f7ccbb914490e320800000000000000
+      internalID: 2585229195617290233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_101
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 174
+        width: 38
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56003b4ba71744e80800000000000000
+      internalID: -8195300650075881371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_102
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 183
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40609f8696aecb5b0800000000000000
+      internalID: -5351144518769375740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_103
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 163
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ec84a748e37fad0800000000000000
+      internalID: -2668595515485532645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_104
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 158
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb9c0b909c180dc0800000000000000
+      internalID: -3672654088718476292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_105
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 154
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad63ef9dc719aff40800000000000000
+      internalID: 5763078638593259226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_106
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 93
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9da8b6db6afc8e30800000000000000
+      internalID: 4507252668161895839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_107
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 134
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f0f1b941426a0230800000000000000
+      internalID: 3605802484212297968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_108
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 104
+        width: 53
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45670c55ebc4d1a10800000000000000
+      internalID: 1881744599676909140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_109
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14
+        width: 90
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58ebd341110f4a540800000000000000
+      internalID: 5018399840942276229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_110
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 77
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aaba7cff0ecea6c0800000000000000
+      internalID: -4130137240196433242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_111
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 60
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c01db065fdb9c80800000000000000
+      internalID: -8314806726351057880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_112
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 81
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d9f8f511861b2b0800000000000000
+      internalID: -5570556840253612710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_113
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 87
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f36f4a732fe910840800000000000000
+      internalID: 5188603008860354111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_114
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 84
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d80c342e9345d08c0800000000000000
+      internalID: -4031473483840765811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_115
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 68
+        width: 34
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d05dc6425dba5d2c0800000000000000
+      internalID: -4407427728384666355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_116
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 59
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf450696ad02f240800000000000000
+      internalID: 4823933159999885250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_117
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 21
+        width: 30
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78def2787b6da5cb0800000000000000
+      internalID: -4874347562939716217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_118
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 34
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7350883ffe94d62b0800000000000000
+      internalID: -5589730267565128393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_119
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0fa6aeae6248d10800000000000000
+      internalID: 2126867714422796451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_120
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 83
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7c0dd4059bff3fd0800000000000000
+      internalID: -2359891062268556166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_121
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 10
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ff9336e4b1876b50800000000000000
+      internalID: 6586375594008879092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_122
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 22
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c6889a902771510800000000000000
+      internalID: 1519808785085393931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_123
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 0
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ad7b21d40debc830800000000000000
+      internalID: 4092625291341168037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_124
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e87a18ab5b9405c20800000000000000
+      internalID: 3193133180672649102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_125
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4c7c56a70ef19030800000000000000
+      internalID: 3499857694252891211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_126
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 53
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a56070e98a4473a0800000000000000
+      internalID: -6668623192192424535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_127
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca86b5e6692cfc160800000000000000
+      internalID: 7048065893210482860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuMask_128
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 0
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a839e85e9d76bd760800000000000000
+      internalID: 7483689391363101578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MenuMask_0: -4518062871676867173
+      MenuMask_1: 5715647231803561576
+      MenuMask_10: -3231215169787108260
+      MenuMask_100: 2585229195617290233
+      MenuMask_101: -8195300650075881371
+      MenuMask_102: -5351144518769375740
+      MenuMask_103: -2668595515485532645
+      MenuMask_104: -3672654088718476292
+      MenuMask_105: 5763078638593259226
+      MenuMask_106: 4507252668161895839
+      MenuMask_107: 3605802484212297968
+      MenuMask_108: 1881744599676909140
+      MenuMask_109: 5018399840942276229
+      MenuMask_11: 4672163686459274573
+      MenuMask_110: -4130137240196433242
+      MenuMask_111: -8314806726351057880
+      MenuMask_112: -5570556840253612710
+      MenuMask_113: 5188603008860354111
+      MenuMask_114: -4031473483840765811
+      MenuMask_115: -4407427728384666355
+      MenuMask_116: 4823933159999885250
+      MenuMask_117: -4874347562939716217
+      MenuMask_118: -5589730267565128393
+      MenuMask_119: 2126867714422796451
+      MenuMask_12: 2300386146827859105
+      MenuMask_120: -2359891062268556166
+      MenuMask_121: 6586375594008879092
+      MenuMask_122: 1519808785085393931
+      MenuMask_123: 4092625291341168037
+      MenuMask_124: 3193133180672649102
+      MenuMask_125: 3499857694252891211
+      MenuMask_126: -6668623192192424535
+      MenuMask_127: 7048065893210482860
+      MenuMask_128: 7483689391363101578
+      MenuMask_13: 6596939118880487725
+      MenuMask_14: -8674413838809181221
+      MenuMask_15: -5056721818754306226
+      MenuMask_16: -3659982845272482900
+      MenuMask_17: -4730381497032874349
+      MenuMask_18: -5536055296580011486
+      MenuMask_19: 215429824249854066
+      MenuMask_2: -8230396002315102194
+      MenuMask_20: -4850678196757439076
+      MenuMask_21: -5595147227512000928
+      MenuMask_22: 8637295628162644783
+      MenuMask_23: -1338408026562294165
+      MenuMask_24: 1585238820260221192
+      MenuMask_25: 4825742906335192530
+      MenuMask_26: -8424271080102233512
+      MenuMask_27: -7362653455947725
+      MenuMask_28: -7289901834784141280
+      MenuMask_29: -8680044455403070774
+      MenuMask_3: 5154471656153994381
+      MenuMask_30: -1238791160683707074
+      MenuMask_31: -5138689364319918488
+      MenuMask_32: 2206774255496259022
+      MenuMask_33: -254599016606703120
+      MenuMask_34: -7152286146867253490
+      MenuMask_35: -2425959949690745598
+      MenuMask_36: 2159758415968380623
+      MenuMask_37: -8516314303387993671
+      MenuMask_38: 2392985158427801767
+      MenuMask_39: 8540931076893687309
+      MenuMask_4: -1523172891880609503
+      MenuMask_40: -5659654799116991260
+      MenuMask_41: -3790211139572141112
+      MenuMask_42: -3953867249631261000
+      MenuMask_43: 5765314643072558607
+      MenuMask_44: -4326280562295000035
+      MenuMask_45: 3455525822099981734
+      MenuMask_46: -2239891960687508079
+      MenuMask_47: -6808207060555628687
+      MenuMask_48: -1911990308372226321
+      MenuMask_49: -3168484417805818692
+      MenuMask_5: -1551947481911085199
+      MenuMask_50: -217531793580065322
+      MenuMask_51: -3370611895236182087
+      MenuMask_52: -5111928048319939517
+      MenuMask_53: 1751258527314632315
+      MenuMask_54: -733916128414152524
+      MenuMask_55: 7276088054333937434
+      MenuMask_56: 146637478918648486
+      MenuMask_57: -2551707538774467906
+      MenuMask_58: 6723619857853508537
+      MenuMask_59: 4135332180979689773
+      MenuMask_6: 7368782873657459497
+      MenuMask_60: 475554537830335209
+      MenuMask_61: 6725516184717939627
+      MenuMask_62: -6539545244117893140
+      MenuMask_63: 5299064068032191090
+      MenuMask_64: 4441452319185349535
+      MenuMask_65: -949421276832587646
+      MenuMask_66: 7781442214915336884
+      MenuMask_67: -5508357315029774459
+      MenuMask_68: -5890800327943265705
+      MenuMask_69: -2112660731531066418
+      MenuMask_7: 6726453123191232377
+      MenuMask_70: -5344859055949342323
+      MenuMask_71: -5832649671727273663
+      MenuMask_72: -6515772994140335011
+      MenuMask_73: 1421602431932176794
+      MenuMask_74: 3017371727024321242
+      MenuMask_75: -5788961827544089080
+      MenuMask_76: -8809155567486851194
+      MenuMask_77: -7383235193354055149
+      MenuMask_78: 5370414652668282518
+      MenuMask_79: -4379060432368026947
+      MenuMask_8: 330186272696372402
+      MenuMask_80: 2929684509164029203
+      MenuMask_81: 3861282183156698380
+      MenuMask_82: 9029966776579776551
+      MenuMask_83: 5381946390916186508
+      MenuMask_84: 2987312959506242289
+      MenuMask_85: -2945307299263415863
+      MenuMask_86: -1969675241880647693
+      MenuMask_87: -2242881954039962077
+      MenuMask_88: -2736439377213447244
+      MenuMask_89: -6093405619184662719
+      MenuMask_9: -415852761874742814
+      MenuMask_90: -1745539129222356677
+      MenuMask_91: -4651694692478700243
+      MenuMask_92: 6642687613746505134
+      MenuMask_93: -3184704629007186290
+      MenuMask_94: 735861125131195427
+      MenuMask_95: 705812758498508891
+      MenuMask_96: 8465208443785737004
+      MenuMask_97: 7324470065453412228
+      MenuMask_98: -7938647684552384528
+      MenuMask_99: 2653555310025714211
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

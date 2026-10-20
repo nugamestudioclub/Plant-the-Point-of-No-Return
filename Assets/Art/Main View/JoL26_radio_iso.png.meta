@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 98b45982fcc986241b2b0ec7b795cac9
+guid: ff04c87dc6e20514eaae423f8d255ee4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3352540126919150417
-    second: JoL26ResourceMonitor_Front_Iso_0
-  - first:
-      213: 4422711255520562977
-    second: JoL26ResourceMonitor_Front_Iso_1
+      213: -5710266464813800947
+    second: JoL26_radio_iso_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -101,17 +98,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JoL26ResourceMonitor_Front_Iso_0
+      name: JoL26_radio_iso_0
       rect:
         serializedVersion: 2
-        x: 115
-        y: 31
-        width: 542
-        height: 1358
+        x: 0
+        y: 0
+        width: 483
+        height: 371
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,30 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa4bdbf54826971d0800000000000000
-      internalID: -3352540126919150417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JoL26ResourceMonitor_Front_Iso_1
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 26
-        width: 93
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 12fcc615470a06d30800000000000000
-      internalID: 4422711255520562977
+      spriteID: d02a2ff87ee01c0b0800000000000000
+      internalID: -5710266464813800947
       vertices: []
       indices: 
       edges: []
@@ -162,8 +163,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      JoL26ResourceMonitor_Front_Iso_0: -3352540126919150417
-      JoL26ResourceMonitor_Front_Iso_1: 4422711255520562977
+      JoL26_radio_iso_0: -5710266464813800947
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
