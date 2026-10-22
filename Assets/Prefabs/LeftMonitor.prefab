@@ -120,6 +120,7 @@ MonoBehaviour:
   dropDist: 30
   contentParent: {fileID: 0}
   spawnLoc: {fileID: 0}
+  isInteractable: 0
 --- !u!1 &2262851608756783708
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,6 +424,9 @@ MonoBehaviour:
   cameraZoomController: {fileID: 0}
   zoomOffset: {fileID: 7919482318736200140}
   overrideVal: 2
+  onSelected:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6638329877642747181
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,6 +802,10 @@ PrefabInstance:
     - target: {fileID: 6494577752213163701, guid: 69b612a1cf8f3364788da1b030def465, type: 3}
       propertyPath: m_Name
       value: NotificationUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330294728033170272, guid: 69b612a1cf8f3364788da1b030def465, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
