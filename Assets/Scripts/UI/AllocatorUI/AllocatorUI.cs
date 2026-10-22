@@ -8,11 +8,8 @@ public class AllocatorUI : MonoBehaviour
 {
     [SerializeField] private Transform pointer;
     [SerializeField] private Button[] selectors;
-    [SerializeField] private RectTransform center;
-
-    [SerializeField] private Slider allocationSlider;
-    [SerializeField] private TMP_Text allocatedValueText;
-    [SerializeField] private TMP_Text maxValueText;
+    [SerializeField] private float wheelToPointerRatio = 0.25f;
+    private ColorBlock[] defaultColors;
 
     private int selected = -1;
     private int countEnabled = 0;
@@ -69,28 +66,17 @@ public class AllocatorUI : MonoBehaviour
             int index = i; 
 
             selectors[i].interactable = false;
-            selectors[i].onClick.AddListener(
-                () => { AllocatePercent(GameState.Instance.GamePlots[i].assigned / GameState.Instance.GamePlots[i].capacityLimit); }
-            );
-        }
-
-        //allocationSlider.wholeNumbers = true;
-        //allocationSlider.minValue = 0;
-        //allocationSlider.onValueChanged.AddListener(OnAllocationChange);
-
-        /*RefreshSelectors();
-        
-        for (int i = 0; i < selectors.Length; i++)
-        {
-            if (GameState.Instance.GamePlots[i].level > 0)
+            selectors[i].onClick.AddListener(() =>
             {
-                PointPointerAt(selectors[i]);
-                break;
-            }
-        }*/
+                selected = index;
+                UpdateSelectorVisuals();
+                AllocatePercent(GameState.Instance.GetPlotAssignmentPercent(index));
 
-        //if (selected < 0)
-            //RefreshSlider();
+            });
+        }
+        defaultColors = new ColorBlock[selectors.Length];
+        for (int i = 0; i < selectors.Length; i++)
+            defaultColors[i] = selectors[i].colors;
     }
 
     private void RefreshSelectors()
@@ -125,48 +111,34 @@ public class AllocatorUI : MonoBehaviour
     }
     public void AllocatePercent(float perc)
     {
-        print("CHANGING ALLOC");
+        print("CHANGING ALLOC to:"+perc);
         RotatePointerTo(2f * (perc - 0.5f) * 90f);
     }
 
-    /*private void RefreshSlider()
+    public float ConvertAngleToPercent(float angle)
     {
-        if (selected < 0 ||
-            selected >= GameState.Instance.GamePlots.Length)
-        {
-            updatingSlider = true;
-            allocationSlider.minValue = 0;
-            allocationSlider.maxValue = 0;
-            allocationSlider.value = 0;
-            allocatedValueText.text = "0";
-            maxValueText.text = "0";
-            updatingSlider = false;
-            allocationSlider.interactable = false;
-            return;
-        }
+        return (angle / 180f) + 0.5f;
+    }
 
-        int currentAssignment = GetPlotAssignment(selected);
-        int maxAssignable = GetMaxAssignable(selected);
 
-        updatingSlider = true;
+    public void ChangeByAngle(float wheelDelta)
+    {
+        if (selected < 0) return; // nothing selected, wheel does nothing
 
-        allocationSlider.minValue = 0;
-        allocationSlider.maxValue = maxAssignable;
+        var plot = GameState.Instance.GamePlots[selected];
+        if (plot.capacityLimit <= 0) return;
 
-        // Normally currentAssignment is already valid. Clamp defensively
-        // if other game systems changed population or assignments.
-        int safeAssignment = Mathf.Clamp(
-            currentAssignment, 0, maxAssignable
-        );
+        float newAngle = Mathf.Clamp(targetRot + wheelDelta * wheelToPointerRatio, -90f, 90f);
+        float perc = ConvertAngleToPercent(newAngle);
 
-        allocationSlider.value = safeAssignment;
+        // Don't let the pointer go past the number of people actually available.
+        float maxPerc = (float)GameState.Instance.GetMaxAssignable(selected) / plot.capacityLimit;
+        perc = Mathf.Min(perc, maxPerc);
 
-        allocatedValueText.text = safeAssignment.ToString();
-        maxValueText.text = maxAssignable.ToString();
+        GameState.Instance.SetPlotAssignment(selected, Mathf.RoundToInt(perc * plot.capacityLimit));
+        AllocatePercent(perc);
+    }
 
-        updatingSlider = false;
-        allocationSlider.interactable = countEnabled > 0;
-    }*/
 
     public void OnAllocationChange(float value)
     {
@@ -182,8 +154,7 @@ public class AllocatorUI : MonoBehaviour
         GameState.Instance.GamePlots[selected]
             .AssignNewAssignmentCount(assigned);
 
-        allocatedValueText.text = assigned.ToString();
-        maxValueText.text = maxAssignable.ToString();
+      
 
     }
 
@@ -191,7 +162,21 @@ public class AllocatorUI : MonoBehaviour
     {
 
     }
+    private void UpdateSelectorVisuals()
+    {
+        for (int i = 0; i < selectors.Length; i++)
+        {
+            ColorBlock cb = defaultColors[i];
 
+            if (i == selected)
+            {
+                cb.normalColor = cb.selectedColor;
+                cb.highlightedColor = cb.selectedColor; 
+            }
+
+            selectors[i].colors = cb;
+        }
+    }
     private void Update()
     {
         if(GameManager.GameState == GameManager.EGameState.GAME)
