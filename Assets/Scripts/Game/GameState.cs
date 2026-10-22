@@ -130,6 +130,11 @@ public class GameState : MonoBehaviour
         this.pauseSemaphore--;
     }
 
+    public bool IsResource(string resourceName)
+    {
+        return this.resourceSupplyCounts.ContainsKey(resourceName);
+    }
+
     /// <summary>
     /// This function loads the types out of registry to create trackable resource tags for internal tracking.
     /// </summary>

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class AllocatorUI : MonoBehaviour
 {
-    [SerializeField] private RectTransform pointer;
+    [SerializeField] private Transform pointer;
     [SerializeField] private Button[] selectors;
     [SerializeField] private RectTransform center;
 
@@ -17,6 +17,8 @@ public class AllocatorUI : MonoBehaviour
     private int selected = -1;
     private int countEnabled = 0;
     private bool updatingSlider = false;
+
+    private float targetRot = -90;
 
     private int GetPopulation()
     {
@@ -68,13 +70,13 @@ public class AllocatorUI : MonoBehaviour
 
             selectors[i].interactable = false;
             selectors[i].onClick.AddListener(
-                () => PointPointerAt(selectors[index])
+                () => { AllocatePercent(GameState.Instance.GamePlots[i].assigned / GameState.Instance.GamePlots[i].capacityLimit); }
             );
         }
 
-        allocationSlider.wholeNumbers = true;
-        allocationSlider.minValue = 0;
-        allocationSlider.onValueChanged.AddListener(OnAllocationChange);
+        //allocationSlider.wholeNumbers = true;
+        //allocationSlider.minValue = 0;
+        //allocationSlider.onValueChanged.AddListener(OnAllocationChange);
 
         /*RefreshSelectors();
         
@@ -87,8 +89,8 @@ public class AllocatorUI : MonoBehaviour
             }
         }*/
 
-        if (selected < 0)
-            RefreshSlider();
+        //if (selected < 0)
+            //RefreshSlider();
     }
 
     private void RefreshSelectors()
@@ -108,35 +110,26 @@ public class AllocatorUI : MonoBehaviour
                 countEnabled++;
         }
 
-        allocationSlider.interactable =
-            countEnabled > 0 && selected >= 0;
+        if(countEnabled <= 0)
+        {
+            targetRot = -90;
+        }
+       
+        pointer.transform.localEulerAngles = new Vector3(0, 0, targetRot);
     }
 
-    public void PointPointerAt(Button button)
+    public void RotatePointerTo(float angle)
     {
-        int index = Array.IndexOf(selectors, button);
-
-        if (index < 0 ||
-            index >= GameState.Instance.GamePlots.Length ||
-            GameState.Instance.GamePlots[index].level <= 0)
-            return;
-
-        selected = index;
-
-        Vector3 direction =
-            button.transform.position - center.transform.position;
-
-        Vector3 buttonPos = button.transform.position;
-        Vector3 centerPos = center.transform.position;
-        float angle = Vector3.Angle(Vector3.left, buttonPos - centerPos);
-        pointer.transform.localEulerAngles = new Vector3(0, 0, -angle);
-
-        pointer.localEulerAngles = new Vector3(0, 0, -angle);
-
-        RefreshSlider();
+        targetRot = angle;
+      
+    }
+    public void AllocatePercent(float perc)
+    {
+        print("CHANGING ALLOC");
+        RotatePointerTo(2f * (perc - 0.5f) * 90f);
     }
 
-    private void RefreshSlider()
+    /*private void RefreshSlider()
     {
         if (selected < 0 ||
             selected >= GameState.Instance.GamePlots.Length)
@@ -173,7 +166,7 @@ public class AllocatorUI : MonoBehaviour
 
         updatingSlider = false;
         allocationSlider.interactable = countEnabled > 0;
-    }
+    }*/
 
     public void OnAllocationChange(float value)
     {
@@ -192,8 +185,11 @@ public class AllocatorUI : MonoBehaviour
         allocatedValueText.text = assigned.ToString();
         maxValueText.text = maxAssignable.ToString();
 
-        
-        RefreshSlider();
+    }
+
+    private void HandleSelection()
+    {
+
     }
 
     private void Update()
@@ -202,8 +198,8 @@ public class AllocatorUI : MonoBehaviour
         {
             RefreshSelectors();
 
-            if (selected >= 0)
-                RefreshSlider();
+           // if (selected >= 0)
+                //RefreshSlider();
         }
        
     }

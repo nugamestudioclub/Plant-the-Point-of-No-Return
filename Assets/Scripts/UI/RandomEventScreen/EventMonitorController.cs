@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,11 +33,39 @@ public class EventMonitorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        List<NotificationScreenUI> rem = new List<NotificationScreenUI>();
         foreach (NotificationScreenUI ui in screens)
         {
             ui.ToggleButton(isInteractable);
+            if (ui.IsResolved)
+            {
+               rem.Add(ui);
+            }
+        }
+        foreach(var ui in rem)
+        {
+            screens.Remove(ui);
+            StartCoroutine(WaitDestroy(ui.gameObject));
+        }
+        // readjust.
+        if(rem.Count > 0)
+        {
+            int y = 0;
+            foreach (NotificationScreenUI notificationScreen in screens)
+            {
+                //notificationScreen.transform.position = spawnLoc.position;
+                notificationScreen.UpdatePos(spawnLoc.localPosition + Vector3.down * dropDist * y);
+                //notificationScreen.transform.localPosition += Vector3.down * dropDist*y;
+                y++;
+            }
         }
         
+    }
+
+    private IEnumerator WaitDestroy(GameObject ui)
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(ui);
     }
 
     public void SubmitEvent(RandomEvent e)
@@ -46,17 +75,26 @@ public class EventMonitorController : MonoBehaviour
         spawned.transform.position = spawnLoc.position;
         foreach (NotificationScreenUI notificationScreen in screens)
         {
-            notificationScreen.transform.localPosition += Vector3.down*dropDist;
+            //notificationScreen.transform.localPosition += Vector3.down*dropDist;
+            notificationScreen.UpdatePos(notificationScreen.transform.localPosition + Vector3.down * dropDist);
         }
         NotificationScreenUI ui = spawned.GetComponent<NotificationScreenUI>();
         Button notifButton = ui.GetComponent<Button>();
         notifButton.onClick.AddListener(() => {
-            ui.Open(ui.transform.position,spawnLoc.position);
+            ui.Open(ui.transform.position,spawnLoc.localPosition);
 
         });
        
-        ui.LoadContent(e);
+        ui.LoadContent(e,spawnLoc.position);
         screens.Add(ui);
+
+        
+        int y = 0;
+        foreach (NotificationScreenUI notificationScreen in screens)
+        {
+            notificationScreen.UpdatePos(spawnLoc.localPosition + Vector3.down * dropDist * y);
+            y++;
+        }
     }
 
     private void OnDestroy()

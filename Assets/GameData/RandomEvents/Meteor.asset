@@ -18,9 +18,9 @@ MonoBehaviour:
   choice1: Poor Jim.
   choice2: Poor Jim.
   choice1Effects:
-  - key: humans
+  - key: population
     value: -1
   choice2Effects:
-  - key: humans
+  - key: population
     value: -1
   baseWeight: 10

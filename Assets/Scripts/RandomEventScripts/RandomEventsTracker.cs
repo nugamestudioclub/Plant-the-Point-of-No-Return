@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using Mono.Cecil.Cil;
 using UnityEngine;
 
@@ -76,7 +77,23 @@ public class RandomEventsTracker : MonoBehaviour
     {
         //put in actual stuff of what each key to function does here, in my head its basically just a series of if statements which each call to other functions but idk how best to implement it
         //
-            
+        Dictionary<string, float> effects;
+        if (choice == 1)
+        {
+            effects = randEvent.Choice1Effects;
+            foreach(string effect in effects.Keys)
+            {
+                resolveEvent(effect, effects[effect]);
+            }
+        }
+        else
+        {
+            effects = randEvent.Choice2Effects;
+            foreach (string effect in effects.Keys)
+            {
+                resolveEvent(effect, effects[effect]);
+            }
+        }
         //
         if (randEvent is EventChain chain)
         {
@@ -90,6 +107,18 @@ public class RandomEventsTracker : MonoBehaviour
             {
                 eventPool[chain.Path2] = 100;
             }
+        }
+    }
+    private void resolveEvent(string effect, float val)
+    {
+        if (GameState.Instance.IsResource(effect))
+        {
+            GameState.Instance.Spend(effect, val);
+        }
+        else
+        {
+            //TODO: Check function mapper
+            //TODO: Execute function
         }
     }
 }

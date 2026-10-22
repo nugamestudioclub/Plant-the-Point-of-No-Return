@@ -69,7 +69,7 @@ MonoBehaviour:
     newCapacityIncrease: 20
   maxPlotCount: 4
   startingPopulation: 25
-  startingFood: 50
+  startingFood: 100
   startingFertilizer: 20
   passivePopulationGrowth: 0.25
   passiveFertilizerIncome: 4

@@ -81,7 +81,15 @@ public class GameUI : MonoBehaviour
         }
         else
         {
-            displayText += "<color=red><size=25><b>Paused:</size></b> <size=15><voffset=0.1em>Hit [Space] to Unpause</voffset></color></size><br><br>";
+            if (GameState.Instance.IsLocked>0)
+            {
+                displayText += "<color=red><size=25><b>Locked:</size></b> <size=15><voffset=0.1em>Locked until Notif Resolved</voffset></color></size><br><br>";
+            }
+            else
+            {
+                displayText += "<color=red><size=25><b>Paused:</size></b> <size=15><voffset=0.1em>Hit [Space] to Unpause</voffset></color></size><br><br>";
+            }
+            
         }
         
         foreach (string resource in resources)

@@ -17,6 +17,10 @@ MonoBehaviour:
   textDisplay: The frost has descended accross the land. Plants are freezing!
   choice1: Oh well
   choice2: Crap
-  choice1Effects: []
-  choice2Effects: []
+  choice1Effects:
+  - key: food
+    value: -500
+  choice2Effects:
+  - key: food
+    value: 500
   baseWeight: 10
