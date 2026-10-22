@@ -803,6 +803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NotificationUI
       objectReference: {fileID: 0}
+    - target: {fileID: 6494577752213163701, guid: 69b612a1cf8f3364788da1b030def465, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7330294728033170272, guid: 69b612a1cf8f3364788da1b030def465, type: 3}
       propertyPath: m_Material
       value: 

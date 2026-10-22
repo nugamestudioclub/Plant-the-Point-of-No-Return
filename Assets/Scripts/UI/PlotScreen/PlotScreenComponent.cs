@@ -112,7 +112,7 @@ public class PlotScreenComponent : MonoBehaviour
         }
         levelUpConfirmBtn.onClick.RemoveAllListeners();
         levelUpConfirmBtn.onClick.AddListener(() => {
-            GameState.Instance.GamePlots[this.index].SetPlant("potato");
+            GameState.Instance.GamePlots[this.index].SetPlant("");
             GameState.Instance.GamePlots[this.index].LevelUp();
             
             this.ExitView();

@@ -17,6 +17,10 @@ MonoBehaviour:
     value: {fileID: 11400000, guid: 700bfde38cba3ca40bb3ab9ccab715bb, type: 2}
   - key: beauty
     value: {fileID: 11400000, guid: 51b448ae8b4d88942adf68cbca90bf6a, type: 2}
+  - key: ProfXStart
+    value: {fileID: 11400000, guid: 30b9c077aca616f419c8f2b5dd92b440, type: 2}
+  - key: ProfXCont
+    value: {fileID: 11400000, guid: b14319c698d6c8640826dfdf62a2e0a0, type: 2}
   plantTypes:
   - key: corn
     value: {fileID: 11400000, guid: 33a21140c2af47147a30c18b3c3653cd, type: 2}

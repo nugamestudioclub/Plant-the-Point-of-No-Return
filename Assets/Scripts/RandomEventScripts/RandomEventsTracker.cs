@@ -117,8 +117,7 @@ public class RandomEventsTracker : MonoBehaviour
         }
         else
         {
-            //TODO: Check function mapper
-            //TODO: Execute function
+            GameManager.Instance.DelegateEventFunction(effect, val);
         }
     }
 }

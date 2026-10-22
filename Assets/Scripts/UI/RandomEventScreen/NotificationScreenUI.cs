@@ -40,12 +40,16 @@ public class NotificationScreenUI : MonoBehaviour
     [SerializeField]
     private Image contentImage;
     [SerializeField]
+    private Image characterImage;
+    [SerializeField]
     public Button optionA;
     [SerializeField]
     public Button optionB;
     private bool selected = false;
 
     public bool IsResolved { get; private set; }=false;
+
+    private bool isOpen = false;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -103,6 +107,9 @@ public class NotificationScreenUI : MonoBehaviour
         Sprite art = e.Art;
         this.contentImage.sprite = art;
 
+        Sprite cg = e.CharacterArt;
+        this.characterImage.sprite = cg;
+
         this.optionA.GetComponent<TMP_Text>().text = "- "+e.Choice1;
         this.optionB.GetComponent<TMP_Text>().text = "- "+e.Choice2;
         parentStartPos = targetPos.y;
@@ -110,18 +117,21 @@ public class NotificationScreenUI : MonoBehaviour
     }
     public void ToggleButton(bool interactive)
     {
-        if (!this.selected)
+        if (!this.selected && !this.isOpen)
         {
             this.GetComponent<Button>().enabled = interactive;
         }
         else
         {
-            this.GetComponent<Button>().interactable = false;
+            this.GetComponent<Button>().enabled = false;
         }
+        print("ENABLED?:" + this.GetComponent<Button>().enabled);
     }
     public void Open(Vector3 originPos, Vector3 topPos)
     {
+        
         ToggleButton(false);
+        isOpen = true;
 
         this.targetPage = 1;
         exclamation.gameObject.SetActive(false);

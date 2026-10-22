@@ -47,10 +47,11 @@ public class GameConfig : ScriptableObject
     public Dictionary<string, float> fertilizerCreatorInputs;
     [SerializeField]
     public Dictionary<string, float> fertilizerCreatorOuputs;
-
+    
 
     public OngoingCost GetResourceOngoingCost(string resource)
     {
+        
         if(resourceCostsDict == null)
         {
             resourceCostsDict = new Dictionary<string,OngoingCost>();

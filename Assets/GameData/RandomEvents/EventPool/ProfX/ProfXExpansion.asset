@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccdf1a5296b2834cac3b8ab0a7b8ff7, type: 3}
+  m_Name: ProfXExpansion
+  m_EditorClassIdentifier: Assembly-CSharp::RandomEvent
+  title: Professor X
+  art: {fileID: 3353298954701156263, guid: 470c2dc8b51ae1c479f076b246fe32e4, type: 3}
+  character: {fileID: 727799980831053370, guid: e6ac6a9bb0ae41b44ae867d00a709d19, type: 3}
+  textDisplay: I have an idea to expand the machine!
+  choice1: Great idea!
+  choice2: Not thank you.
+  choice1Effects:
+  - key: Action_ProfXAcceptMore
+    value: 0
+  choice2Effects: []
+  baseWeight: 1000000

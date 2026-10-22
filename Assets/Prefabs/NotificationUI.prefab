@@ -906,6 +906,7 @@ MonoBehaviour:
   notifTitle: {fileID: 200478313022185704}
   notifText: {fileID: 3785243163925789254}
   contentImage: {fileID: 7330294728033170272}
+  characterImage: {fileID: 8394993551146238666}
   optionA: {fileID: 3680860085446032139}
   optionB: {fileID: 1787573198876332254}
 --- !u!1 &6733003241931524869
