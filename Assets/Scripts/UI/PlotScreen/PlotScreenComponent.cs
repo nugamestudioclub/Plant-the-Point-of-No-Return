@@ -91,7 +91,7 @@ public class PlotScreenComponent : MonoBehaviour
         {
             if (availableCounts.Contains(s))
             {
-                requirementsText += $"<color=green>{requirementCounts[s]} {s}</color> ";
+                requirementsText += $"<color=#599152>{requirementCounts[s]} {s}</color> ";
             }
             else 
             {
