@@ -1,10 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
+
 using UnityEngine;
-using TMPro;
 using UnityEngine.Events;
-using System.Runtime.CompilerServices;
 
 public class GameState : MonoBehaviour
 {
@@ -172,7 +171,7 @@ public class GameState : MonoBehaviour
         resourceSupplyCounts[registry.FertilizeResouceTagName] = config.startingFertilizer;
 
         //set a time for the first random event to fire
-        randEventFireTime = Random.Range(minTimeRandEvents, maxTimeRandEvents);
+        randEventFireTime = UnityEngine.Random.Range(minTimeRandEvents, maxTimeRandEvents);
 
         //set eventvisuals and canvas to be disabled and assigned properly
         eventCanvas.SetActive(false);
@@ -234,7 +233,7 @@ public class GameState : MonoBehaviour
         if (timeElapsedRandEvent >= randEventFireTime)
         {
             timeElapsedRandEvent = 0;
-            randEventFireTime = Random.Range(minTimeRandEvents, maxTimeRandEvents);
+            randEventFireTime = UnityEngine.Random.Range(minTimeRandEvents, maxTimeRandEvents);
             RandomEvent randEvent = randEventTracker.PullRandomEvent();
             print($"PULL RANDOM EVENT {randEvent.Title}");
             Event(randEvent);
@@ -307,6 +306,9 @@ public class GameState : MonoBehaviour
         }
         if (this.resourceSupplyCounts[registry.PopulationResourceTagName] < 0)
             this.resourceSupplyCounts[registry.PopulationResourceTagName] = 0;
+
+        for (int i = 0; i < plots.Length; i++)
+            SetPlotAssignment(i, plots[i].assigned);
     }
 
     private void UpdateAllocationNumbers()
@@ -418,7 +420,34 @@ public class GameState : MonoBehaviour
 
         }
     }
-    
+    public int GetMaxAssignable(int plotIndex)
+    {
+        if (plotIndex < 0 || plotIndex >= plots.Length) return 0;
+
+        int population = Mathf.FloorToInt(resourceSupplyCounts[registry.PopulationResourceTagName]);
+        int assignedElsewhere = 0;
+        for (int i = 0; i < plots.Length; i++)
+            if (i != plotIndex) assignedElsewhere += plots[i].assigned;
+
+        int available = Mathf.Max(0, population - assignedElsewhere);
+        return Mathf.Min(plots[plotIndex].capacityLimit, available);
+    }
+    public int SetPlotAssignment(int plotIndex, int requested)
+    {
+        if (plotIndex < 0 || plotIndex >= plots.Length) return 0;
+        Plot plot = plots[plotIndex];
+        if (plot.level <= 0) return 0;
+
+        plot.assigned = Mathf.Clamp(requested, 0, GetMaxAssignable(plotIndex));
+        UpdateAllocationNumbers();
+        return plot.assigned;
+    }
+    public float GetPlotAssignmentPercent(int plotIndex)
+    {
+        Plot plot = plots[plotIndex];
+        return plot.capacityLimit > 0 ? (float)plot.assigned / plot.capacityLimit : 0f;
+    }
+
     public class Plot
     {
         public int level = 0;
@@ -450,7 +479,8 @@ public class GameState : MonoBehaviour
         {
             if (count >= capacityLimit)
             {
-                this.assigned = capacityLimit;
+                //this.assigned = capacityLimit;
+                GameState.Instance.SetPlotAssignment(Array.IndexOf(GameState.Instance.plots, this), this.capacityLimit);
                 return this.capacityLimit - count;
             }
 

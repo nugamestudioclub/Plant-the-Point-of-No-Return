@@ -12,6 +12,8 @@ public class MainMenuManager : MonoBehaviour
     private Button exitButton;
     [SerializeField]
     private RectTransform mainPanel;
+    [SerializeField]
+    private Canvas menuCanvas;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,7 +31,7 @@ public class MainMenuManager : MonoBehaviour
     public void StartTransition()
     {
         float height = Screen.height;
-        Vector3 targetPos = mainPanel.transform.position + Vector3.up * height*2;
+        Vector3 targetPos = mainPanel.transform.position + Vector3.up * height*2 * menuCanvas.transform.localScale.y;
         StartCoroutine(TransitionScreen(targetPos));
         
     }
