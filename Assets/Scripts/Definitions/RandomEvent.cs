@@ -9,6 +9,8 @@ public class RandomEvent : ScriptableObject
     private string title;
     [SerializeField]
     private Sprite art;
+    [SerializeField]
+    private Sprite character;
     [SerializeField, TextArea(3, 10)]
     private string textDisplay;
     [SerializeField]
@@ -26,6 +28,7 @@ public class RandomEvent : ScriptableObject
 
     public string Title { get { return title; } }
     public Sprite Art { get { return art; } }
+    public Sprite CharacterArt { get { return character; } }
     public string TextDisplay { get { return textDisplay; } }
     public string Choice1 {  get { return choice1; } }
     public string Choice2 { get { return choice2; } }

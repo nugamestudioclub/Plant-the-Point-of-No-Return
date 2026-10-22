@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Meteor
   m_EditorClassIdentifier: Assembly-CSharp::RandomEvent
   title: Meteor Strike!
-  art: {fileID: 0}
+  art: {fileID: -7913225011324885479, guid: 87c78096f9945934295424569603b6f1, type: 3}
   textDisplay: A meteor crash landed on your colony! Fortunately no plants were hurt, but Jim got hit. Poor Jim.
   choice1: Poor Jim.
   choice2: Poor Jim.
   choice1Effects:
-  - key: humans
+  - key: population
     value: -1
   choice2Effects:
-  - key: humans
+  - key: population
     value: -1
   baseWeight: 10

@@ -69,8 +69,8 @@ MonoBehaviour:
     newCapacityIncrease: 20
   maxPlotCount: 4
   startingPopulation: 25
-  startingFood: 50
-  startingFertilizer: 20
+  startingFood: 1000
+  startingFertilizer: 2000
   passivePopulationGrowth: 0.25
   passiveFertilizerIncome: 4
   resourceCosts:
@@ -116,5 +116,9 @@ MonoBehaviour:
     - FUNGI_EVENTS
   basePopulationFoodRequiremnet: 0.02
   allocatedWorkerFoodRequirement: 0.03
-  fertilizerCreatorInputs: []
-  fertilizerCreatorOuputs: []
+  fertilizerCreatorInputs:
+  - key: population
+    value: 1
+  fertilizerCreatorOuputs:
+  - key: fertilizer
+    value: 1

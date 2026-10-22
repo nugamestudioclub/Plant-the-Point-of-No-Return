@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using Mono.Cecil.Cil;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ public class RandomEventsTracker : MonoBehaviour
 	private void Start()
 	{
 		registry = GameDefinitionRegistry.Instance.Registry;
+        eventPool = new Dictionary<RandomEvent, int>();
 	}
 
 	public void AddPool(string eventTag)
@@ -56,6 +58,7 @@ public class RandomEventsTracker : MonoBehaviour
             sum += eventWeights[j];
         }
         int instance = Random.Range(0, sum) + 1;
+        print("[RANDOM EVENT TRACKER]INSTANCE:" + instance.ToString());
         for (int i = 0; i < eventPool.Count; i++)
         {
             instance -= eventPool[eventPool.Keys.ToList()[i]];
@@ -64,6 +67,7 @@ public class RandomEventsTracker : MonoBehaviour
                 return eventPool.Keys.ToList()[i];
             }
         }
+        print("[RANDOM EVENT TRACKER] FAILED TO FETCH AN EVENT!");
         // If for some strange reason (which can only happen if something else somehow affects this) the weights don't subtract the sum to 0, return last element.
         int len = eventWeights.Count - 1;
         return eventPool.Keys.ToList()[len];
@@ -73,7 +77,23 @@ public class RandomEventsTracker : MonoBehaviour
     {
         //put in actual stuff of what each key to function does here, in my head its basically just a series of if statements which each call to other functions but idk how best to implement it
         //
-
+        Dictionary<string, float> effects;
+        if (choice == 1)
+        {
+            effects = randEvent.Choice1Effects;
+            foreach(string effect in effects.Keys)
+            {
+                resolveEvent(effect, effects[effect]);
+            }
+        }
+        else
+        {
+            effects = randEvent.Choice2Effects;
+            foreach (string effect in effects.Keys)
+            {
+                resolveEvent(effect, effects[effect]);
+            }
+        }
         //
         if (randEvent is EventChain chain)
         {
@@ -87,6 +107,17 @@ public class RandomEventsTracker : MonoBehaviour
             {
                 eventPool[chain.Path2] = 100;
             }
+        }
+    }
+    private void resolveEvent(string effect, float val)
+    {
+        if (GameState.Instance.IsResource(effect))
+        {
+            GameState.Instance.Spend(effect, val);
+        }
+        else
+        {
+            GameManager.Instance.DelegateEventFunction(effect, val);
         }
     }
 }

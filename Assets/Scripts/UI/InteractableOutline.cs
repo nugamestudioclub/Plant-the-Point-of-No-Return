@@ -11,11 +11,20 @@ public class InteractableOutline : MonoBehaviour
 
     void OnMouseOver()
     {
+        
         outlineObject.SetActive(true);
     }
 
     void OnMouseExit()
     {
         outlineObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (CameraOrthographicZoom.isZoomed)
+        {
+            outlineObject.SetActive(false);
+        }
     }
 }

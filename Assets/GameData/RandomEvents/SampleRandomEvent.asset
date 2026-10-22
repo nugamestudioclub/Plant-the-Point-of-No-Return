@@ -13,7 +13,18 @@ MonoBehaviour:
   m_Name: SampleRandomEvent
   m_EditorClassIdentifier: Assembly-CSharp::RandomEvent
   title: Breakout!
-  art: {fileID: 0}
+  art: {fileID: 21300000, guid: 24b54ec1532e5634e8931a4ab6876b8c, type: 3}
   textDisplay: Sir, the plants have broken out! They're attacking colonists, what do we do?!
   choice1: Send out colonists to repair the fence and kill the plants!
   choice2: Burn the fields!
+  choice1Effects:
+  - key: food
+    value: 0
+  - key: population
+    value: -500
+  choice2Effects:
+  - key: food
+    value: -500
+  - key: population
+    value: -5
+  baseWeight: 10

@@ -1,0 +1,821 @@
+fileFormatVersion: 2
+guid: b8182d811f8b1ce479f4bee70ded051c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4054136510161646457
+    second: JoL26_Government_CharacterArt_0
+  - first:
+      213: 4264637423060352342
+    second: JoL26_Government_CharacterArt_1
+  - first:
+      213: -8137435645928526987
+    second: JoL26_Government_CharacterArt_2
+  - first:
+      213: 4608707360725446254
+    second: JoL26_Government_CharacterArt_3
+  - first:
+      213: -9036286661228679477
+    second: JoL26_Government_CharacterArt_4
+  - first:
+      213: -8096850154356772119
+    second: JoL26_Government_CharacterArt_5
+  - first:
+      213: 7345070330956045061
+    second: JoL26_Government_CharacterArt_6
+  - first:
+      213: -216452708588578550
+    second: JoL26_Government_CharacterArt_7
+  - first:
+      213: -3677578278561418247
+    second: JoL26_Government_CharacterArt_8
+  - first:
+      213: -7223925843280001083
+    second: JoL26_Government_CharacterArt_9
+  - first:
+      213: 1860288357852632269
+    second: JoL26_Government_CharacterArt_10
+  - first:
+      213: -1340197013721745405
+    second: JoL26_Government_CharacterArt_11
+  - first:
+      213: 224340092381682816
+    second: JoL26_Government_CharacterArt_12
+  - first:
+      213: -1515187553421316395
+    second: JoL26_Government_CharacterArt_13
+  - first:
+      213: -8609815274728968037
+    second: JoL26_Government_CharacterArt_14
+  - first:
+      213: 5803569025533014671
+    second: JoL26_Government_CharacterArt_15
+  - first:
+      213: -7552509422982567635
+    second: JoL26_Government_CharacterArt_16
+  - first:
+      213: -2136065953689441427
+    second: JoL26_Government_CharacterArt_17
+  - first:
+      213: 3658845696258505031
+    second: JoL26_Government_CharacterArt_18
+  - first:
+      213: 6587033971988836116
+    second: JoL26_Government_CharacterArt_19
+  - first:
+      213: 6470193092577729226
+    second: JoL26_Government_CharacterArt_20
+  - first:
+      213: -2386970925467632091
+    second: JoL26_Government_CharacterArt_21
+  - first:
+      213: -415079405556809925
+    second: JoL26_Government_CharacterArt_22
+  - first:
+      213: 8929587248324378614
+    second: JoL26_Government_CharacterArt_23
+  - first:
+      213: -9122021434180117354
+    second: JoL26_Government_CharacterArt_24
+  - first:
+      213: 1938586623856089691
+    second: JoL26_Government_CharacterArt_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_0
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 2840
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c8fd0e250dcb7c0800000000000000
+      internalID: -4054136510161646457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_1
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 2836
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d795924290f2b30800000000000000
+      internalID: 4264637423060352342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_2
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 2807
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57b24ddd465021f80800000000000000
+      internalID: -8137435645928526987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_3
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 2817
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6ea4c53dea65ff30800000000000000
+      internalID: 4608707360725446254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_4
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 2820
+        width: 60
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bce2ddc6829a89280800000000000000
+      internalID: -9036286661228679477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_5
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 2828
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e27ffdfea532af80800000000000000
+      internalID: -8096850154356772119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1918
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b55e6dc8eeee560800000000000000
+      internalID: 7345070330956045061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_7
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1926
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0918e988610ffcf0800000000000000
+      internalID: -216452708588578550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_8
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 0
+        width: 1169
+        height: 2790
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f377a05a0e96fcc0800000000000000
+      internalID: -3677578278561418247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_9
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1888
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c7088338b57fbb90800000000000000
+      internalID: -7223925843280001083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_10
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1911
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc4d99db76211d910800000000000000
+      internalID: 1860288357852632269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_11
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1856
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 308731caae9a66de0800000000000000
+      internalID: -1340197013721745405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_12
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 1861
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08cd94b10240d1300800000000000000
+      internalID: 224340092381682816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_13
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1832
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5deaa3ea2f8f8fae0800000000000000
+      internalID: -1515187553421316395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_14
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1844
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b903c08df9ac38880800000000000000
+      internalID: -8609815274728968037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_15
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1823
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f82fa54b74b6a8050800000000000000
+      internalID: 5803569025533014671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_16
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1812
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d296558d1b8103790800000000000000
+      internalID: -7552509422982567635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_17
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1736
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6be88d155b2b52e0800000000000000
+      internalID: -2136065953689441427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_18
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1751
+        width: 8
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 749747d76c4d6c230800000000000000
+      internalID: 3658845696258505031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_19
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1722
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41f23d77f78d96b50800000000000000
+      internalID: 6587033971988836116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_20
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1702
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca184f465ebac950800000000000000
+      internalID: 6470193092577729226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_21
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1694
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ef05a0796cfded0800000000000000
+      internalID: -2386970925467632091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_22
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 833
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3fb436da775d3af0800000000000000
+      internalID: -415079405556809925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_23
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 815
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ff7b379a444ceb70800000000000000
+      internalID: 8929587248324378614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_24
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 791
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69cd13e06d1186180800000000000000
+      internalID: -9122021434180117354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoL26_Government_CharacterArt_25
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 95
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a1449634e37ea10800000000000000
+      internalID: 1938586623856089691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      JoL26_Government_CharacterArt_0: -4054136510161646457
+      JoL26_Government_CharacterArt_1: 4264637423060352342
+      JoL26_Government_CharacterArt_10: 1860288357852632269
+      JoL26_Government_CharacterArt_11: -1340197013721745405
+      JoL26_Government_CharacterArt_12: 224340092381682816
+      JoL26_Government_CharacterArt_13: -1515187553421316395
+      JoL26_Government_CharacterArt_14: -8609815274728968037
+      JoL26_Government_CharacterArt_15: 5803569025533014671
+      JoL26_Government_CharacterArt_16: -7552509422982567635
+      JoL26_Government_CharacterArt_17: -2136065953689441427
+      JoL26_Government_CharacterArt_18: 3658845696258505031
+      JoL26_Government_CharacterArt_19: 6587033971988836116
+      JoL26_Government_CharacterArt_2: -8137435645928526987
+      JoL26_Government_CharacterArt_20: 6470193092577729226
+      JoL26_Government_CharacterArt_21: -2386970925467632091
+      JoL26_Government_CharacterArt_22: -415079405556809925
+      JoL26_Government_CharacterArt_23: 8929587248324378614
+      JoL26_Government_CharacterArt_24: -9122021434180117354
+      JoL26_Government_CharacterArt_25: 1938586623856089691
+      JoL26_Government_CharacterArt_3: 4608707360725446254
+      JoL26_Government_CharacterArt_4: -9036286661228679477
+      JoL26_Government_CharacterArt_5: -8096850154356772119
+      JoL26_Government_CharacterArt_6: 7345070330956045061
+      JoL26_Government_CharacterArt_7: -216452708588578550
+      JoL26_Government_CharacterArt_8: -3677578278561418247
+      JoL26_Government_CharacterArt_9: -7223925843280001083
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

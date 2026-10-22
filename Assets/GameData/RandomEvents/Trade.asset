@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Trade
   m_EditorClassIdentifier: Assembly-CSharp::RandomEvent
   title: Capitalism
-  art: {fileID: 0}
+  art: {fileID: -2316363744810171048, guid: d8ff76436b717c7449f9b4b42c976743, type: 3}
   textDisplay: 'A somewhat large group comes to your colony saying they need some food. They say they''re willing to work if it means they get fed. '
   choice1: Sure, we'll have you on.
   choice2: We're full.

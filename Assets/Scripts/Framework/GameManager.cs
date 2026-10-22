@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -14,6 +16,8 @@ public class GameManager : MonoBehaviour
     private GameUI gameUIManager;
     [SerializeField]
     private GameState gameState;
+    [SerializeField]
+    private FunctionDelegator delegator;
 
     [SerializeField]
     private GameDefinitionRegistry gameDefinitionRegistry;
@@ -111,6 +115,9 @@ public class GameManager : MonoBehaviour
                 break;
 
             case EGameState.POSTGAME:
+
+                bool goodEnding = !gameState.FertilizerCreatorEnabled;
+                //Todo: Call PlayEnding(goodEnding);
                 return transition(destState);
                
         }
@@ -161,5 +168,11 @@ public class GameManager : MonoBehaviour
             Instance = null;
             GameState = EGameState.INTRO;
         }
+    }
+
+
+    public void DelegateEventFunction(string name, float val)
+    {
+        delegator.DelegateFunction(name, val);
     }
 }

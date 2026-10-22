@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class CameraOrthographicZoom : MonoBehaviour
@@ -7,10 +8,14 @@ public class CameraOrthographicZoom : MonoBehaviour
     [SerializeField] private float cameraZoomSpeed = 5f;
     [SerializeField] private float zoomedOrthoSize = 3f;   // size used when zoomed in
 
+    public static bool isZoomed = false;
+
     private Vector3 startingPosition;
     private Vector3 zoomTarget;
     private float targetOrthoSize;
     private bool zoomRequested;
+
+    public UnityEvent onDeselect;
 
     void Awake()
     {
@@ -21,7 +26,7 @@ public class CameraOrthographicZoom : MonoBehaviour
 
     void Update()
     {
-        if (Mouse.current.rightButton.wasPressedThisFrame)
+        if (Mouse.current.rightButton.wasPressedThisFrame || Input.GetKeyDown(KeyCode.Escape))
         {
             ResetZoom();
         }
@@ -32,7 +37,7 @@ public class CameraOrthographicZoom : MonoBehaviour
         if (zoomRequested) ZoomCameraToTarget();
     }
 
-    public void OnZoomRequested(Vector3 targetWorldPosition)
+    public void OnZoomRequested(Vector3 targetWorldPosition, float zoomOverride=-1)
     {
         cameraManager.IsZoomed = true;
 
@@ -44,8 +49,14 @@ public class CameraOrthographicZoom : MonoBehaviour
         Vector3 offset = transform.position - lookAtPointOnAxis;
 
         zoomTarget = targetWorldPosition + offset;
+       
         targetOrthoSize = zoomedOrthoSize;
+        if (zoomOverride > 0)
+        {
+            targetOrthoSize = zoomOverride;
+        }
         zoomRequested = true;
+        isZoomed = true;
     }
 
     public void ResetZoom()
@@ -54,6 +65,8 @@ public class CameraOrthographicZoom : MonoBehaviour
         zoomTarget = startingPosition;
         targetOrthoSize = cameraManager.BaseOrthoSize;
         zoomRequested = true;
+        isZoomed = false;
+        onDeselect.Invoke();
     }
 
     private void ZoomCameraToTarget()

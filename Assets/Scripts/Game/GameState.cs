@@ -56,7 +56,6 @@ public class GameState : MonoBehaviour
     private RandomEventsTracker randEventTracker;
     [SerializeField]
     private GameObject eventCanvas;
-    private EventVisual eventVisual;
     private RandomEvent currentEvent = null;
     private int durationWithoutFood = 0;
 
@@ -64,9 +63,14 @@ public class GameState : MonoBehaviour
     private float _t = 0;
 
     private FertilizerCreator fertCreator;
+    private bool fertModeEligable = false;
+    public bool FertilizerCreatorEnabled { get { return fertCreator!=null; } }
     public enum EGameSubState { FIRST_PHASE, SECOND_PHASE }
     public EGameSubState SubState { get; private set; } = EGameSubState.FIRST_PHASE;
+    private int pauseSemaphore = 0;
+    public int IsLocked { get { return pauseSemaphore; } }
 
+    public UnityEvent OnEnableStage2;
 
     private void Awake()
     {
@@ -93,6 +97,10 @@ public class GameState : MonoBehaviour
             Ticker();
             UpdateAllocationNumbers();
 
+            if (resourceSupplyCounts[this.registry.PopulationResourceTagName] < 0)
+            {
+                GameManager.Instance.TransitionToState(GameManager.EGameState.POSTGAME);
+            }
         }
     }
 
@@ -104,13 +112,36 @@ public class GameState : MonoBehaviour
 
     public void TogglePause()
     {
+        if (pauseSemaphore>0)
+        {
+            return;
+        }
         this.isTickerRunning = !this.isTickerRunning;
         print($"[Game State] Ticker Paused: {!isTickerRunning}");
     }
     public void Pause()
     {
+        if (pauseSemaphore>0)
+        {
+            return;
+        }
         this.isTickerRunning = false;
         print($"[Game State] Ticker Paused: {!isTickerRunning}");
+    }
+
+    public void LockPause()
+    {
+        this.pauseSemaphore++;
+    }
+    public void UnlockPause()
+    {
+        this.pauseSemaphore--;
+    }
+
+    
+    public bool IsResource(string resourceName)
+    {
+        return this.resourceSupplyCounts.ContainsKey(resourceName);
     }
 
     /// <summary>
@@ -145,10 +176,11 @@ public class GameState : MonoBehaviour
 
         //set eventvisuals and canvas to be disabled and assigned properly
         eventCanvas.SetActive(false);
-        eventVisual = eventCanvas.GetComponent<EventVisual>();
+
         randEventTracker.LoadEventsFromRegistry();
         randEventTracker.AddPool("beauty");
         randEventTracker.AddPool("random");
+        
 
         prevResourceSupplyDeltas = new Dictionary<string, float>(resourceSupplyCounts);
     }
@@ -185,12 +217,13 @@ public class GameState : MonoBehaviour
         //Passive Costs
         ApplyPopulationFoodNeeds();
 
-        if(this.SubState == EGameSubState.SECOND_PHASE)
+        if(FertilizerCreatorEnabled)
         {
             fertCreator.Produce();
         }
-        
+
         IsRandomTime();
+        CheckConditions();
     }
 
     private void IsRandomTime()
@@ -203,17 +236,30 @@ public class GameState : MonoBehaviour
             timeElapsedRandEvent = 0;
             randEventFireTime = Random.Range(minTimeRandEvents, maxTimeRandEvents);
             RandomEvent randEvent = randEventTracker.PullRandomEvent();
+            print($"PULL RANDOM EVENT {randEvent.Title}");
             Event(randEvent);
+        }
+    }
+
+    private void CheckConditions()
+    {
+        float totalFertConsumption = 0;
+        foreach(Plot p in this.plots)
+        {
+            totalFertConsumption += p.GetFertUsage();
+        }
+        if(totalFertConsumption > config.passiveFertilizerIncome && !this.fertModeEligable)
+        {
+            this.fertModeEligable = true;
+            OnEnableStage2.Invoke();
+
         }
     }
 
     private void Event(RandomEvent randomEvent)
     {
-        eventVisual.title.text = randomEvent.Title;
-        eventVisual.textDisplay.text = randomEvent.TextDisplay;
-        eventVisual.choice1.text = randomEvent.Choice1;
-        eventVisual.choice2.text = randomEvent.Choice2;
-        eventCanvas.SetActive(true);
+        EventMonitorController.Instance.SubmitEvent(randomEvent);
+        
         currentEvent = randomEvent;
     }
 
@@ -299,6 +345,19 @@ public class GameState : MonoBehaviour
             this.resourceSupplyCounts[resource] = 0;
         }
         
+    }
+
+    public void EnableFertilizerCreator()
+    {
+        this.fertCreator = new FertilizerCreator();
+        this.SubState = EGameSubState.SECOND_PHASE;
+        randEventTracker.AddPool("ProfXCont");
+        randEventTracker.RemovePool("ProfXStart");
+    }
+    public void ExpandFertilizerCreator()
+    {
+        this.fertCreator.SelfAddInputs();
+        this.fertCreator.SelfAddOutputs();
     }
 
     public Dictionary<string,int> GetUpgradeRequirements(int level)
@@ -427,8 +486,9 @@ public class GameState : MonoBehaviour
 
         public void Produce()
         {
-            if(inputs!=null && outputs != null && level >= 1)
+            if(inputs!=null && outputs != null && level >= 1 && plant.Length>2)
             {
+                
                 float scale = 1;
                 scale *= GetPercAvailable(assigned, capacityLimit);
                 print($"[Game State] Assigned:{assigned} / Capacity: {capacityLimit} ==> {scale}");
@@ -457,8 +517,31 @@ public class GameState : MonoBehaviour
             }
         }
 
+        public float GetFertUsage()
+        {
+            if(plant == "")
+            {
+                return 0;
+            }
+            float scale = 1;
+            scale *= GetPercAvailable(assigned, capacityLimit);
+            print($"[Game State] Assigned:{assigned} / Capacity: {capacityLimit} ==> {scale}");
+            if (scale == 0)
+            {
+                //nothing produced.
+                print($"[Game State] Nothing to produce due to Scale={scale}");
+                return 0;
+            }
+            float mod = inputs[GameState.Instance.registry.FertilizeResouceTagName] * level;
+            return mod * scale;
+        }
+
         public void SetPlant(string plant)
         {   
+            if(plant == "")
+            {
+                return;
+            }
             GameConfig.OngoingCost costData = Instance.config.GetResourceOngoingCost(plant);
             this.plant = plant;
             this.inputs = costData.inputResourceCost;
@@ -486,6 +569,8 @@ public class GameState : MonoBehaviour
             }
             
             this.level += 1;
+            //TODO: REMOVE THIS
+            this.assigned = this.capacityLimit;
             print($"[Game State] Set Plot's Level to {level}.");
         }
     }
@@ -503,8 +588,8 @@ public class GameState : MonoBehaviour
         {
             string popTag = GameState.Instance.registry.PopulationResourceTagName;
             string fertTag = GameState.Instance.registry.FertilizeResouceTagName;
-            inputs = GameState.Instance.config.fertilizerCreatorInputs;
-            outputs = GameState.Instance.config.fertilizerCreatorOuputs;
+            inputs = new Dictionary<string, float>(GameState.Instance.config.fertilizerCreatorInputs);
+            outputs = new Dictionary<string, float>(GameState.Instance.config.fertilizerCreatorOuputs);
             popInput = inputs[popTag];
             fertOutput = outputs[fertTag];
 
@@ -533,6 +618,14 @@ public class GameState : MonoBehaviour
                 this.inputs[resource] += modification;
             }
         }
+        public void SelfAddInputs(float mod=1)
+        {
+            for(int i =0;i< inputs.Keys.Count;i++)
+            {
+                string input = this.inputs.Keys.ToList()[i];
+                this.inputs[input] += GameState.instance.config.fertilizerCreatorInputs[input]*mod;
+            }
+        }
         public void ModifyOutputs(string resource, float modification, bool isOverride = false)
         {
             if (isOverride)
@@ -543,6 +636,15 @@ public class GameState : MonoBehaviour
             {
                 this.outputs[resource] = modification;
             }
+        }
+        public void SelfAddOutputs(float mod = 1)
+        {
+            for(int i =0;i < outputs.Keys.Count; i++)
+            {
+                string output = this.outputs.Keys.ToList()[i];
+                this.outputs[output] += GameState.Instance.config.fertilizerCreatorOuputs[output] * mod;
+            }
+          
         }
     }
 
