@@ -123,6 +123,7 @@ public class GameState : MonoBehaviour
             return;
         }
         this.isTickerRunning = !this.isTickerRunning;
+
         print($"[Game State] Ticker Paused: {!isTickerRunning}");
     }
     public void Pause()
@@ -132,6 +133,7 @@ public class GameState : MonoBehaviour
             return;
         }
         this.isTickerRunning = false;
+
         print($"[Game State] Ticker Paused: {!isTickerRunning}");
     }
 
@@ -230,6 +232,7 @@ public class GameState : MonoBehaviour
 
         IsRandomTime();
         CheckConditions();
+        GameManager.Instance.AudioController.PlayTicking();
     }
 
     private void IsRandomTime()
@@ -363,6 +366,7 @@ public class GameState : MonoBehaviour
         this.SubState = EGameSubState.SECOND_PHASE;
         randEventTracker.AddPool("ProfXCont");
         randEventTracker.RemovePool("ProfXStart");
+        GameManager.Instance.AudioController.targetAudio = 2;
     }
     public void ExpandFertilizerCreator()
     {
@@ -511,7 +515,7 @@ public class GameState : MonoBehaviour
         {
             return (float)assigned / (float)capacity;
         }
-
+        
         private float ScaleOutputByResourceLeft(string resource, float pull, int level)
         {
             //Example: say we pull 15

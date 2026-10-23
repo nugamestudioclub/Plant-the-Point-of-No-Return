@@ -119,8 +119,8 @@ public class PlotScreenComponent : MonoBehaviour
         });
         isUpgradeOpen = true;
 
-
     }
+    
 
     public void ExitView()
     {
