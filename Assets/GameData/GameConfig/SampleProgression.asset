@@ -68,9 +68,9 @@ MonoBehaviour:
       value: 200
     newCapacityIncrease: 20
   maxPlotCount: 4
-  startingPopulation: 1
-  startingFood: 0
-  startingFertilizer: 1
+  startingPopulation: 25
+  startingFood: 100
+  startingFertilizer: 100
   passivePopulationGrowth: 0.25
   passiveFertilizerIncome: 4
   resourceCosts:
@@ -78,40 +78,40 @@ MonoBehaviour:
     costTag: corn_production
     inputResourceCost:
     - key: fertilizer
-      value: 1
+      value: 2
     outputResourceGain:
     - key: food
-      value: 1
+      value: 1.8
     functionTags:
     - CORN_EVENTS
   - resourceTag: pumpkin
     costTag: pumpkin_production
     inputResourceCost:
     - key: fertilizer
-      value: 1
+      value: 0.8
     outputResourceGain:
     - key: food
-      value: 1
+      value: 0.75
     functionTags:
     - PUMPKIN_EVENTS
   - resourceTag: potato
     costTag: potato_production
     inputResourceCost:
     - key: fertilizer
-      value: 1
+      value: 0.5
     outputResourceGain:
     - key: food
-      value: 1
+      value: 0.5
     functionTags:
     - POTATO_EVENTS
   - resourceTag: fungi
     costTag: fungi_production
     inputResourceCost:
     - key: fertilizer
-      value: 1
+      value: 4
     outputResourceGain:
     - key: food
-      value: 1
+      value: 3
     functionTags:
     - FUNGI_EVENTS
   basePopulationFoodRequiremnet: 0.02

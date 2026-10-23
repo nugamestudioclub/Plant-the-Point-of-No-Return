@@ -184,7 +184,7 @@ public class GameState : MonoBehaviour
         eventCanvas.SetActive(false);
 
         randEventTracker.LoadEventsFromRegistry();
-        randEventTracker.AddPool("beauty");
+        //randEventTracker.AddPool("beauty");
         randEventTracker.AddPool("random");
         
 
@@ -265,12 +265,13 @@ public class GameState : MonoBehaviour
     private void Event(RandomEvent randomEvent)
     {
         EventMonitorController.Instance.SubmitEvent(randomEvent);
-        
+         
         currentEvent = randomEvent;
     }
 
     public void EventOptionPicked(int choice)
     {
+        print("CHOICE:"+ choice);
         randEventTracker.ResolveEvent(currentEvent, choice);
         eventCanvas.SetActive(false);
         currentEvent = null;

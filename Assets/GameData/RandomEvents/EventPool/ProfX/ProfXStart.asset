@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccdf1a5296b2834cac3b8ab0a7b8ff7, type: 3}
   m_Name: ProfXStart
   m_EditorClassIdentifier: Assembly-CSharp::RandomEvent
-  title: Professor X
+  title: Dr. X
   art: {fileID: 3353298954701156263, guid: 470c2dc8b51ae1c479f076b246fe32e4, type: 3}
-  character: {fileID: 727799980831053370, guid: e6ac6a9bb0ae41b44ae867d00a709d19, type: 3}
+  character: {fileID: 21300000, guid: ee69e315ad67bc445b3e9bf49dfb5cfc, type: 3}
   textDisplay: I have a proposal for your... fertilizer problem...
   choice1: Sounds good to me!
   choice2: No thanks!
@@ -22,4 +22,4 @@ MonoBehaviour:
   - key: Action_ProfXAccept
     value: 0
   choice2Effects: []
-  baseWeight: 1000000
+  baseWeight: 40

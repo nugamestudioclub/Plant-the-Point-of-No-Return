@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata;
-using Mono.Cecil.Cil;
+
 using UnityEngine;
 
 public class RandomEventsTracker : MonoBehaviour
@@ -75,11 +74,20 @@ public class RandomEventsTracker : MonoBehaviour
     }
     public void ResolveEvent(RandomEvent randEvent, int choice)
     {
-        //put in actual stuff of what each key to function does here, in my head its basically just a series of if statements which each call to other functions but idk how best to implement it
-        //
-        Dictionary<string, float> effects;
+        if(choice == 1)
+        {
+            choice = 2;
+        }
+        else
+        {
+            choice = 1;
+        }
+            //put in actual stuff of what each key to function does here, in my head its basically just a series of if statements which each call to other functions but idk how best to implement it
+            //
+            Dictionary<string, float> effects;
         if (choice == 1)
         {
+            print("CHOICE 1 PICKED!!!");
             effects = randEvent.Choice1Effects;
             foreach(string effect in effects.Keys)
             {
@@ -88,6 +96,7 @@ public class RandomEventsTracker : MonoBehaviour
         }
         else
         {
+            print("CHOICE 2 PICKED!!!");
             effects = randEvent.Choice2Effects;
             foreach (string effect in effects.Keys)
             {

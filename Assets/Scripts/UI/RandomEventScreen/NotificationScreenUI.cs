@@ -125,7 +125,6 @@ public class NotificationScreenUI : MonoBehaviour
         {
             this.GetComponent<Button>().enabled = false;
         }
-        print("ENABLED?:" + this.GetComponent<Button>().enabled);
     }
     public void Open(Vector3 originPos, Vector3 topPos)
     {

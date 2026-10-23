@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccdf1a5296b2834cac3b8ab0a7b8ff7, type: 3}
   m_Name: ProfXExpansion
   m_EditorClassIdentifier: Assembly-CSharp::RandomEvent
-  title: Professor X
+  title: Dr. X
   art: {fileID: 3353298954701156263, guid: 470c2dc8b51ae1c479f076b246fe32e4, type: 3}
-  character: {fileID: 727799980831053370, guid: e6ac6a9bb0ae41b44ae867d00a709d19, type: 3}
+  character: {fileID: 21300000, guid: 002530d1462f311448641533b4c86f3e, type: 3}
   textDisplay: I have an idea to expand the machine!
   choice1: Great idea!
   choice2: Not thank you.
@@ -22,4 +22,4 @@ MonoBehaviour:
   - key: Action_ProfXAcceptMore
     value: 0
   choice2Effects: []
-  baseWeight: 1000000
+  baseWeight: 10

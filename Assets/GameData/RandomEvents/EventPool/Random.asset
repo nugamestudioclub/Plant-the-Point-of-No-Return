@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EventPool
   tag: random
   events:
-  - {fileID: 11400000, guid: 94218b6d1dcf9c54aa6eb5634d6469df, type: 2}
-  - {fileID: 11400000, guid: f08dfd57b1d442348b3c9c3e5f2307e0, type: 2}
-  - {fileID: 11400000, guid: 677c221016a685a45b59152e5caaaba9, type: 2}
-  - {fileID: 11400000, guid: a66a907c0c049c54eb837caab5fc3e66, type: 2}
+  - {fileID: 11400000, guid: 8bd01810009282a4fb40dac64629b244, type: 2}
+  - {fileID: 11400000, guid: 87c54a74d7d00eb45a4a08b412726d3c, type: 2}
+  - {fileID: 11400000, guid: 194e3a9a1d6c0fb4cb2f357846336df5, type: 2}

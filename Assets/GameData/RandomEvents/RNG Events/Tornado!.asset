@@ -10,17 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ccdf1a5296b2834cac3b8ab0a7b8ff7, type: 3}
-  m_Name: Trade
+  m_Name: Tornado!
   m_EditorClassIdentifier: Assembly-CSharp::RandomEvent
-  title: Capitalism
-  art: {fileID: -2316363744810171048, guid: d8ff76436b717c7449f9b4b42c976743, type: 3}
-  textDisplay: 'A somewhat large group comes to your colony saying they need some food. They say they''re willing to work if it means they get fed. '
-  choice1: Sure, we'll have you on.
-  choice2: We're full.
+  title: Tornado Warning!
+  art: {fileID: -1769480402598467305, guid: 962e70a919dfd194a8887a6c3823fe64, type: 3}
+  character: {fileID: 21300000, guid: b8182d811f8b1ce479f4bee70ded051c, type: 3}
+  textDisplay: Warning a tornado is running amock!
+  choice1: Evacuate the workers!
+  choice2: Save the plants!
   choice1Effects:
-  - key: humans
-    value: 10
+  - key: population
+    value: -5
   - key: food
-    value: -10
-  choice2Effects: []
+    value: -50
+  choice2Effects:
+  - key: food
+    value: -5
+  - key: population
+    value: -50
   baseWeight: 10

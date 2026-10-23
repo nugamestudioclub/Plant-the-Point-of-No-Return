@@ -10,21 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ccdf1a5296b2834cac3b8ab0a7b8ff7, type: 3}
-  m_Name: SampleRandomEvent
+  m_Name: Frost
   m_EditorClassIdentifier: Assembly-CSharp::RandomEvent
-  title: Breakout!
-  art: {fileID: 21300000, guid: 24b54ec1532e5634e8931a4ab6876b8c, type: 3}
-  textDisplay: Sir, the plants have broken out! They're attacking colonists, what do we do?!
-  choice1: Send out colonists to repair the fence and kill the plants!
-  choice2: Burn the fields!
+  title: Frost!
+  art: {fileID: 21300000, guid: 7e3abe2ce1480124987e3b34427f6d12, type: 3}
+  character: {fileID: 21300000, guid: b8182d811f8b1ce479f4bee70ded051c, type: 3}
+  textDisplay: Frost has descended accross the land. The plants are dying.
+  choice1: Send workers into the cold to protect the plants.
+  choice2: Let the plants die.
   choice1Effects:
-  - key: food
-    value: 0
   - key: population
-    value: -500
-  choice2Effects:
+    value: -20
   - key: food
-    value: -500
-  - key: population
     value: -5
+  - key: fertilizer
+    value: -20
+  choice2Effects:
+  - key: fertilizer
+    value: 50
+  - key: food
+    value: -50
+  - key: population
+    value: 5
   baseWeight: 10
