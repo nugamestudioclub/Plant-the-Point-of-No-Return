@@ -22,7 +22,7 @@ public class InteractableZoom : MonoBehaviour
 
     void OnMouseDown()
     {
-        cameraZoomController.OnZoomRequested(zoomOffset.position,overrideVal);
+        cameraZoomController.OnZoomRequested(zoomOffset.position, overrideVal);
         
         onSelected.Invoke();
         
