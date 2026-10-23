@@ -37,24 +37,18 @@ public class CameraOrthographicZoom : MonoBehaviour
         if (zoomRequested) ZoomCameraToTarget();
     }
 
-    public void OnZoomRequested(Vector3 targetWorldPosition, float zoomOverride=-1)
+    public void OnZoomRequested(Vector3 targetWorldPosition, float zoomOverride = -1)
     {
         cameraManager.IsZoomed = true;
 
-        Transform camTransform = cameraManager.transform;
-        Vector3 toTarget = targetWorldPosition - transform.position;
-        float distanceAlongLookVector = Vector3.Dot(toTarget, camTransform.forward);
+        Vector3 forward = cameraManager.transform.forward;
+        Vector3 toTarget = targetWorldPosition - startingPosition;
+        float distanceAlongLook = Vector3.Dot(toTarget, forward);
 
-        Vector3 lookAtPointOnAxis = transform.position + (camTransform.forward * distanceAlongLookVector);
-        Vector3 offset = transform.position - lookAtPointOnAxis;
+        // Same lateral position as the target, at the camera's starting depth
+        zoomTarget = targetWorldPosition - forward * distanceAlongLook;
 
-        zoomTarget = targetWorldPosition + offset;
-       
-        targetOrthoSize = zoomedOrthoSize;
-        if (zoomOverride > 0)
-        {
-            targetOrthoSize = zoomOverride;
-        }
+        targetOrthoSize = zoomOverride > 0 ? zoomOverride : zoomedOrthoSize;
         zoomRequested = true;
         isZoomed = true;
     }
