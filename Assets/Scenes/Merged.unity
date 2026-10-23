@@ -742,8 +742,8 @@ RectTransform:
   m_GameObject: {fileID: 123679713}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.42, y: 1.42, z: 1.42}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 452387431}
   - {fileID: 1643551683}
@@ -753,7 +753,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -55, y: 319}
+  m_AnchoredPosition: {x: -55, y: 239}
   m_SizeDelta: {x: 1144.4, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &123679715
@@ -769,7 +769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6745098, g: 0.6901961, b: 0.52156866, a: 1}
+  m_Color: {r: 0.73333335, g: 0.75294125, b: 0.5686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1933,7 +1933,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 139.4
+  m_fontSize: 134.7
   m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2184,6 +2184,8 @@ MonoBehaviour:
           m_StringArgument: ProfXStart
           m_BoolArgument: 0
         m_CallState: 2
+  goodEndingScene: Outro1
+  badEndingScene: Outro2
 --- !u!114 &617098275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3146,6 +3148,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862681534}
   m_CullTransparentMesh: 1
+--- !u!1 &972477199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 972477200}
+  m_Layer: 0
+  m_Name: CameraZoomTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &972477200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972477199}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.499999, y: 7.1428566, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1486487626}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &989115444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3534,7 +3567,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -3874,7 +3907,7 @@ GameObject:
   - component: {fileID: 1457655064}
   - component: {fileID: 1457655063}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: AllocationButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4008,6 +4041,7 @@ GameObject:
   - component: {fileID: 1486487624}
   - component: {fileID: 1486487627}
   - component: {fileID: 1486487628}
+  - component: {fileID: 1486487629}
   m_Layer: 0
   m_Name: TurnableValve
   m_TagString: Untagged
@@ -4124,6 +4158,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 972477200}
   - {fileID: 721873509}
   m_Father: {fileID: 28679249}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4156,6 +4191,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
   outlineObject: {fileID: 721873508}
+--- !u!114 &1486487629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486487623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e9e4f431542c3047a6dbd6f46319f4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableZoom
+  cameraZoomController: {fileID: 329764396}
+  zoomOffset: {fileID: 972477200}
+  overrideVal: 5
+  onSelected:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1558220895 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2406178284455817511, guid: f323ace5df5eac44c813fb4d93bc8f6a, type: 3}
