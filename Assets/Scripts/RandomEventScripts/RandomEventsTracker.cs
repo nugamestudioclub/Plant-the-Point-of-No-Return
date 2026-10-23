@@ -11,6 +11,8 @@ public class RandomEventsTracker : MonoBehaviour
     private Dictionary<RandomEvent, int> eventPool;
     private Dictionary<string, EventPool> eventPoolRegistry;
     private DefinitionRegistry registry;
+    private readonly HashSet<RandomEvent> pending = new HashSet<RandomEvent>();
+
     [SerializeField]
     private UnityEvent onEventPopup;
 
@@ -32,16 +34,15 @@ public class RandomEventsTracker : MonoBehaviour
         }
     }
 
-    public void RemovePool(string eventTag)
+    public List<RandomEvent> RemovePool(string eventTag)
     {
-        EventPool instance = eventPoolRegistry[eventTag];
-        for (int i = 0; i < instance.Events.Count; i++)
+        var stale = new List<RandomEvent>();
+        foreach (var ev in eventPoolRegistry[eventTag].Events)
         {
-            if (eventPool.Keys.Contains(instance.Events[i]))
-            {
-                eventPool.Remove(instance.Events[i]);
-            }
+            eventPool.Remove(ev);
+            if (pending.Remove(ev)) stale.Add(ev);
         }
+        return stale;
     }
 
     public void LoadEventsFromRegistry()
@@ -51,76 +52,48 @@ public class RandomEventsTracker : MonoBehaviour
 
     public RandomEvent PullRandomEvent()
     {
-      
-        List<int> eventWeights = eventPool.Values.ToList();
-        int sum = 0;
+        
+        var candidates = eventPool.Where(kv => kv.Value > 0 && !pending.Contains(kv.Key)).ToList();
+        if (candidates.Count == 0) return null;
 
-        for (int j = 0; j < eventWeights.Count; j++)
+        int roll = Random.Range(0, candidates.Sum(kv => kv.Value));
+        foreach (var kv in candidates)
         {
-            sum += eventWeights[j];
-        }
-        int instance = Random.Range(0, sum) + 1;
-        print("[RANDOM EVENT TRACKER]INSTANCE:" + instance.ToString());
-        for (int i = 0; i < eventPool.Count; i++)
-        {
-            instance -= eventPool[eventPool.Keys.ToList()[i]];
-            if (instance <= 0)
+            roll -= kv.Value;
+            if (roll < 0)
             {
+                pending.Add(kv.Key);
                 onEventPopup.Invoke();
-                return eventPool.Keys.ToList()[i];
+                return kv.Key;
             }
         }
-        print("[RANDOM EVENT TRACKER] FAILED TO FETCH AN EVENT!");
-        // If for some strange reason (which can only happen if something else somehow affects this) the weights don't subtract the sum to 0, return last element.
-        int len = eventWeights.Count - 1;
-        return eventPool.Keys.ToList()[len];
-        
+        return null;
     }
     public void ResolveEvent(RandomEvent randEvent, int choice)
     {
-        if(choice == 1)
+        if (randEvent == null)
         {
-            choice = 2;
+            print("[RANDOM EVENT TRACKER] Resolve called with NULL event");
+            return;
         }
-        else
+        if (!pending.Remove(randEvent))
         {
-            choice = 1;
+            print($"[RANDOM EVENT TRACKER] {randEvent.Title} not pending, ignored");
+            return;
         }
-            //put in actual stuff of what each key to function does here, in my head its basically just a series of if statements which each call to other functions but idk how best to implement it
-            //
-            Dictionary<string, float> effects;
-        if (choice == 1)
-        {
-            print("CHOICE 1 PICKED!!!");
-            effects = randEvent.Choice1Effects;
-            foreach(string effect in effects.Keys)
-            {
-                resolveEvent(effect, effects[effect]);
-            }
-        }
-        else
-        {
-            print("CHOICE 2 PICKED!!!");
-            effects = randEvent.Choice2Effects;
-            foreach (string effect in effects.Keys)
-            {
-                resolveEvent(effect, effects[effect]);
-            }
-        }
-        //
+
+        bool first = choice != 1;
+        print($"[RANDOM EVENT TRACKER] Resolving {randEvent.Title}, choice {choice}, using {(first ? "Choice1" : "Choice2")}Effects");
+
         if (randEvent is EventChain chain)
         {
             eventPool.Remove(randEvent);
-            if (choice == 0 && chain.Path1 != null)
-            {
-                //sets the next option to have much higher weight
-                eventPool[chain.Path1] = 100;
-            }
-            if (choice == 1 && chain.Path2 != null)
-            {
-                eventPool[chain.Path2] = 100;
-            }
+            RandomEvent next = first ? chain.Path1 : chain.Path2;
+            if (next != null) eventPool[next] = 100;
         }
+
+        var effects = first ? randEvent.Choice1Effects : randEvent.Choice2Effects;
+        foreach (var kv in effects) resolveEvent(kv.Key, kv.Value);
     }
     private void resolveEvent(string effect, float val)
     {

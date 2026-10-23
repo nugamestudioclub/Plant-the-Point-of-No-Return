@@ -46,6 +46,7 @@ public class NotificationScreenUI : MonoBehaviour
     [SerializeField]
     public Button optionB;
     private bool selected = false;
+    private RandomEvent loadedEvent;
 
     public bool IsResolved { get; private set; }=false;
 
@@ -66,7 +67,7 @@ public class NotificationScreenUI : MonoBehaviour
             {
                 return;
             }
-            GameState.Instance.EventOptionPicked(1);
+            GameState.Instance.EventOptionPicked(loadedEvent, 1);
             this.Close();
             selected = true;
         });
@@ -76,7 +77,7 @@ public class NotificationScreenUI : MonoBehaviour
             {
                 return;
             }
-            GameState.Instance.EventOptionPicked(2);
+            GameState.Instance.EventOptionPicked(loadedEvent, 2);
             this.Close();
             selected = true;
         });
@@ -98,6 +99,7 @@ public class NotificationScreenUI : MonoBehaviour
 
     public void LoadContent(RandomEvent e, Vector3 targetPos)
     {
+        loadedEvent = e;
         string title = e.Title;
         this.notifTitle.text = title;
 
@@ -114,6 +116,19 @@ public class NotificationScreenUI : MonoBehaviour
         this.optionB.GetComponent<TMP_Text>().text = "- "+e.Choice2;
         parentStartPos = targetPos.y;
 
+        optionA.onClick.RemoveAllListeners();
+        optionB.onClick.RemoveAllListeners();
+        optionA.onClick.AddListener(() => Pick(e, 1));
+        optionB.onClick.AddListener(() => Pick(e, 2));
+
+    }
+
+    private void Pick(RandomEvent e, int choice)
+    {
+        if (selected) return;
+        selected = true;
+        GameState.Instance.EventOptionPicked(e, choice);
+        Close();
     }
     public void ToggleButton(bool interactive)
     {

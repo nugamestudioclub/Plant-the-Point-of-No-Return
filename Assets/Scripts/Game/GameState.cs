@@ -238,18 +238,13 @@ public class GameState : MonoBehaviour
     private void IsRandomTime()
     {
         timeElapsedRandEvent += tickDuration;
-        print(timeElapsedRandEvent);
-        
-        if (timeElapsedRandEvent >= randEventFireTime)
-        {
-            timeElapsedRandEvent = 0;
-            randEventFireTime = UnityEngine.Random.Range(minTimeRandEvents, maxTimeRandEvents);
-            RandomEvent randEvent = randEventTracker.PullRandomEvent();
-            print($"PULL RANDOM EVENT {randEvent.Title}");
-            Event(randEvent);
-        }
-    }
+        if (timeElapsedRandEvent < randEventFireTime) return;
 
+        timeElapsedRandEvent = 0;
+        randEventFireTime = UnityEngine.Random.Range(minTimeRandEvents, maxTimeRandEvents);
+        RandomEvent randEvent = randEventTracker.PullRandomEvent();
+        if (randEvent != null) EventMonitorController.Instance.SubmitEvent(randEvent);
+    }
     private void CheckConditions()
     {
         float totalFertConsumption = 0;
@@ -272,10 +267,11 @@ public class GameState : MonoBehaviour
         currentEvent = randomEvent;
     }
 
-    public void EventOptionPicked(int choice)
+
+    public void EventOptionPicked(RandomEvent ev, int choice)
     {
-        print("CHOICE:"+ choice);
-        randEventTracker.ResolveEvent(currentEvent, choice);
+        print("CHOICE:" + choice);
+        randEventTracker.ResolveEvent(ev, choice);
         eventCanvas.SetActive(false);
         currentEvent = null;
     }
@@ -362,10 +358,15 @@ public class GameState : MonoBehaviour
 
     public void EnableFertilizerCreator()
     {
-        this.fertCreator = new FertilizerCreator();
-        this.SubState = EGameSubState.SECOND_PHASE;
-        randEventTracker.AddPool("ProfXCont");
+        if (fertCreator != null) return; // guard against a second accept
+        fertCreator = new FertilizerCreator();
+        SubState = EGameSubState.SECOND_PHASE;
+
+        
         randEventTracker.RemovePool("ProfXStart");
+        randEventTracker.AddPool("ProfXCont");
+
+
         GameManager.Instance.AudioController.targetAudio = 2;
     }
     public void ExpandFertilizerCreator()
