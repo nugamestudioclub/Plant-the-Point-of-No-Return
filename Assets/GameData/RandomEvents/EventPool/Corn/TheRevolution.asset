@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccdf1a5296b2834cac3b8ab0a7b8ff7, type: 3}
+  m_Name: TheRevolution
+  m_EditorClassIdentifier: Assembly-CSharp::RandomEvent
+  title: Commander Corn
+  art: {fileID: 21300000, guid: 928d97edfa7137a41a94a2739de79f83, type: 3}
+  character: {fileID: 21300000, guid: bbade5e846e726b418e044fe02580914, type: 3}
+  textDisplay: 'The day has come to seize what is ours! For the revolution! For the equality of all growing things! '
+  choice1: Burn the corn field before it can spread.
+  choice2: Allow corn to spread to all fields.
+  choice1Effects:
+  - key: food
+    value: -50
+  - key: fertilizer
+    value: 100
+  - key: population
+    value: -30
+  choice2Effects:
+  - key: the_revolution
+    value: 0
+  baseWeight: 10

@@ -15,7 +15,7 @@ MonoBehaviour:
   title: Frost!
   art: {fileID: 21300000, guid: 7e3abe2ce1480124987e3b34427f6d12, type: 3}
   character: {fileID: 21300000, guid: b8182d811f8b1ce479f4bee70ded051c, type: 3}
-  textDisplay: Frost has descended accross the land. The plants are dying.
+  textDisplay: The temperature has fallen too much. Frost threatens the fields!
   choice1: Send workers into the cold to protect the plants.
   choice2: Let the plants die.
   choice1Effects:
@@ -32,4 +32,4 @@ MonoBehaviour:
     value: -50
   - key: population
     value: 5
-  baseWeight: 10
+  baseWeight: 5

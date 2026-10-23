@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccdf1a5296b2834cac3b8ab0a7b8ff7, type: 3}
+  m_Name: Mushroom2
+  m_EditorClassIdentifier: Assembly-CSharp::RandomEvent
+  title: Mushroom Person
+  art: {fileID: 5160473557976873458, guid: cf02c8e84fc5edc41ab86c337721b632, type: 3}
+  character: {fileID: 0}
+  textDisplay: '*<i>Solumn mushroom gibberish</i>*'
+  choice1: Send more fertilizer...
+  choice2: Send more workers..
+  choice1Effects:
+  - key: fertilizer
+    value: -300
+  choice2Effects:
+  - key: population
+    value: -50
+  baseWeight: 10

@@ -19,6 +19,14 @@ MonoBehaviour:
     value: {fileID: 11400000, guid: 30b9c077aca616f419c8f2b5dd92b440, type: 2}
   - key: ProfXCont
     value: {fileID: 11400000, guid: b14319c698d6c8640826dfdf62a2e0a0, type: 2}
+  - key: potato
+    value: {fileID: 11400000, guid: d524d595cdf835c4589a512554770c42, type: 2}
+  - key: corn
+    value: {fileID: 11400000, guid: 1e062a14121f99e4fb9bc262a5b11a42, type: 2}
+  - key: fungi
+    value: {fileID: 11400000, guid: 8811512ff19fe1743b0b93bb9313763b, type: 2}
+  - key: pumpkin
+    value: {fileID: 11400000, guid: 66c0372e137649d4e98074fa80045baa, type: 2}
   plantTypes:
   - key: corn
     value: {fileID: 11400000, guid: 33a21140c2af47147a30c18b3c3653cd, type: 2}

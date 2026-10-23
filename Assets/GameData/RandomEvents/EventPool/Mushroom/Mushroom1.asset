@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccdf1a5296b2834cac3b8ab0a7b8ff7, type: 3}
+  m_Name: Mushroom1
+  m_EditorClassIdentifier: Assembly-CSharp::RandomEvent
+  title: Mushroom Person
+  art: {fileID: 21300000, guid: 086a43645ed784d429aff664fcbf7c91, type: 3}
+  character: {fileID: 21300000, guid: 860e2048c9ed97c40b4a6a0e624c1d75, type: 3}
+  textDisplay: '*<i>Happy mushroom gibberish</i>*'
+  choice1: Yes?
+  choice2: No?
+  choice1Effects:
+  - key: population
+    value: -5
+  - key: fertilizer
+    value: -50
+  - key: food
+    value: 100
+  choice2Effects:
+  - key: fertilizer
+    value: 50
+  - key: food
+    value: 25
+  - key: population
+    value: -5
+  baseWeight: 10

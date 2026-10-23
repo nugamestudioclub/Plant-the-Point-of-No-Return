@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555ab5d1a69b0b440ae385e9d937c0d7, type: 3}
+  m_Name: PupkinCamps1
+  m_EditorClassIdentifier: Assembly-CSharp::EventChain
+  title: Pumpkin Priest
+  art: {fileID: 21300000, guid: 71831096c59df434182e26160a4bd4fb, type: 3}
+  character: {fileID: 21300000, guid: 85a38a890402a6d448dc5965749d491e, type: 3}
+  textDisplay: I couldn't help but notice you sent some sacrifices for our... "prayer" circles in the night... we appreciate them greatly. It helps enrich the soil...
+  choice1: Stop this madness.
+  choice2: Send more.
+  choice1Effects:
+  - key: population
+    value: -5
+  - key: food
+    value: -50
+  - key: fertilizer
+    value: 50
+  choice2Effects:
+  - key: population
+    value: -30
+  baseWeight: 10
+  path1: {fileID: 0}
+  path2: {fileID: 11400000, guid: b9d7bb55deddf07408b7ff6eb2556875, type: 2}

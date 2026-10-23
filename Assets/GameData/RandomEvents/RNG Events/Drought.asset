@@ -28,4 +28,4 @@ MonoBehaviour:
     value: -5
   - key: population
     value: -50
-  baseWeight: 10
+  baseWeight: 5

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555ab5d1a69b0b440ae385e9d937c0d7, type: 3}
+  m_Name: CornEvents
+  m_EditorClassIdentifier: Assembly-CSharp::EventChain
+  title: Commander Corn
+  art: {fileID: 2590876829446902844, guid: ef69ed4e97e43c846a6ec626081ec654, type: 3}
+  character: {fileID: 21300000, guid: bbade5e846e726b418e044fe02580914, type: 3}
+  textDisplay: The corn numbers grow by the day... every corn deserves an equal share... distribute it all or face the consequences!
+  choice1: No
+  choice2: Maybe stockpiles are overrated.
+  choice1Effects:
+  - key: population
+    value: -5
+  - key: fertilizer
+    value: -30
+  - key: food
+    value: 60
+  choice2Effects:
+  - key: redistribute_the_wealth
+    value: 0
+  baseWeight: 10
+  path1: {fileID: 11400000, guid: 4ada77d7a06ea2a498c7ed9654293a35, type: 2}
+  path2: {fileID: 11400000, guid: 65d493ca6c99f1f4eab80aa812a7be4d, type: 2}

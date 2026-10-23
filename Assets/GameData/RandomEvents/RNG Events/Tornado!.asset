@@ -15,7 +15,7 @@ MonoBehaviour:
   title: Tornado Warning!
   art: {fileID: -1769480402598467305, guid: 962e70a919dfd194a8887a6c3823fe64, type: 3}
   character: {fileID: 21300000, guid: b8182d811f8b1ce479f4bee70ded051c, type: 3}
-  textDisplay: Warning a tornado is running amock!
+  textDisplay: Warning a tornado is approaching the fields!
   choice1: Evacuate the workers!
   choice2: Save the plants!
   choice1Effects:
@@ -28,4 +28,4 @@ MonoBehaviour:
     value: -5
   - key: population
     value: -50
-  baseWeight: 10
+  baseWeight: 5

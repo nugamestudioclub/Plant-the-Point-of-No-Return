@@ -29,6 +29,17 @@ public class FunctionDelegator : MonoBehaviour
                 GameState.Instance.ExpandFertilizerCreator();
                 print("[Function Delegator] Fertilizer Creator expanded!");
                 break;
+            case "the_revolution":
+                foreach(GameState.Plot plot in GameState.Instance.GamePlots)
+                {
+                    plot.SetPlant("corn");
+                }
+                print("[Function Delegator] Corn is everything!");
+                break;
+            case "redistribute_the_wealth":
+                GameState.Instance.Spend("fertilizer", GameState.Instance.GetResourceCount("fertilizer")*0.9f);
+                print("[Function Delegator] 90% of fertilizer gone!");
+                break;
             
 
         }

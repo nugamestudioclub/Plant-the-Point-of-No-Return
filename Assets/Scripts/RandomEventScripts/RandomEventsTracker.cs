@@ -82,8 +82,8 @@ public class RandomEventsTracker : MonoBehaviour
             return;
         }
 
-        bool first = choice != 1;
-        print($"[RANDOM EVENT TRACKER] Resolving {randEvent.Title}, choice {choice}, using {(first ? "Choice1" : "Choice2")}Effects");
+        bool first = choice == 1;
+        
 
         if (randEvent is EventChain chain)
         {
@@ -91,8 +91,9 @@ public class RandomEventsTracker : MonoBehaviour
             RandomEvent next = first ? chain.Path1 : chain.Path2;
             if (next != null) eventPool[next] = 100;
         }
+       
 
-        var effects = first ? randEvent.Choice1Effects : randEvent.Choice2Effects;
+            var effects = first ? randEvent.Choice1Effects : randEvent.Choice2Effects;
         foreach (var kv in effects) resolveEvent(kv.Key, kv.Value);
     }
     private void resolveEvent(string effect, float val)

@@ -420,6 +420,19 @@ public class GameState : MonoBehaviour
         return count;
     }
 
+    public void UpdatePlantEventPools(string outgoing, string incoming)
+    {
+        if(outgoing != null && outgoing != "")
+        {
+            randEventTracker.RemovePool(outgoing);
+        }
+        if(incoming != null && incoming != "")
+        {
+            randEventTracker.AddPool(incoming);
+            print("Added to pool:" + incoming);
+        }
+    }
+
     public bool isOver()
     {
         return this.resourceSupplyCounts[registry.PopulationResourceTagName] < 0;
@@ -596,6 +609,7 @@ public class GameState : MonoBehaviour
             {
                 return;
             }
+            GameState.Instance.UpdatePlantEventPools(this.plant, plant);
             GameConfig.OngoingCost costData = Instance.config.GetResourceOngoingCost(plant);
             this.plant = plant;
             this.inputs = costData.inputResourceCost;
@@ -627,6 +641,8 @@ public class GameState : MonoBehaviour
             this.assigned = this.capacityLimit;
             print($"[Game State] Set Plot's Level to {level}.");
         }
+
+        
     }
 
 
