@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RandomEventsTracker : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class RandomEventsTracker : MonoBehaviour
     private Dictionary<RandomEvent, int> eventPool;
     private Dictionary<string, EventPool> eventPoolRegistry;
     private DefinitionRegistry registry;
+    [SerializeField]
+    private UnityEvent onEventPopup;
 
 	private void Start()
 	{
@@ -63,6 +66,7 @@ public class RandomEventsTracker : MonoBehaviour
             instance -= eventPool[eventPool.Keys.ToList()[i]];
             if (instance <= 0)
             {
+                onEventPopup.Invoke();
                 return eventPool.Keys.ToList()[i];
             }
         }

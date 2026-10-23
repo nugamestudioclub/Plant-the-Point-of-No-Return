@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     private GameDefinitionRegistry gameDefinitionRegistry;
     public GameDefinitionRegistry GameDefinitionRegistry { get { return gameDefinitionRegistry; } }
 
+    [SerializeField]
+    private AudioController audioController;
+    public AudioController AudioController {  get { return audioController; } }
+
     
     public static ETransitionState TransitionState { get; private set; } = ETransitionState.NONE;
 
@@ -89,6 +93,7 @@ public class GameManager : MonoBehaviour
             case EGameState.INTRO:
                 if (destState == EGameState.MAINMENU)
                 {
+                    audioController.targetAudio = 0;
                     return transition(destState);
                 }
                 break;
@@ -102,6 +107,7 @@ public class GameManager : MonoBehaviour
                     cameraManager.TransitionIn();
                     gameUIManager.TransitionIn();
                     gameState.NewGame();
+                    audioController.targetAudio = 1;
                     return transition(destState);
                 }
                 break;
