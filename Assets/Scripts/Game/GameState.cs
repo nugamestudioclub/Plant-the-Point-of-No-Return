@@ -457,14 +457,8 @@ public class GameState : MonoBehaviour
 
     public void TransitionOut()
     {
-        if (this.FertilizerCreatorEnabled)
-        {
-            StartCoroutine(_Transitionout(badEndingScene));
-        }
-        else
-        {
-            StartCoroutine(_Transitionout(goodEndingScene));
-        }
+        StartCoroutine(_Transitionout("Outro"));
+        OutroManager.isGood = !this.FertilizerCreatorEnabled;
     }
     private IEnumerator _Transitionout(string scene)
     {
