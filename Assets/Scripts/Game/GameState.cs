@@ -1,9 +1,11 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameState : MonoBehaviour
 {
@@ -71,6 +73,11 @@ public class GameState : MonoBehaviour
 
     public UnityEvent OnEnableStage2;
 
+    [SerializeField]
+    private string goodEndingScene = "Outro1";
+    [SerializeField]
+    private string badEndingScene = "Outro2";
+
     private void Awake()
     {
         instance = this;
@@ -96,7 +103,7 @@ public class GameState : MonoBehaviour
             Ticker();
             UpdateAllocationNumbers();
 
-            if (resourceSupplyCounts[this.registry.PopulationResourceTagName] < 0)
+            if (resourceSupplyCounts[this.registry.PopulationResourceTagName] < 0.9)
             {
                 GameManager.Instance.TransitionToState(GameManager.EGameState.POSTGAME);
             }
@@ -446,6 +453,23 @@ public class GameState : MonoBehaviour
     {
         Plot plot = plots[plotIndex];
         return plot.capacityLimit > 0 ? (float)plot.assigned / plot.capacityLimit : 0f;
+    }
+
+    public void TransitionOut()
+    {
+        if (this.FertilizerCreatorEnabled)
+        {
+            StartCoroutine(_Transitionout(badEndingScene));
+        }
+        else
+        {
+            StartCoroutine(_Transitionout(goodEndingScene));
+        }
+    }
+    private IEnumerator _Transitionout(string scene)
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(scene);
     }
 
     public class Plot

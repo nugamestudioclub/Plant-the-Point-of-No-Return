@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -28,6 +29,10 @@ public class GameUI : MonoBehaviour
     [SerializeField]
     private PlotScreenComponent[] plotScreenComponents;
 
+    [SerializeField]
+    private Canvas fadeCanvas;
+    private Animator fadeAnimator;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -48,6 +53,8 @@ public class GameUI : MonoBehaviour
                 RequestLevelUp(btn);
             });
         }
+        fadeCanvas.gameObject.SetActive(true);
+        fadeAnimator = fadeCanvas.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -182,4 +189,14 @@ public class GameUI : MonoBehaviour
         plotScreenComponents[index].LevelUpRequested(index, requirements, availableResources.ToArray());
     }
    
+    public void TransitionOut()
+    {
+        StartCoroutine(_TransitionOut());
+    }
+    private IEnumerator _TransitionOut()
+    {
+        fadeAnimator.Play("FadeOut");
+        yield return new WaitForSeconds(1);
+
+    }
 }

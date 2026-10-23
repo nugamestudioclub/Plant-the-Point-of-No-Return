@@ -110,7 +110,9 @@ public class GameManager : MonoBehaviour
                 {
                     print("[GAME STATE] GAME OVER! TRANSITIONING INTO POST GAME");
                     // Make sure to add game state transition into which ending...
-                    
+                    gameUIManager.TransitionOut();
+                    gameState.TransitionOut();
+                    transition(destState);
                 }
                 break;
 
@@ -118,6 +120,7 @@ public class GameManager : MonoBehaviour
 
                 bool goodEnding = !gameState.FertilizerCreatorEnabled;
                 //Todo: Call PlayEnding(goodEnding);
+                
                 return transition(destState);
                
         }
