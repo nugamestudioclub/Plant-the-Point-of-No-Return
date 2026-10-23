@@ -65,6 +65,7 @@ public class GameUI : MonoBehaviour
             DisplayResourceState();
             UpdatePlotState();
             DisplayPlotLevels();
+            UpdateLevelUpButtons();
         }
     }
 
@@ -150,6 +151,7 @@ public class GameUI : MonoBehaviour
             plotLevelTexts[i].text = text;
         }
     }
+    
     private void UpdatePlotState()
     {
         for(int i =0;i < plotButtons.Length; i++)
@@ -163,6 +165,40 @@ public class GameUI : MonoBehaviour
                 plotButtons[i].enabled = true;
             }
         }
+    }
+    private void UpdateLevelUpButtons()
+    {
+        for (int i = 0; i < plotUpgradeButtons.Length; i++)
+        {
+            Dictionary<string, int> requirements = GetRequirementsForPlot(i);
+            plotUpgradeButtons[i].interactable = CanAfford(requirements);
+        }
+    }
+    private Dictionary<string, int> GetRequirementsForPlot(int index)
+    {
+        int level = GameState.Instance.GamePlots[index].level;
+
+        if (level == 0)
+        {
+            int activePlots = GameState.Instance.GetNumberOfActivePlots();
+            return GameState.Instance.GetExpansionRequirements(activePlots);
+        }
+
+        return GameState.Instance.GetUpgradeRequirements(level + 1);
+    }
+
+    private bool CanAfford(Dictionary<string, int> requirements)
+    {
+        
+        if (requirements == null || requirements.Count == 0)
+            return false;
+
+        foreach (KeyValuePair<string, int> req in requirements)
+        {
+            if (GameState.Instance.GetResourceCount(req.Key) < req.Value)
+                return false;
+        }
+        return true;
     }
     private void RequestLevelUp(Button plotUpgradeButton)
     {

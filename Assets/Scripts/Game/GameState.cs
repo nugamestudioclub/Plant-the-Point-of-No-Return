@@ -515,7 +515,7 @@ public class GameState : MonoBehaviour
         {
             return (float)assigned / (float)capacity;
         }
-
+        
         private float ScaleOutputByResourceLeft(string resource, float pull, int level)
         {
             //Example: say we pull 15
